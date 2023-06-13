@@ -5,7 +5,8 @@ import App from './App';
 import configureStore from './store';
 import { Provider } from 'react-redux';
 import { BrowserRouter } from 'react-router-dom';
-import { csrfFetch, restoreCSRF } from './store/csrf';
+import {  restoreCSRF } from './store/csrf';
+import csrfFetch from './store/csrf';
 
 const store = configureStore();
 
@@ -24,12 +25,7 @@ function Root() {
   );
 }
 
-ReactDOM.render(
-  <React.StrictMode>
-    <Root />
-  </React.StrictMode>,
-  document.getElementById('root')
-);
+
 
 const renderApplication = () => {
   ReactDOM.render(
