@@ -24,11 +24,30 @@ class ApplicationController < ActionController::API
     def require_logged_in
         if !logged_in?
             render json: {errors: ['Must be logged in']}, status: unauthorized
+        end 
     end 
 
     def require_logged_out
         if logged_in?
             render json: {errors: ['Must be logged out']}, status: unauthorized 
+        end 
+    end 
+
+    def test
+        if params.has_key?(:login)
+          login!(User.first)
+        elsif params.has_key?(:logout)
+          logout!
+        end
+      
+        if current_user
+          render json: { user: current_user.slice('id', 'username', 'session_token') }
+        else
+          render json: ['No current user']
+        end
+      end
+
+    
 
     private
 
@@ -38,4 +57,5 @@ class ApplicationController < ActionController::API
 
     def attact_authenticity_token
         headers['X-CSRF-Token'] = masked_authenticity_token(session)
+    end 
 end
