@@ -1,5 +1,28 @@
 .login-form {
     display: flex;
+    flex-direction: column;
     justify-content: space-evenly;
     margin: 50px;
+    align-items: left;
+}
+
+.login-button {
+    color: white;
+    background-color: black;
+    border-radius: 99999px;
+    font-size: 14px;
+    border-width: 2px;
+    min-width: 14.5em;
+    min-height: 44px;
+    font-weight: bold;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.text-input {
+    width: 305px;
+}
+
+.login-heading {
+    display: flex;
+    flex-direction: column;
 }

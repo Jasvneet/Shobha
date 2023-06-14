@@ -37,17 +37,37 @@ function LoginFormPage() {
             <ul>
                 {errors.map(error => <li key={error}>{error}</li>)}
             </ul>
-            <label>Email:
-                <input type="text" value={email} onChange={(e) => setEmail(e.currentTarget.value)} />                
+            <div className="login-heading">
+            <h3>Sign In</h3>
+            <br />
+            <p> Sign in or create an account to enjoy FREE standard shipping on all orders.</p>
+
+            </div>
+            <br />
+            <label>
+                <input 
+                type="text" 
+                placeholder="Email Address"
+                value={email} 
+                onChange={(e) => setEmail(e.currentTarget.value)} 
+                className="text-input" />                
             </label>
 
             <br />
 
-            <label>Password:
-                <input type="password" value={password} onChange={(e) => setPassword(e.currentTarget.value)}/>                
+            <label>
+                <input 
+                type="password" 
+                placeholder="Password"
+                value={password}
+                onChange={(e) => setPassword(e.currentTarget.value)}
+                className="text-input"/>                
             </label>
-
+            <br />
+            <div>
             <button type="submit" className="login-button">Sign In</button>
+
+            </div>
             
         </form>
     )
