@@ -4,8 +4,9 @@ class Api::SessionsController < ApplicationController
   before_action :require_logged_out, only: [:create]
 
   def show
-    @user = current_user
-    if @user
+  
+    if current_user
+      @user = current_user
       render 'api/users/show'
     else 
       render json: {user: nil}
@@ -13,7 +14,9 @@ class Api::SessionsController < ApplicationController
   end
 
   def create
+    debugger
     @user = User.find_by_credentials(params[:email], params[:password])
+    
     if @user
       login!(@user)
       render 'api/users/show'
