@@ -49,6 +49,23 @@ export const restoreSession = () => async dispatch => {
     dispatch(setCurrentUser(data.user));
     return response;
   };
+
+  export const signup = (user) => async (dispatch) => {
+    const { email, password, firstname, lastname } = user;
+    const response = await csrfFetch("/api/users", {
+      method: "POST",
+      body: JSON.stringify({
+        email,
+        password,
+        firstname,
+        lastname
+      })
+    });
+    const data = await response.json();
+    storeCurrentUser(data.user);
+    dispatch(setCurrentUser(data.user));
+    return response;
+  };
   
 
   

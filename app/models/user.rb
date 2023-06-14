@@ -14,10 +14,8 @@ class User < ApplicationRecord
   before_validation :ensure_session_token
 
   def self.find_by_credentials(email, password)
-    
     user = User.find_by(email: email )
     
-
     if user && user.authenticate(password)
       return user
     end 
@@ -31,18 +29,21 @@ class User < ApplicationRecord
 		self.session_token
 	end
   
-  def ensure_session_token
-    self.session_token ||= generate_unique_session_token
-  end 
-  
+
   private
 
   def generate_unique_session_token
 		loop do
-			session_token = SecureRandom::urlsafe_base64(16)
+			session_token = SecureRandom.urlsafe_base64(16)
 			return session_token unless User.exists?(session_token: session_token)
 		end
+   
 	end
+
+  def ensure_session_token
+    self.session_token ||= generate_unique_session_token
+  end 
+  
 
 
 
