@@ -34,6 +34,9 @@ function LoginFormPage() {
 
     return (
         <form onSubmit={handleSubmit}>
+            <ul>
+                {errors.map(error => <li key={error}>{error}</li>)}
+            </ul>
             <label>Email:
                 <input type="text" value={email} onChange={(e) => setEmail(e.currentTarget.value)} />                
             </label>
