@@ -1,0 +1,8 @@
+.nav-links {
+    display: flex;
+    justify-content: space-between;
+}
+
+.home-link {
+    font-size: 32px;
+}
