@@ -1,8 +1,22 @@
 .nav-links {
     display: flex;
     justify-content: space-between;
+   font-family: Arial, Helvetica, sans-serif;
+
 }
 
 .home-link {
-    font-size: 32px;
+    font-size: 28px;
+    color: black;
+    text-decoration-line: none;
+   font-family: Arial, Helvetica, sans-serif;
+
+}
+
+.nav-link {
+    text-decoration-line: none;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 12px;
+    color: black;
+
 }

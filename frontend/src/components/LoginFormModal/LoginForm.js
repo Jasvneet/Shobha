@@ -1,18 +1,18 @@
 import { useDispatch, useSelector } from "react-redux";
 import { useState } from 'react';
 import * as sessionActions from '../../store/session';
-import { Redirect } from 'react-router-dom';
+// import { Redirect } from 'react-router-dom';
 import './LoginForm.css';
 
 
-function LoginFormPage() {
+function LoginForm() {
     const dispatch = useDispatch();
-    const sessionUser = useSelector(state => state.session.user);
+    // const sessionUser = useSelector(state => state.session.user);
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
     const [errors, setErrors] = useState([]);
 
-    if (sessionUser) return <Redirect to="/" />;
+    // if (sessionUser) return <Redirect to="/" />;
 
     const handleSubmit = (e) => {
         e.preventDefault();
@@ -66,12 +66,13 @@ function LoginFormPage() {
             <br />
             <div>
             <button type="submit" className="login-button">Sign In</button>
-
             </div>
+            
+            <div className="line"></div>
             
         </form>
     )
 
 }
 
-export default LoginFormPage;
+export default LoginForm;
