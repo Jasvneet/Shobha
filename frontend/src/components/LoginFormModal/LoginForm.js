@@ -37,10 +37,10 @@ function LoginForm() {
             <ul>
                 {errors.map(error => <li key={error}>{error}</li>)}
             </ul>
-            <div className="login-heading">
-            <h3>Sign In</h3>
+            <div className="login-message">
+            <h3 id="login-heading">Sign In</h3>
             <br />
-            <p> Sign in or create an account to enjoy FREE standard shipping on all orders.</p>
+            <p> Sign in or create an account to enjoy <strong>FREE standard shipping </strong> on all orders.</p>
 
             </div>
             <br />

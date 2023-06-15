@@ -9,6 +9,8 @@
 
 .name-input {
     display: flex;
+    width: 150px;
+    justify-content: center;
 }
 
 .first-name {
