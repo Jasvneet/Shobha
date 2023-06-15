@@ -33,7 +33,21 @@ function Navigation() {
       </li>
 
      <li>
+      <div class="dropdown">
+        <span>Stores and Services</span>
+      <div class="dropdown-content">
+        <p>Sephora Powell</p>
+      </div>
+      </div>
+     </li>
 
+     <li>
+      <div class="dropdown">
+        <span>Community</span>
+      <div class="dropdown-content">
+        <p>Community Profile</p>
+      </div>
+      </div>
      </li>
 
       <li>
