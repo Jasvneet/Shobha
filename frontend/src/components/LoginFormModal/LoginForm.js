@@ -1,18 +1,22 @@
 import { useDispatch, useSelector } from "react-redux";
-import { useState } from 'react';
+import { useState} from 'react';
 import * as sessionActions from '../../store/session';
+import SignupForm from "../SignupFormPage/SignupForm";
+import { Modal } from "../../context/Modal";
 // import { Redirect } from 'react-router-dom';
 import './LoginForm.css';
 
 
-function LoginForm() {
+function LoginForm(props) {
     const dispatch = useDispatch();
     // const sessionUser = useSelector(state => state.session.user);
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
     const [errors, setErrors] = useState([]);
-
+    const [showSignupModal, setShowSignupModal] = useState(false);
+    const [showLoginForm, setShowLoginForm] = useState(true);
     // if (sessionUser) return <Redirect to="/" />;
+    
 
     const handleSubmit = (e) => {
         e.preventDefault();
@@ -32,11 +36,28 @@ function LoginForm() {
           });
     }
 
+    const handleOpenSignupModal = () => {
+      setShowSignupModal(true);
+      setShowLoginForm(false);
+    };
+  
+    const handleCloseSignupModal = () => {
+      setShowSignupModal(false);
+      setShowLoginForm(false);
+      props.closeLogin();
+    };
+
+
+
     return (
+      <>
+      {showLoginForm && !showSignupModal && (
         <form onSubmit={handleSubmit} className="login-form">
-            <ul>
-                {errors.map(error => <li key={error}>{error}</li>)}
-            </ul>
+             <ul>
+                {errors.map((error, index) => <li key={index}>{error}</li>)}
+             </ul>
+             <div className="form">
+
             <div className="login-message">
             <h3 id="login-heading">Sign In</h3>
             <br />
@@ -64,13 +85,33 @@ function LoginForm() {
                 className="text-input"/>                
             </label>
             <br />
+            <div id='terms-of-use'>By clicking “Sign In”, you (1) agree to the current version of our <strong>TERMS OF USE</strong>, and (2) have read Sephora’s Privacy Policy</div>
             <div>
             <button type="submit" className="login-button">Sign In</button>
             </div>
+             </div>
+
             
             <div className="line"></div>
+            <div id="new-user-message">
+              New To Shobha?
+            </div>
+            <div>
+                <button type="button" onClick={handleOpenSignupModal} className="create-account-button">Create Account</button>
+            </div>
+            
+            
+         
             
         </form>
+      )}
+        {showSignupModal && !showLoginForm && (
+        <Modal onClose={handleCloseSignupModal}>
+          <SignupForm />
+        </Modal>
+        )}
+         
+      </>
     )
 
 }

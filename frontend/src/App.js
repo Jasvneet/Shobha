@@ -1,16 +1,15 @@
 import React from 'react';
 import { Route, Switch } from 'react-router-dom';
-import SignupFormPage from './components/SignupFormPage';
+
 import Navigation from "./components/Navigation";
 
 function App() {
   return (
     <>
+    <button className="freeShipping-button">Get FREE shipping on all orders when you join Beauty Insider. Exclusions/terms apply. <strong>LEARN MORE</strong></button>
       <Navigation />
         <Switch>
-          <Route path="/signup">
-            <SignupFormPage />
-          </Route>
+         
         </Switch>
     </>
   );

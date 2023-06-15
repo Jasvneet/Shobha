@@ -4,6 +4,7 @@
     flex-direction: column;
     margin: 50px;
     align-items: center;
+   
     
 }
 
@@ -20,6 +21,7 @@
 .text-input {
     position: relative;
     width: 305px; /* Adjust the width value as needed */
+    
   }
 
 .signup-button {
