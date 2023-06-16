@@ -4,7 +4,7 @@ import { useSelector } from 'react-redux';
 import ProfileButton from './ProfileButton';
 import LoginFormModal from '../LoginFormModal';
 import './Navigation.css';
-import SignupFormModal from '../SignupFormPage';
+
 
 function Navigation() {
   const sessionUser = useSelector(state => state.session.user);
@@ -53,6 +53,20 @@ function Navigation() {
       <li>
         {sessionLinks}
       </li>
+
+      <li>
+      <i className='far fa-comment fa-flip-horizontal'></i>
+      </li>
+
+      <li>
+      <i class="far fa-sharp fa-light fa-heart"></i>
+      </li>
+      
+      <li>
+      <i class="far fa-solid fa-basket-shopping"></i>
+      </li>
+
+
     </ul>
   );
 }
