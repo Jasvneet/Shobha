@@ -60,15 +60,18 @@ function Navigation() {
         <span id="original-icon" class="icon"><FaRegComment /></span>
         <span id="replacement-icon" class="icon"><FaComment /></span>
         <div class="dropdown-content">
-        <p>Live Chat</p>
-      </div>
+          <p>Live Chat</p>
+        </div>
       </div>
       </li>
         
       <li id='heart-icon-container'>
-      <div id="icon-container">
+      <div id="icon-container" className='dropdown'>
         <span id="original-icon" class="icon"><FaRegHeart /></span>
         <span id="replacement-icon" class="icon"><FaHeart /></span>
+        <div class="dropdown-content">
+          <p>Recently Loved</p>
+        </div>
       </div>
       </li>
 
