@@ -21,3 +21,27 @@ body {
   
 
 }
+
+.icon {
+    display: inline-block;
+    width: 24px; 
+    height: 24px;
+    font-size: 16px;
+    
+  }
+  
+  #icon-container:hover #replacement-icon {
+    display: inline-block;
+  }
+
+  #icon-container:hover #original-icon {
+    display: none;
+  }
+  
+  #replacement-icon {
+    display: none; 
+    position: initial;
+    top: 0;
+    left: 0;
+  }
+
