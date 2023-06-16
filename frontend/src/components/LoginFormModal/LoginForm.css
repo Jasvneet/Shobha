@@ -1,9 +1,15 @@
 .login-form {
-    /* overflow-y: auto; */
+    overflow-y: auto;
     position: relative;
-    flex: 1 1 0%;
-    padding: 16px 16px 32px;
-    display: block;
+    flex-grow: 1;
+    flex-shrink: 1;
+    flex-basis: 0%;
+    padding: 16px 16px;
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    width: 400px;
+    
 }
 
 .login-button {
@@ -14,9 +20,16 @@
     border-width: 2px;
     min-width: 14.5em;
     min-height: 44px;
-    font-weight: bold;
+    font-weight: 700;
     font-family: Arial, Helvetica, sans-serif;
-     padding: 0.25em 1.125em;
+    padding: 0.25em 1.125em;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    line-height: 1;
+    white-space: pre-wrap;
+    overflow-wrap: break-word;
 }
 
 .loginmodal-button {
@@ -26,7 +39,7 @@
     font-size: 12px;
     font-family: Arial, Helvetica, sans-serif;
     display: flex;
-    padding: 0;
+  
 
 }
 
@@ -39,29 +52,33 @@
 .text-input {
     display: flex;
     align-items: center;
-    flex: 1 1 0%;
+    flex-grow: 1;
+    flex-shrink: 1;
+    flex-basis: 0%;
     font-family: inherit;
     font-size: 14px;
     padding-left: 16px;
-    padding-right: 12px;  
-    width: 80%
+    justify-content: center; 
+    width: 93%;
+    line-height: 40px;
+    border-radius: 4px;
+    border: 1px solid lightgray;
+    
+    
 }
 
 #login-heading {
     font-size: 16px;
     font-weight: bold;
     font-family: Arial, Helvetica, sans-serif;
+    white-space: pre-wrap;
     
 }
 
-.login-message {
-    display: flex;
-    flex-direction: column;
-    font-family: Arial, Helvetica, sans-serif;
+.login-message p {
     font-size: 14px;
-    width: 80%;
-
 }
+
 
 .line {
     border-bottom: 1px solid rgba(0, 0, 0, 0.063);
@@ -84,6 +101,10 @@ strong {
     margin-bottom: 16px;
 }
 
+#new-user {
+    margin-left: 16px;
+}
+
 .create-account-button {
     transition: color 0.2s ease 0s, border-color 0.2s ease 0s;
     min-width: 14.5em;
@@ -101,23 +122,22 @@ strong {
     border-radius: 99999px;
     appearance: none;
     color: rgb(0, 0, 0);
+   
 }
 
 #terms-of-use {
+    white-space: pre-wrap;
+    overflow-wrap: break-word;
+    line-height: 1.25;
     font-size: 11px;
+    color: rgb(102, 102, 102);
+    margin-top: 16px;
+    margin-bottom: 16px;
     display: block;
-    margin-block-start: 1em;
-    margin-block-end: 1em;
-    margin-inline-start: 0px;
-    margin-inline-end: 0px;
-    width: 80%;
+
 }
 
-.form {
-    display: flex;
-    flex-direction: column;
-   
-}
+
 
 #login-nav {
     display: flex;

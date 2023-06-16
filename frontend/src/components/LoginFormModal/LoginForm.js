@@ -93,18 +93,22 @@ function LoginForm(props) {
 
             
             <div className="line"></div>
+          
+        </form>
+         
+
+      )}
+
+      <div id="new-user"> 
             <div id="new-user-message">
               New To Shobha?
             </div>
             <div>
                 <button type="button" onClick={handleOpenSignupModal} className="create-account-button">Create Account</button>
             </div>
-            
-            
-         
-            
-        </form>
-      )}
+
+      </div>
+
         {showSignupModal && !showLoginForm && (
         <Modal onClose={handleCloseSignupModal}>
           <SignupForm />
