@@ -5,48 +5,5 @@ body {
     margin: 0%;
    
 }
-.freeShipping-button {
-    border-style: none;
-    background-color: #C0DCF1;
-    margin-top: 0px;
-    width: 100%;
-    font-size: 14px;
-    display: flex;
-    justify-content: center;
-    width: 100%;
-    line-height: 1.25;
-    margin-bottom: 30px;
-    min-height: clamp(0px, 4.80769vw, 60px);
-    padding-bottom: 0.5em;
-    
-   
-}
 
-.freeShipping-text {
-  margin-top: 0.8em;
-}
-
-.icon {
-    display: inline-block;
-    width: 24px; 
-    height: 24px;
-    font-size: 24px;
-    transform: scaleX(-1);
-    
-  }
-  
-  #icon-container:hover #replacement-icon {
-    display: inline-block;
-  }
-
-  #icon-container:hover #original-icon {
-    display: none;
-  }
-  
-  #replacement-icon {
-    display: none; 
-    position: initial;
-    top: 0;
-    left: 0;
-  }
 

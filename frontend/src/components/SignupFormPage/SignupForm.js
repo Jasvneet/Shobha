@@ -38,10 +38,17 @@ function SignupForm(){
     };
   
     return (
+      <>
+       
       <form onSubmit={handleSubmit} className="signup-form">
         <ul>
           {errors.map(error => <li key={error}>{error}</li>)}
         </ul>
+        <div>
+          <h1>Create an Account</h1>
+        </div>
+        <img className='insider-logo' src="/images/logo-beauty-insider.svg"/>
+        <p>Join the Beauty Insider loyalty program. Earn points, get FREE standard shipping, redeem rewards, and more.</p>
         <br />
         <div className="name-input">
         <label className="first-name ">
@@ -97,8 +104,10 @@ function SignupForm(){
           />
         </label>
         <br />
+        <p>By clicking “Join Now” you acknowledge that you are a U.S. or Canada resident and (1) have read Sephora’s Privacy Policy and Notice of Financial Incentive, (2), agree to TERMS OF USE, BEAUTY INSIDER TERMS, and to automatically receive Beauty Insider offers and notifications via email.</p>
         <button type="submit" className="signup-button">Join Now</button>
       </form>
+      </>
     );
 }
   

@@ -1,27 +1,83 @@
-.nav-links {
+.freeShipping-button {
+  border-style: none;
+  background-color: #C0DCF1;
+  margin-top: 0px;
+  width: 100%;
+  font-size: 14px;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  line-height: 1.25;
+  min-height: clamp(0px, 4.80769vw, 60px);
+}
+
+.freeShipping-text {
+  margin: auto;
+}
+
+
+.freeShipping-text:hover {
+  text-decoration: underline;
+}
+
+
+.icon {
+  display: inline-block;
+  width: 24px; 
+  font-size: 24px;
+  transform: scaleX(-1);
+  height: 100%;
+  padding-top: 16px;
+  padding-bottom: 16px;
+  padding-left: 12px;
+  padding-right: 12px;
+  
+}
+
+#icon-container:hover #replacement-icon {
+  display: inline-block;
+}
+
+#icon-container:hover #original-icon {
+  display: none;
+}
+
+#replacement-icon {
+  display: none; 
+  position: initial;
+  top: 0;
+  left: 0;
+}
+
+.nav1 {
     display: flex;
     justify-content: space-evenly;
     font-family: Arial, Helvetica, sans-serif;
-
+    margin-right: -12px;
+    margin-top: 12px;
+    margin-bottom: 12px;
 }
 
 .home-link {
-    font-size: 21px;
-    color: black;
-    text-decoration-line: none;
-   font-family: Arial, Helvetica, sans-serif;
-   margin-left: 20px;
-   margin-bottom: 30px;
+  font-size: 21px;
+  color: black;
+  text-decoration-line: none;
+  font-family: Arial, Helvetica, sans-serif;
 
 }
 
-.nav-link {
-    text-decoration-line: none;
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 12px;
-    color: black;
-
+ul li {
+  text-align: center;
+  align-items: center;
+  display: flex;
 }
+
+.nav-button {
+  background-color: white;
+  border-style: none;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
 
 .dropdown {
     position: relative;
@@ -44,4 +100,36 @@
     display: block;
   }
 
+.nav2 {
+  background-color: black;
+  font-size: 0;
+  white-space: nowrap;
+  overflow-x: auto;
+  padding: 8px;
+  padding-left: 0;
+  text-align: center;
+  border-bottom: 1px solid #eee;
+  border-bottom-width: 1px;
+  border-bottom-style: solid;
+  border-bottom-color: rgb(238, 238, 238);
+}
 
+.nav2-links {
+  display: flex;
+  justify-content: space-around;
+  text-align: center;
+  align-items: center;
+  position: relative;
+}
+
+.nav2-link {
+  color: white;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 14px;
+  text-decoration: none;
+  width: 100%;
+  line-height: 1.25;
+  padding: 8px;
+  position: static;
+  width: 100%;
+}
