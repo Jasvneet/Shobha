@@ -12,6 +12,18 @@
     
 }
 
+.login-nav {
+    display: inline-flex;
+    flex-direction: row;
+    justify-content: flex-start;
+
+}
+
+img {
+    height: 24px;
+    width: 24px;
+}
+
 .login-button {
     color: white;
     background-color: black;

@@ -7,9 +7,11 @@ function LoginFormModal() {
 
   return (
     <>
+    <img src='images/profile-icon.svg'/>
     <div id='login-nav'>
-
+    
       <button className="loginmodal-button"onClick={() => setShowModal(true)}>
+       
         <strong>Sign In</strong>
         <span>for FREE Shipping 🚚</span>
       </button>
