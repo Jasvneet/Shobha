@@ -10,6 +10,7 @@
     margin: 0;
     width: 400px;
     
+    
 }
 
 .login-nav {
@@ -118,6 +119,7 @@ strong {
 
 #new-user {
     margin-left: 16px;
+    margin-bottom: 17px;
 }
 
 .create-account-button {
