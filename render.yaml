@@ -1,6 +1,6 @@
 databases:
   - name: authenticate-me
-    user: authenticate-me
+    user: shobha
     plan: free
     region: oregan
 
