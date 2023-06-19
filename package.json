@@ -1,0 +1,25 @@
+{
+  "name": "shobha",
+  "version": "1.0.0",
+  "description": "This is a Sephora clone.",
+  "engines": {
+    "node": "16.x"
+  },
+  "directories": {
+    "lib": "lib"
+  },
+  "scripts": {
+    "build": "npm install --prefix frontend && npm run build --prefix frontend"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Jasvneet/Shobha.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Jasvneet/Shobha/issues"
+  },
+  "homepage": "https://github.com/Jasvneet/Shobha#readme"
+}
