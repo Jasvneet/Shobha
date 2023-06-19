@@ -3,13 +3,16 @@ import { Route, Switch } from 'react-router-dom';
 import MainCarousel from './components/Carousel1/carousel1';
 
 import Navigation from "./components/Navigation";
+import ProductShow from './components/Product/ProductShow';
 
 function App() {
   return (
     <>
       <Navigation />
-        <MainCarousel />
           <Switch>
+          <Route exact path="/" component={MainCarousel} />
+            <Route exact path="/products/:productId" component={ProductShow} />
+
           
           </Switch>
     </>

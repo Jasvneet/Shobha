@@ -22,16 +22,16 @@ ApplicationRecord.transaction do
     # Create one user with an easy to remember username, email, and password:
     User.create!(
       email: 'demo@user.io', 
-      password: 'password'
+      password: 'password',
       firstname: 'Demo-lition', 
-      lastname: 'test',
+      lastname: 'test'
       
     )
     User.create!(
       email: 'demo2@user.io', 
-      password: 'password'
+      password: 'password',
       firstname: 'Demo2', 
-      lastname: 'test',
+      lastname: 'test'
      
     )
 
@@ -96,15 +96,16 @@ Product.create!(
     category: 'Makeup, Lip Gloss'
 )
 
-Product.create!( 
-  name: 'ShineOn Lip Jelly Non-Sticky Gloss', 
-  description: 'What it is: A non-sticky, moisturizing gloss for soft, shiny lips.\n\nHighlighted Ingredients:\n\n- Apricot Kernel Oil: Nurtures and soothes lips.\n\n- Raspberry Seed Oil: Protects lips against damage from free radicals and environmental aggressors.\n\n- Rosehip Oil: Contains vitamins A and E while promoting cell repair and regeneration.\n\nIngredient Callouts: This product is vegan, cruelty-free, and gluten-free.\n\nWhat Else You Need to Know: ShineOn Lip Jelly is a lip gloss that has the shine of a gloss, the comfort of a balm, and a touch of juicy translucent color. It uses a unique blend of five nurturing oils to soothe and protect lips from drying and peeling. Plus, it has an addictive apricot-vanilla scent. Choose from six juicy shades inspired by some of our favorite colors and the meanings behind them.', 
-  price: 16.00, 
-  size: 0.13, 
-  ingredients: 'Polybutene, Hydrogenated Polyisobutene, Hydrogenated Polybutene, Prunus Armeniaca (Apricot) Kernel Oil, Ethylene/Propylene/Styrene Copolymer, Octyldodecanol, Silica Dimethyl Silylate, Ricinus Communis (Castor) Seed Oil, Persea Gratissima (Avocado) Oil, Rosa Canina Seed Oil, Rubus Idaeus (Raspberry) Seed Oil, Oryza Sativa (Rice) Bran Extract, Helianthus Annuus (Sunflower) Extract, Rosmarinus Officinalis (Rosemary) Leaf Extract, Butylene/Ehtylene/Styrene Copolymer, Aroma/Flavor, Caprylyl Glycol, Ethylhexylglycerin, Tocopherol, Pentaerythrityl Tetra-di-t-butyl Hydroxyhydrocinnamate, MAY CONTAIN (+/-): Iron Oxides (CI 77492), Iron Oxides (CI 77491), Iron Oxides (CI 77499), Titanium Dioxide (CI 77891), Red 7 Lake (CI 15850).',
-  brand: `Tower 28 Beauty`, 
-  category: `Makeup, Lip Gloss'
-  ) 
+# Product.create!( 
+#   name: 'ShineOn Lip Jelly Non-Sticky Gloss', 
+#   description: 'What it is: A non-sticky, moisturizing gloss for soft, shiny lips.\n\nHighlighted Ingredients:\n\n- Apricot Kernel Oil: Nurtures and soothes lips.\n\n- Raspberry Seed Oil: Protects lips against damage from free radicals and environmental aggressors.\n\n- Rosehip Oil: Contains vitamins A and E while promoting cell repair and regeneration.\n\nIngredient Callouts: This product is vegan, cruelty-free, and gluten-free.\n\nWhat Else You Need to Know: ShineOn Lip Jelly is a lip gloss that has the shine of a gloss, the comfort of a balm, and a touch of juicy translucent color. It uses a unique blend of five nurturing oils to soothe and protect lips from drying and peeling. Plus, it has an addictive apricot-vanilla scent. Choose from six juicy shades inspired by some of our favorite colors and the meanings behind them.', 
+#   price: 16.00, 
+#   size: 0.13, 
+#   ingredients: 'Polybutene, Hydrogenated Polyisobutene, Hydrogenated Polybutene, Prunus Armeniaca (Apricot) Kernel Oil, Ethylene/Propylene/Styrene Copolymer, Octyldodecanol, Silica Dimethyl Silylate, Ricinus Communis (Castor) Seed Oil, Persea Gratissima (Avocado) Oil, Rosa Canina Seed Oil, Rubus Idaeus (Raspberry) Seed Oil, Oryza Sativa (Rice) Bran Extract, Helianthus Annuus (Sunflower) Extract, Rosmarinus Officinalis (Rosemary) Leaf Extract, Butylene/Ehtylene/Styrene Copolymer, Aroma/Flavor, Caprylyl Glycol, Ethylhexylglycerin, Tocopherol, Pentaerythrityl Tetra-di-t-butyl Hydroxyhydrocinnamate, MAY CONTAIN (+/-): Iron Oxides (CI 77492), Iron Oxides (CI 77491), Iron Oxides (CI 77499), Titanium Dioxide (CI 77891), Red 7 Lake (CI 15850).',
+#   brand: `Tower 28 Beauty`, 
+#   category: `Makeup, Lip Gloss'
+
+# )
 
 
 
@@ -112,5 +113,5 @@ Product.create!(
   
 
   
-    puts "Done!"
-  end
+  puts "Done!"
+end

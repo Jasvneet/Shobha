@@ -7,7 +7,7 @@ function LoginFormModal() {
 
   return (
     <>
-    <img src='images/profile-icon.svg'/>
+    <img src='/images/profile-icon.svg'/>
     <div id='login-nav'>
     
       <button className="loginmodal-button"onClick={() => setShowModal(true)}>
