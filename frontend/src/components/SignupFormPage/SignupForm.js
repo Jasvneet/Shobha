@@ -39,42 +39,44 @@ function SignupForm(){
   
     return (
       <>
+      <div className="signup-heading">
+        <h2>Create an Account</h2>
+      </div>
        
       <form onSubmit={handleSubmit} className="signup-form">
         <ul>
           {errors.map(error => <li key={error}>{error}</li>)}
         </ul>
         <div>
-          <h1>Create an Account</h1>
-        </div>
-        <img className='insider-logo' src="/images/logo-beauty-insider.svg"/>
-        <p>Join the Beauty Insider loyalty program. Earn points, get FREE standard shipping, redeem rewards, and more.</p>
-        <br />
-        <div className="name-input">
-        <label className="first-name ">
-          <input className="name-input"
-            type="text"
-            placeholder="First Name"
-            value={firstname}
-            onChange={(e) => setFirstname(e.target.value)}
-            required
-          />
-           
-        </label>
-        <br />
-        <label>
-          <input className="name-input"
-            type="text"
-            placeholder="Last Name"
-            value={lastname}
-            onChange={(e) => setLastname(e.target.value)}
-            required
-          />
-        </label>
+          <img className='insider-logo' src="/images/logo-beauty-insider.svg"/>
+          <p>Join the Beauty Insider loyalty program. Earn points, get <strong>FREE standard shipping</strong>, redeem rewards, and more.</p>
         </div>
         <br />
+        <div className="fullname">
+          <label className="first-name ">
+            <input className="name-input"
+              type="text"
+              placeholder="First Name"
+              value={firstname}
+              onChange={(e) => setFirstname(e.target.value)}
+              required
+            />
+            
+          </label>
+          <br />
+          <label className="last-name">
+            <input className="name-input"
+              type="text"
+              placeholder="Last Name"
+              value={lastname}
+              onChange={(e) => setLastname(e.target.value)}
+              required
+            />
+          </label>
+        </div>
+        <br />
         <label>
-          <input className="text-input"
+          <input className="signup-text-input"
             type="text"
             placeholder="Email Address"
             value={email}
@@ -85,7 +87,7 @@ function SignupForm(){
         
         <br />
         <label>
-          <input className="text-input"
+          <input className="signup-text-input"
             type="password"
             placeholder="Password (minimum: 6 characters)"
             value={password}
@@ -95,7 +97,7 @@ function SignupForm(){
         </label>
         <br />
         <label>
-          <input className="text-input"
+          <input className="signup-text-input"
             type="password"
             placeholder="Confirm Password"
             value={confirmPassword}
@@ -104,8 +106,10 @@ function SignupForm(){
           />
         </label>
         <br />
-        <p>By clicking “Join Now” you acknowledge that you are a U.S. or Canada resident and (1) have read Sephora’s Privacy Policy and Notice of Financial Incentive, (2), agree to TERMS OF USE, BEAUTY INSIDER TERMS, and to automatically receive Beauty Insider offers and notifications via email.</p>
-        <button type="submit" className="signup-button">Join Now</button>
+        <div className="footer">
+          <p>By clicking “Join Now” you acknowledge that you are a U.S. or Canada resident and (1) have read Sephora’s Privacy Policy and Notice of Financial Incentive, (2), agree to TERMS OF USE, BEAUTY INSIDER TERMS, and to automatically receive Beauty Insider offers and notifications via email.</p>
+          <button type="submit" className="signup-button">Join Now</button>
+        </div>
       </form>
       </>
     );
