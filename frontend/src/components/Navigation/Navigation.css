@@ -1,3 +1,4 @@
+
 .freeShipping-button {
   border-style: none;
   background-color: #C0DCF1;
@@ -20,6 +21,31 @@
   text-decoration: underline;
 }
 
+.profile-button {
+  border: none;
+  background-color: transparent;
+  display: flex;
+  line-height: 1.25;
+  align-items: center;
+  min-width: 8em;
+}
+
+.user-greeting {
+  font-size: 14px;
+}
+
+.profile-icon {
+  object-fit: cover;
+  width: 32px;
+  height: 32px;
+  margin-top: -4px;
+  margin-bottom: -4px;
+  margin-right: 12px;
+  display: inline-block;
+  max-width: 100%;
+}
+
+
 
 .icon {
   display: inline-block;
@@ -40,6 +66,8 @@
   font-size: 24px;
   margin-right: 12px;
   margin-top: -0.125em;
+  
+
 }
 
 
@@ -62,11 +90,24 @@
 
 .nav1 {
     display: flex;
-    justify-content: space-evenly;
+    justify-content: space-between;
     font-family: Arial, Helvetica, sans-serif;
-    margin-right: -12px;
+    margin-right: 12px;
     margin-top: 12px;
     margin-bottom: 12px;
+}
+
+.nav1-home {
+  display: flex;
+  align-items: center;
+  padding-left: 16px;
+  margin-left: 16px;
+  padding-right: 16px;
+  margin-right: -16px;
+}
+
+.nav1-dropdowns {
+  display: flex;
 }
 
 .home-link {
@@ -88,6 +129,11 @@ ul li {
   border-style: none;
   font-family: Arial, Helvetica, sans-serif;
   display: flex;
+
+  padding-top: 20px;
+  padding-bottom: 20px;
+  /* padding-left: 12px; */
+  /* padding-right: 12px; */
 }
 
 
@@ -115,9 +161,9 @@ ul li {
 
 .nav2 {
   background-color: black;
-  font-size: 0;
+
   white-space: nowrap;
-  padding: 8px;
+  padding: 7px;
   padding-left: 0;
   text-align: center;
   border-bottom: 1px solid #eee;
@@ -128,20 +174,34 @@ ul li {
 
 .nav2-links {
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   text-align: center;
   align-items: center;
   position: relative;
+  width: 100%;
+  max-width: 1280px;
+  padding-left: 16px;
+  padding-right: 16px;
+  margin-left: auto;
+  margin-right: auto;
+ 
 }
 
 .nav2-link {
-  color: white;
+  color: rgb(246, 242, 242);
   font-family: Arial, Helvetica, sans-serif;
   font-size: 14px;
+  
   text-decoration: none;
   width: 100%;
   line-height: 1.25;
-  padding: 8px;
+  padding: 10px;
   position: static;
   width: 100%;
+  display: flex;
+  flex-grow: 1;
+  justify-content: center;
+  text-align: center;
+  flex-wrap: wrap;
+  
 }
