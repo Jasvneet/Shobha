@@ -4,6 +4,7 @@ import MainCarousel from './components/Carousel1/carousel1';
 
 import Navigation from "./components/Navigation";
 import ProductShow from './components/Product/ProductShow';
+import ProductIndex from './components/Product/ProductIndex';
 
 function App() {
   return (
@@ -11,7 +12,8 @@ function App() {
       <Navigation />
           <Switch>
           <Route exact path="/" component={MainCarousel} />
-            <Route exact path="/products/:productId" component={ProductShow} />
+          <Route exact path="/products/:productId" component={ProductShow} />
+          <Route exact path="/products" component={ProductIndex} />
 
           
           </Switch>

@@ -1,11 +1,11 @@
 import { useEffect } from 'react';
 import { Link, useParams } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
-import { fetchProduct } from '../../store/product';
+import { fetchProduct } from '../../store/products';
 
 const ProductShow = () => {
     const {productId} = useParams();
-    const product = useSelector(state => state.product[productId]);
+    const product = useSelector(state => state.products[productId]);
     const dispatch = useDispatch();
 
     useEffect(() => {
@@ -13,8 +13,12 @@ const ProductShow = () => {
 
             dispatch(fetchProduct(productId))
         }
-    }, [productId]);
-    console.log(productId);
+    }, [dispatch, productId]);
+
+    if (product === undefined) {
+        return null 
+    }
+   
     return (
         <>
             <h1>ProductShow</h1>

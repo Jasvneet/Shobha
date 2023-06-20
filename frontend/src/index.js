@@ -8,7 +8,7 @@ import { BrowserRouter } from 'react-router-dom';
 import { ModalProvider } from './context/Modal';
 import csrfFetch from './store/csrf';
 import * as sessionActions from './store/session';
-import * as productActions from './store/product'
+import * as productActions from './store/products'
 
 const store = configureStore();
 
