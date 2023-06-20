@@ -35,15 +35,52 @@ ApplicationRecord.transaction do
      
     )
 
-   Product.create!(
-    name: 'Glowscreen SPF 40 Sunscreen with Hyaluronic Acid + Niacinamide',
-    description: "What it is: A hydrating, makeup-gripping primer with SPF 40 and blue-light protection that has a pearlescent finish to leave skin luminous with an instant glow.\n\nSkincare Concerns: Dullness, Dryness, and Fine Lines and Wrinkles\n\nFormulation: Lotion\n\nHighlighted Ingredients:\n\n- Hyaluronic Acid and Vitamin B5: Help boost moisture in the skin, leaving it feeling soft and nurtured.\n\n- Sea Lavender: Helps provide powerful antioxidant protection while also supporting long-lasting hydration.\n\n- Cocoa Peptides: Help protect the skin from blue-light damage.\n\nIngredient Callouts: This product is cruelty-free, and gluten-free.\n\nWhat Else You Need to Know: This multitasking primer with SPF gives skin an instant glow-up. Formulated with hyaluronic acid, niacinamide & vitamin B5 to hydrate & perfect, this broad spectrum tinted sunscreen creates an instant glow on its own or under makeup. Plus, it helps filter blue light from tech!",
-    price: 48.00,
-    size: 2.5,
-    ingredients: 'Active: Avobenzone 3%, Octisalate 5%, Octocrylene 10% Inactive: Water, Propanediol, Butyloctyl Salicylate, Glycerin, C12-15 Alkyl Benzoate, Polymethylsilsesquioxane, Niacinamide, Glyceryl Stearate Citrate, Bismuth Oxychloride, Mica, Titanium Dioxide, Lauryl Lactate, Isododecane, Isodecyl Neopentanoate, Glyceryl Stearate, Diisopropyl Sebacate, Cetyl Phosphate, Caprylic/Capric Triglyceride, Coco-Caprylate, Ethylhexyl Hydroxystearate, Butylene Glycol, Arginine, Hydroxyacetophenone, Caprylyl Glycol, 1,2-Hexanediol, Iron Oxides, Sodium Hyaluronate, Chlorphenesin, Acrylates/C10-30 Alkyl Acrylate Crosspolymer, Trisodium Ethylenediamine Disuccinate, Phospholipids, Limonium Gerberi Extract, Leuconostoc/ Radish Root Ferment Filtrate, Theobroma Cacao (Cocoa) Seed Extract, Pantothenic Acid, Tocopherol, Helianthus Annuus (Sunflower) Seed Oil, Ferulic Acid', 
-    brand: 'Supergoop!',
-    category: 'Skincare, Face Sunscreen'
+
+
+    
+   
+
+   
+
+    Product.create!(
+      name: 'Glowscreen SPF 40 Sunscreen with Hyaluronic Acid + Niacinamide',
+      price: 48.0,
+      size: 2.5,
+      ingredients: 'Active: Avobenzone 3%, Octisalate 5%, Octocrylene 10% Inactive: Water, Propanediol, Butyloctyl Salicylate, Glycerin, C12-15 Alkyl Benzoate, Polymethylsilsesquioxane, Niacinamide, Glyceryl Stearate Citrate, Bismuth Oxychloride, Mica, Titanium Dioxide, Lauryl Lactate, Isododecane, Isodecyl Neopentanoate, Glyceryl Stearate, Diisopropyl Sebacate, Cetyl Phosphate, Caprylic/Capric Triglyceride, Coco-Caprylate, Ethylhexyl Hydroxystearate, Butylene Glycol, Arginine, Hydroxyacetophenone, Caprylyl Glycol, 1,2-Hexanediol, Iron Oxides, Sodium Hyaluronate, Chlorphenesin, Acrylates/C10-30 Alkyl Acrylate Crosspolymer, Trisodium Ethylenediamine Disuccinate, Phospholipids, Limonium Gerberi Extract, Leuconostoc/ Radish Root Ferment Filtrate, Theobroma Cacao (Cocoa) Seed Extract, Pantothenic Acid, Tocopherol, Helianthus Annuus (Sunflower) Seed Oil',
+      brand: 'Supergoop!',
+      category: 'Skincare, Face Sunscreen',
+      description: 'this is amazing\n\n'
     )
+
+
+
+
+  
+
+  #  Product.create!(
+  #   name: 'Glowscreen SPF 40 Sunscreen with Hyaluronic Acid + Niacinamide',
+  #   price: 48.0,
+  #   size: 2.5,
+  #   ingredients: 'Active: Avobenzone 3%, Octisalate 5%, Octocrylene 10% Inactive: Water, Propanediol, Butyloctyl Salicylate, Glycerin, C12-15 Alkyl Benzoate, Polymethylsilsesquioxane, Niacinamide, Glyceryl Stearate Citrate, Bismuth Oxychloride, Mica, Titanium Dioxide, Lauryl Lactate, Isododecane, Isodecyl Neopentanoate, Glyceryl Stearate, Diisopropyl Sebacate, Cetyl Phosphate, Caprylic/Capric Triglyceride, Coco-Caprylate, Ethylhexyl Hydroxystearate, Butylene Glycol, Arginine, Hydroxyacetophenone, Caprylyl Glycol, 1,2-Hexanediol, Iron Oxides, Sodium Hyaluronate, Chlorphenesin, Acrylates/C10-30 Alkyl Acrylate Crosspolymer, Trisodium Ethylenediamine Disuccinate, Phospholipids, Limonium Gerberi Extract, Leuconostoc/ Radish Root Ferment Filtrate, Theobroma Cacao (Cocoa) Seed Extract, Pantothenic Acid, Tocopherol, Helianthus Annuus (Sunflower) Seed Oil, Ferulic Acid', 
+  #   brand: 'Supergoop!',
+  #   category: 'Skincare, Face Sunscreen',
+  #   description: <<-HTML
+  #   What it is: A hydrating, makeup-gripping primer with SPF 40 and blue-light protection that has a pearlescent finish to leave skin luminous with an instant glow.
+
+  #   Skincare Concerns: Dullness, Dryness, and Fine Lines and Wrinkles
+
+  #   Formulation: Lotion
+
+  #   Highlighted Ingredients:
+  #   - Hyaluronic Acid and Vitamin B5: Help boost moisture in the skin, leaving it feeling soft and nurtured.
+  #   - Sea Lavender: Helps provide powerful antioxidant protection while also supporting long-lasting hydration.
+  #   - Cocoa Peptides: Help protect the skin from blue-light damage.
+
+  #   Ingredient Callouts: This product is cruelty-free, and gluten-free.
+
+  #   What Else You Need to Know: This multitasking primer with SPF gives skin an instant glow-up. Formulated with hyaluronic acid, niacinamide & vitamin B5 to hydrate & perfect, this broad spectrum tinted sunscreen creates an instant glow on its own or under makeup. Plus, it helps filter blue light from tech!
+  # HTML
+  #   )
 
    Product.create!(
     name: 'Glowscreen SPF 40 Sunscreen with Hyaluronic Acid + Niacinamide',

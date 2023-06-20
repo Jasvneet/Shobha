@@ -2,6 +2,7 @@ import { useEffect } from 'react';
 import { Link, useParams } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
 import { fetchProduct } from '../../store/products';
+import './Product.css'
 
 const ProductShow = () => {
     const {productId} = useParams();
@@ -21,9 +22,17 @@ const ProductShow = () => {
    
     return (
         <>
-            <h1>ProductShow</h1>
-            <h2>{product.name}</h2>
-            <p>{product.description}</p>
+           <div className='prod-sec1'>
+                <div className='image'></div>
+                <div className='name-price-size'>
+                    <a  className='brand' href='#'>{product.brand}</a>
+                    <span className='name'>{product.name}</span>
+                    <b className='price'>${product.price}</b>
+                    <span className='size'>Size: {product.size} oz</span>
+                </div>
+
+           </div>
+           
         </>
     )
 }

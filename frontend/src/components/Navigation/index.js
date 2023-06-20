@@ -1,5 +1,5 @@
 import React from 'react';
-import { NavLink } from 'react-router-dom';
+import { NavLink, Link } from 'react-router-dom';
 import { useSelector } from 'react-redux';
 import ProfileButton from './ProfileButton';
 import LoginFormModal from '../LoginFormModal';
@@ -87,7 +87,7 @@ function Navigation() {
             {sessionLinks}
           </li>
 
-          <li id='chat-icon-container'>
+          <li className='nav1-icon-container'>
           <div id="icon-container" className='dropdown'>
             <svg width="24" height="24" fill="none" className="nav-icon">
               <g fill="none" fillRule="evenodd">
@@ -104,7 +104,7 @@ function Navigation() {
           </div>
           </li>
             
-          <li id='heart-icon-container'>
+          <li className='nav1-icon-container'>
 
           <div id="icon-container" className='dropdown'>
               <svg className="nav-icon" id='original-icon'>
@@ -119,7 +119,7 @@ function Navigation() {
           </div>
           </li>
 
-          <li>
+          <li className='nav1-icon-container'>
             <div>
               <div id="icon-container" className='dropdown'>
               <svg className='nav-icon' data-at="basket_icon_large" id='original-icon'>
@@ -143,7 +143,9 @@ function Navigation() {
               <a className='nav2-link' href='#'>Brands</a>
           </li>
           <li>
+            <NavLink to={'/products'} className='nav2-link'>
               <a className='nav2-link' href='#'>Makeup</a>
+            </NavLink>
           </li>
           <li>
               <a className='nav2-link' href='#'>Skincare</a>

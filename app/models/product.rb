@@ -15,5 +15,6 @@
 #
 class Product < ApplicationRecord
     validates :name, :description, :price, :size, :category, :brand, :ingredients, presence: true 
-    
+
+ 
 end
