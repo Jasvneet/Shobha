@@ -1,3 +1,9 @@
+.products {
+    display: flex;
+    margin: 100px;
+   
+}
+
 .prod-sec1 {
     display: flex;
     justify-content: center;
@@ -30,4 +36,33 @@
 .image {
     height: 500px;
     width: 500px;
+}
+
+.index-item {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    font-size: 14px;
+    line-height: 1.25;
+   
+    position: relative;
+  
+    
+}
+
+.brand-index {
+    font-size: 12px;
+    font-weight: 700;
+}
+
+.price-index {
+    display: flex;
+    text-align: left;
+    font-size: 16px;
+    font-weight: 700;
+}
+
+.show-link {
+    text-decoration: none;
+    color: black;
 }

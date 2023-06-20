@@ -1,13 +1,16 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 import { useDispatch } from 'react-redux';
+import './Product.css'
 
 const ProductIndexItem = ({product}) => {
     
 
     return (
-        <li>
-            <Link to={`/products/${product.id}`}>{product.name}</Link>
+        <li className='index-item'>
+            <span className='brand-index'>{product.brand}</span>
+            <NavLink to={`/products/${product.id}`} className="show-link">{product.name}</NavLink>
+            <span className='price-index'>${product.price}</span>
         </li>
     )
 }

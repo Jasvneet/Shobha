@@ -3,6 +3,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import { Link } from 'react-router-dom';
 import ProductIndexItem from './ProductIndexItem';
 import { fetchProducts } from '../../store/products';
+import './Product.css'
 
 const ProductIndex = ()=> {
     const dispatch = useDispatch();
@@ -16,8 +17,7 @@ const ProductIndex = ()=> {
 
     return (
         <>
-            <ul>
-                <h1>Products Index</h1>
+            <ul className='products'>
                 {products.map(product => 
                     <ProductIndexItem product={product}/> 
                     )}
