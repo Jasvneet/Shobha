@@ -1,6 +1,8 @@
 .products {
     display: flex;
-    margin: 100px;
+    margin: 200px;
+    flex-wrap: wrap;
+   
    
 }
 
@@ -38,16 +40,27 @@
     padding-top: 80px;
 }
 
+.index-image-container img {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
 
 
 .index-item {
     display: flex;
     flex-direction: column;
-    width: 100%;
+    width: 25%;
+    min-height: 354px;
     font-size: 14px;
     line-height: 1.25;
-   text-align: left;
+    text-align: left;
     position: relative;
+    margin-right: 30px;
+    padding: 24px 12px;
+    
   
     
 }

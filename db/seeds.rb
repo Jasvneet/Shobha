@@ -65,7 +65,7 @@ require "open-uri"
  
 })
 
-  p1.photo.attach(io: URI.open('https://shobha-seeds.s3.us-west-1.amazonaws.com/Supergoop-Glowscreen-48.webp'), filename: 'Supergoop-Glowscreen-48.webp')
+  p1.photo.attach(io: URI.open('https://shobha-seeds.s3.us-west-1.amazonaws.com/Supergoop-GlowScreen-Value-Size.webp'), filename: 'Supergoop-GlowScreen-Value-Size.webp')
 
    p2 = Product.create!({
     name: 'Glowscreen SPF 40 Sunscreen with Hyaluronic Acid + Niacinamide',
@@ -77,10 +77,11 @@ require "open-uri"
     category: 'Skincare, Face Sunscreen'
 })
 
+p2.photo.attach(io: URI.open('https://shobha-seeds.s3.us-west-1.amazonaws.com/Supergoop-Glowscreen-48.webp'), filename: 'Supergoop-Glowscreen-48.webp')
     
 
-   Product.create!({
-    name: 'Glowscreen SPF 40 Sunscreen with Hyaluronic Acid + Niacinamide',
+  p3 = Product.create!({
+    name: 'Mini Glowscreen SPF 40 Sunscreen with Hyaluronic Acid + Niacinamide',
     description: "What it is: A hydrating, makeup-gripping primer with SPF 40 and blue-light protection that has a pearlescent finish to leave skin luminous with an instant glow.\n\nSkincare Concerns: Dullness, Dryness, and Fine Lines and Wrinkles\n\nFormulation: Lotion\n\nHighlighted Ingredients:\n\n- Hyaluronic Acid and Vitamin B5: Help boost moisture in the skin, leaving it feeling soft and nurtured.\n\n- Sea Lavender: Helps provide powerful antioxidant protection while also supporting long-lasting hydration.\n\n- Cocoa Peptides: Help protect the skin from blue-light damage.\n\nIngredient Callouts: This product is cruelty-free, and gluten-free.\n\nWhat Else You Need to Know: This multitasking primer with SPF gives skin an instant glow-up. Formulated with hyaluronic acid, niacinamide & vitamin B5 to hydrate & perfect, this broad spectrum tinted sunscreen creates an instant glow on its own or under makeup. Plus, it helps filter blue light from tech!",
     price: 22.00,
     size: 0.68,
@@ -89,7 +90,9 @@ require "open-uri"
     category: 'Skincare, Face Sunscreen'
 })
 
-   Product.create!({
+p3.photo.attach(io: URI.open('https://shobha-seeds.s3.us-west-1.amazonaws.com/mini-glowscreen.webp'), filename: 'mini-glowscreen.webp')
+
+ p4 = Product.create!({
     name: 'CC+ Cream Full Coverage Color Correcting Foundation with SPF 50+',
     description: "What it is: The #1 SPF foundation in America* is a full-coverage foundation, hydrating & anti-aging serum, and SPF 50+ sunscreen in one—now in extended shades.\n\nSkincare Concerns: Dullness, Dryness, and Fine Lines and Wrinkles\n\nFormulation: Lotion\n\nHighlighted Ingredients:\n\n- Hyaluronic Acid: Hydrates and plumps while minimizing the look of fine lines & wrinkles.\n\n- -Niacinamide: Minimizes the look of discoloration & promotes even-toned, radiant skin.\n\n-Vitamin E: Helps soothe and nourish skin\n\nWhat Else You Need to Know: The full coverage, natural finish of a CC cream foundation meets hydration to color correct and camouflage skin concerns like acne scars, wrinkles, redness, dark circles under eyes, large pores & uneven skin tone. Made with skin-loving ingredients, it moisturizes for visibly healthy & smooth skin.",
     price: 47.00,
@@ -98,8 +101,10 @@ require "open-uri"
     brand: 'IT Cosmetics',
     category: 'Skincare, Makeup, BB & CC Creams'
 })
+
+p4.photo.attach(io: URI.open('https://shobha-seeds.s3.us-west-1.amazonaws.com/IT-CC-SPF50-47.webp'), filename: 'IT-CC-SPF50-47.webp')
     
-   Product.create!({
+p5 = Product.create!({
     name: 'CC+ Cream Full Coverage Color Correcting Foundation with SPF 50+',
     description: "What it is: The #1 SPF foundation in America* is a full-coverage foundation, hydrating & anti-aging serum, and SPF 50+ sunscreen in one—now in extended shades.\n\nSkincare Concerns: Dullness, Dryness, and Fine Lines and Wrinkles\n\nFormulation: Lotion\n\nHighlighted Ingredients:\n\n- Hyaluronic Acid: Hydrates and plumps while minimizing the look of fine lines & wrinkles.\n\n- -Niacinamide: Minimizes the look of discoloration & promotes even-toned, radiant skin.\n\n-Vitamin E: Helps soothe and nourish skin\n\nWhat Else You Need to Know: The full coverage, natural finish of a CC cream foundation meets hydration to color correct and camouflage skin concerns like acne scars, wrinkles, redness, dark circles under eyes, large pores & uneven skin tone. Made with skin-loving ingredients, it moisturizes for visibly healthy & smooth skin.",
     price: 21.00,
@@ -109,8 +114,10 @@ require "open-uri"
     category: 'Skincare, Makeup, BB & CC Creams'
 })
 
+p5.photo.attach(io: URI.open('https://shobha-seeds.s3.us-west-1.amazonaws.com/mini-IT-CC-SPF50-21.webp'), filename: 'mini-IT-CC-SPF50-21.webp')
 
-Product.create!({
+
+p6 = Product.create!({
     name: 'Gloss Bomb Universal Lip Luminizer',
     description: "What it is: A lip gloss that delivers explosive shine in three universal shades handpicked by Rihanna herself.\n\nHighlighted Ingredients:\n\n- Shea Butter: Hydrates and nourishes lips.\n\n- Vitamin E: Helps soothe and nourish skin.\n\nIngredient Callouts: Free of parabens and phthalates. This product is also cruelty-free.\n\nWhat Else You Need to Know: Gloss Bomb Universal Lip Luminizer is the ultimate finishing touch to any look. The non-sticky formula is super shiny and has an addictive peach-vanilla scent. Plus, it's enriched with skin-loving ingredients to make your lips look smooth, plump, and kissable. “I made it because I wanted the girls to get kissed more.”—Rihanna, Brand Founder",
     price: 21.00,
@@ -119,6 +126,8 @@ Product.create!({
     brand: 'Fenty Beauty by Rihanna',
     category: 'Makeup, Lip Gloss'
 })
+
+p6.photo.attach(io: URI.open('https://shobha-seeds.s3.us-west-1.amazonaws.com/Fenty-Gloss-Bomb-Universal-21.webp'), filename: 'Fenty-Gloss-Bomb-Universal-21.webp')
 
 # Product.create!( 
 #   name: 'ShineOn Lip Jelly Non-Sticky Gloss', 

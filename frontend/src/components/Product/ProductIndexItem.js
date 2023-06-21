@@ -8,6 +8,9 @@ const ProductIndexItem = ({product}) => {
 
     return (
         <li className='index-item'>
+            <div className='index-image-container'>
+                <img src={product.photoUrl} />
+            </div>
             <span className='brand-index'>{product.brand}</span>
             <NavLink to={`/products/${product.id}`} className="show-link">{product.name}</NavLink>
             <span className='price-index'>${product.price}</span>
