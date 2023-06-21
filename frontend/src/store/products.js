@@ -30,9 +30,13 @@ export const fetchProducts = () => async(dispatch) => {
     }
 }
 
-// const initialState = {
-//     product: null
-//   };
+export const fetchSearchResults = (searchTerm) => async (dispatch) => {
+    const response = await fetch(`/api/products/search?query=${encodeURIComponent(searchTerm)}`);
+    if (response.ok) {
+      const data = await response.json();
+      dispatch(receiveProducts(data.products));
+    }
+  };
 
 const productsReducer = (state = {}, action) => {
     switch (action.type) {

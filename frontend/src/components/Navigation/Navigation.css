@@ -165,8 +165,7 @@ ul li {
 
 .nav2 {
   background-color: black;
-
-  white-space: nowrap;
+  display: flex;
   padding: 7px;
   padding-left: 0;
   text-align: center;
@@ -174,16 +173,14 @@ ul li {
   border-bottom-width: 1px;
   border-bottom-style: solid;
   border-bottom-color: rgb(238, 238, 238);
+  justify-content: space-between;
+
 }
 
 .nav2-links {
   display: flex;
-  justify-content: space-between;
   text-align: center;
-  align-items: center;
   position: relative;
-  width: 100%;
-  max-width: 1280px;
   padding-left: 16px;
   padding-right: 16px;
   margin-left: auto;
@@ -195,17 +192,15 @@ ul li {
   color: rgb(246, 242, 242);
   font-family: Arial, Helvetica, sans-serif;
   font-size: 14px;
-  padding: 4px;
+  padding: 3px;
   text-decoration-line: none;
-  width: 100%;
   line-height: 1.25;
-  position: static;
-  width: 100%;
   display: flex;
   flex-grow: 1;
   justify-content: center;
   text-align: center;
   flex-wrap: wrap;
+  padding-right: 20px;
   
 }
 

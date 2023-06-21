@@ -16,5 +16,16 @@
 class Product < ApplicationRecord
     validates :name, :description, :price, :size, :category, :brand, :ingredients, presence: true 
 
- 
+    has_one_attached :photo
+
+    # has_many :reviews,
+    #     foreign_key: :product_id,
+    #     class_name: :Review
+
+    def self.search(query)
+        result = where("name ILIKE :query OR description ILIKE :query OR CAST(price AS TEXT) ILIKE :query OR category ILIKE :query", query: "%#{query}%")
+        puts "Searching for: #{query}"
+        puts "Result: #{result.inspect}"
+        result
+    end
 end

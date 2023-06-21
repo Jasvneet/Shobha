@@ -23,7 +23,9 @@ const ProductShow = () => {
     return (
         <>
            <div className='prod-sec1'>
-                <div className='image'></div>
+                <div className="image-container">
+                    <img src={product.photoUrl} />
+                </div>
                 <div className='name-price-size'>
                     <a  className='brand' href='#'>{product.brand}</a>
                     <span className='name'>{product.name}</span>

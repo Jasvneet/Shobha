@@ -4,8 +4,9 @@ import { useSelector } from 'react-redux';
 import ProfileButton from './ProfileButton';
 import LoginFormModal from '../LoginFormModal';
 import './Navigation.css';
-import { FaRegComment, FaComment, FaRegHeart, FaHeart } from "react-icons/fa";
-import {BsCaretRightFill, BsBasket2, BsBasket2Fill} from "react-icons/bs"
+import '../SearchBar/SearchBar.css';
+import {GoSearch} from "react-icons/go"
+import {BsCaretRightFill} from "react-icons/bs"
 
 function Navigation() {
   const sessionUser = useSelector(state => state.session.user);
@@ -44,6 +45,15 @@ function Navigation() {
             <br />
           </li>
         </div>
+
+    
+
+        <div id="search-bar">
+         
+          <input type="text" id="search-input" placeholder="Search"/>
+        </div>
+       
+
 
       <div className='nav1-dropdowns'>
         <li>
@@ -143,7 +153,7 @@ function Navigation() {
               <a className='nav2-link' href='#'>Brands</a>
           </li>
           <li>
-            <NavLink to={'/products'} className='nav2-link'>
+            <NavLink to={'/products'}>
               <a className='nav2-link' href='#'>Makeup</a>
             </NavLink>
           </li>
