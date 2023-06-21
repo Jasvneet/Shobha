@@ -6,6 +6,7 @@ class Api::ProductsController < ApplicationController
 
   def show
     @product = Product.find_by(id: params[:id])
+    response.headers['Content-Disposition'] = 'inline'
     render :show
   end 
 

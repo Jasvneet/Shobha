@@ -3,9 +3,9 @@ import csrfFetch from './csrf';
 export const RECEIVE_PRODUCT = 'products/RECEIVE_PRODUCT'
 export const RECEIVE_PRODUCTS = 'products/RECEIVE_PRODUCTS'
 
-export const receiveProduct = (product) => ({
+export const receiveProduct = (payload) => ({
     type: RECEIVE_PRODUCT,
-    product
+    payload
 })
 
 export const receiveProducts = (products) => ({
@@ -39,14 +39,24 @@ export const fetchSearchResults = (searchTerm) => async (dispatch) => {
   };
 
 const productsReducer = (state = {}, action) => {
+    let newState = {...state}
+
     switch (action.type) {
         case RECEIVE_PRODUCTS:
-            return {...action.products};
+            if (Array.isArray(action.products)) {
+                return action.products.reduce((acc, product) => {
+                    acc[product.id] = product;
+                    return acc;
+                }, {});
+            } else {
+                return action.products;
+            }
         case RECEIVE_PRODUCT:
-            return {...state, [action.product.id]: action.product};
-        default:
-            return state;
+                newState[action.payload.product.id] = action.payload.product;
+                return newState;
+            default:
+                return state;
+        }
     }
-};
   
 export default productsReducer;

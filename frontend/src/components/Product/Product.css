@@ -31,12 +31,16 @@
     margin-top: -100px;
 }
 
-
-
-.image-container {
+.image-container img {
     height: 500px;
     width: 500px;
 }
+
+
+
+
+
+
 
 .index-item {
     display: flex;
