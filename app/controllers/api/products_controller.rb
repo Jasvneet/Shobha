@@ -14,7 +14,7 @@ class Api::ProductsController < ApplicationController
     @products = Product.search(params[:query])
     puts "Search Query: #{params[:query]}" # Add this line to debug the query
     puts "Search Results: #{@products.inspect}" # Add this line to debug the search results
-    render json: { products: @products }
+    render :search
   end
 end
 

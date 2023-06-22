@@ -34,7 +34,7 @@ export const fetchSearchResults = (searchTerm) => async (dispatch) => {
     const response = await fetch(`/api/products/search?query=${encodeURIComponent(searchTerm)}`);
     if (response.ok) {
       const data = await response.json();
-      dispatch(receiveProducts(data.products));
+      dispatch(receiveProducts(data));
     }
   };
 
@@ -43,14 +43,7 @@ const productsReducer = (state = {}, action) => {
 
     switch (action.type) {
         case RECEIVE_PRODUCTS:
-            if (Array.isArray(action.products)) {
-                return action.products.reduce((acc, product) => {
-                    acc[product.id] = product;
-                    return acc;
-                }, {});
-            } else {
-                return action.products;
-            }
+                return {...action.products};
         case RECEIVE_PRODUCT:
                 newState[action.payload.product.id] = action.payload.product;
                 return newState;

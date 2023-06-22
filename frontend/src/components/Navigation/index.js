@@ -3,11 +3,11 @@ import { NavLink, Link } from 'react-router-dom';
 import { useSelector } from 'react-redux';
 import ProfileButton from './ProfileButton';
 import LoginFormModal from '../LoginFormModal';
-import './Navigation.css';
-import '../SearchBar/SearchBar.css';
-import {GoSearch} from "react-icons/go"
 import {BsCaretRightFill} from "react-icons/bs"
 import SearchBar from '../SearchBar/Index';
+import './Navigation.css';
+import '../SearchBar/SearchBar.css';
+import "../SearchBar/SearchBar.css";
 
 function Navigation() {
   const sessionUser = useSelector(state => state.session.user);
@@ -47,15 +47,10 @@ function Navigation() {
           </li>
         </div>
 
-    
-
         <div id="search-bar">
-         
-          <SearchBar />
+              <SearchBar />
         </div>
-       
-
-
+  
       <div className='nav1-dropdowns'>
         <li>
           <div className="dropdown">
@@ -94,8 +89,11 @@ function Navigation() {
           </div>
         </li>
 
-          <li>
+          <li >
             {sessionLinks}
+            <div className="dropdown-content">
+              <p>Live Chat</p>
+            </div>
           </li>
 
           <li className='nav1-icon-container'>

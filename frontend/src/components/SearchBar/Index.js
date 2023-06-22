@@ -7,29 +7,30 @@ import { useDispatch } from "react-redux";
 import { useHistory } from "react-router-dom";
 
 
+
 const SearchBar = () => {
   const [searchTerm, setSearchTerm] = useState('');
   const dispatch = useDispatch();
   const history = useHistory();
 
-  const searchResults = useSelector((state) => Object.values(state.products));
 
   const handleKeyPress = (event) => {
     if (event.key === "Enter") {
+      history.push(`/search?query=${encodeURIComponent(searchTerm)}`);
       dispatch(fetchSearchResults(searchTerm));
-      history.push("/search");
+      setSearchTerm("")
     }
   };
 
   return (
     <div>
       <input
+        className="search-input"
         type="text"
         value={searchTerm}
         onChange={(e) => setSearchTerm(e.target.value)}
         onKeyDown={handleKeyPress}
       />
-      <h1>{searchResults.map(product => product.name)}</h1>
      
     </div>
   );
