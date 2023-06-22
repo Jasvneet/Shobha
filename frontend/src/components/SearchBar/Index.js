@@ -1,29 +1,42 @@
-const searchInput = document.getElementById("search-input");
-searchInput.addEventListener("keydown", function(event) {
-  if (event.key === "Enter") {
-    searchProduct();
-  }
-});
+import { useSelector } from "react-redux";
+import { useState } from "react";
+import "./SearchBar.css";
+import { useEffect } from "react";
+import { fetchSearchResults } from "../../store/products";
+import { useDispatch } from "react-redux";
 
-function searchProduct() {
-  const searchTerm = searchInput.value.toLowerCase();
 
-  // Make a request to the Rails API endpoint to search for the product
-  fetch(`/api/products?search=${searchTerm}`)
-    .then(response => response.json())
-    .then(data => {
-      // Handle the response data
-      if (data.length > 0) {
-        // Redirect to the first product's show page
-        const productId = data[0].id;
-        window.location.href = `/products/${productId}`;
-      } else {
-        // Handle case when no product is found
-        alert("No products found");
-      }
-    })
-    .catch(error => {
-      // Handle any errors that occur during the request
-      console.error("Error:", error);
-    });
-}
+const SearchBar = () => {
+  const [searchTerm, setSearchTerm] = useState('');
+  const dispatch = useDispatch();
+
+  const searchResults = useSelector((state) => Object.values(state.products));
+
+  const handleKeyPress = (event) => {
+    if (event.key === "Enter") {
+      dispatch(fetchSearchResults(searchTerm));
+    }
+  };
+
+  return (
+    <div>
+      <input
+        type="text"
+        value={searchTerm}
+        onChange={(e) => setSearchTerm(e.target.value)}
+        onKeyDown={handleKeyPress}
+      />
+      <h1>{searchResults.map(product => product.name)}</h1>
+     
+    </div>
+  );
+};
+
+export default SearchBar;
+
+
+
+
+
+
+

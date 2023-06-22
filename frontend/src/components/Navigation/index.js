@@ -7,6 +7,7 @@ import './Navigation.css';
 import '../SearchBar/SearchBar.css';
 import {GoSearch} from "react-icons/go"
 import {BsCaretRightFill} from "react-icons/bs"
+import SearchBar from '../SearchBar/Index';
 
 function Navigation() {
   const sessionUser = useSelector(state => state.session.user);
@@ -50,7 +51,7 @@ function Navigation() {
 
         <div id="search-bar">
          
-          <input type="text" id="search-input" placeholder="Search"/>
+          <SearchBar />
         </div>
        
 
@@ -153,8 +154,8 @@ function Navigation() {
               <a className='nav2-link' href='#'>Brands</a>
           </li>
           <li>
-            <NavLink to={'/products'}>
-              <a className='nav2-link' href='#'>Makeup</a>
+            <NavLink to={'/products'} className='nav2-link'>
+             Makeup
             </NavLink>
           </li>
           <li>
