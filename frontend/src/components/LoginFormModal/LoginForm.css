@@ -9,18 +9,17 @@
     flex-direction: column;
     margin: 0;
     width: 400px;
-    
-    
 }
 
 .login-nav {
     display: inline-flex;
     flex-direction: row;
     justify-content: flex-start;
-
 }
 
-
+.login-container {
+    display: flex;
+}
 
 .login-button {
     color: white;
@@ -50,17 +49,11 @@
     font-family: Arial, Helvetica, sans-serif;
     display: flex;
     flex-direction: column;
-  
-
 }
-
-
 
 span:hover {
     text-decoration: 2px underline;
 }
-
-
 
 .text-input {
     display: flex;
@@ -76,8 +69,6 @@ span:hover {
     line-height: 40px;
     border-radius: 4px;
     border: 1px solid lightgray;
-    
-    
 }
 
 #login-heading {
@@ -85,13 +76,11 @@ span:hover {
     font-weight: bold;
     font-family: Arial, Helvetica, sans-serif;
     white-space: pre-wrap;
-    
 }
 
 .login-message p {
     font-size: 14px;
 }
-
 
 .line {
     border-bottom: 1px solid rgba(0, 0, 0, 0.063);
@@ -136,7 +125,6 @@ strong {
     border-radius: 99999px;
     appearance: none;
     color: rgb(0, 0, 0);
-   
 }
 
 #terms-of-use {
@@ -148,10 +136,7 @@ strong {
     margin-top: 16px;
     margin-bottom: 16px;
     display: block;
-
 }
-
-
 
 #login-nav {
     display: flex;

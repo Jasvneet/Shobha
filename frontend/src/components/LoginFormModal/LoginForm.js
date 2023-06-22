@@ -41,7 +41,7 @@ function LoginForm(props) {
       setShowLoginForm(false);
     };
   
-    const handleCloseSignupModal = () => {
+   const handleCloseSignupModal = () => {
       setShowSignupModal(false);
       setShowLoginForm(false);
       props.closeLogin();

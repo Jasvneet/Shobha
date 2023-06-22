@@ -1,16 +1,23 @@
 import React from 'react';
-import { NavLink, Link } from 'react-router-dom';
+import { NavLink, Link} from 'react-router-dom';
+import { useState } from 'react';
 import { useSelector } from 'react-redux';
 import ProfileButton from './ProfileButton';
 import LoginFormModal from '../LoginFormModal';
 import {BsCaretRightFill} from "react-icons/bs"
 import SearchBar from '../SearchBar/Index';
+import LoginForm from '../LoginFormModal/LoginForm';
+import { Modal } from '../../context/Modal';
 import './Navigation.css';
 import '../SearchBar/SearchBar.css';
-import "../SearchBar/SearchBar.css";
+import "../LoginFormModal/LoginForm.css";
+import SignupForm from '../SignupFormPage/SignupForm';
 
 function Navigation() {
   const sessionUser = useSelector(state => state.session.user);
+  const [showModal, setShowModal] = useState(false);
+  const [showSignupModal, setShowSignupModal] = useState(false);
+  const [showLoginForm, setShowLoginForm] = useState(true);
 
   let sessionLinks;
   if (sessionUser) {
@@ -22,11 +29,21 @@ function Navigation() {
     sessionLinks = (
       <>
         <LoginFormModal />
-        
-       
       </>
     );
   }
+
+  const handleOpenSignupModal = () => {
+    setShowSignupModal(true);
+    setShowLoginForm(false);
+  };
+
+ const handleCloseSignupModal = () => {
+    setShowSignupModal(false);
+    setShowLoginForm(false);
+    <LoginForm closeLogin={setShowModal}/>
+  };
+
 
   return (
     <>
@@ -47,7 +64,7 @@ function Navigation() {
           </li>
         </div>
 
-        <div id="search-bar">
+        <div>
               <SearchBar />
         </div>
   
@@ -90,10 +107,49 @@ function Navigation() {
         </li>
 
           <li >
-            {sessionLinks}
-            <div className="dropdown-content">
-              <p>Live Chat</p>
-            </div>
+            <div className='user-dropdown'>
+              {sessionLinks}
+              
+              <div className="dropdown-content">
+
+                <div className='user-icon-msg'>
+                  <div>
+                    <img src='/images/profile-icon-active.svg'/>
+                  </div>
+
+                  <div className='user-msg'>
+                    <h3><strong>Good afternoon, Beautiful. </strong>👋 </h3>
+                    <p>Sign in for <strong>FREE standard shipping</strong> on all orders.</p>
+                  </div>
+                </div>
+
+
+                <div className='user-buttons'>
+                  <div className='user-signin-button'>
+                    <button onClick={() => setShowModal(true)}>
+                      Sign In
+                    </button>
+                  </div>
+                    {showModal && (
+                      <Modal onClose={() => setShowModal(false)}>
+                        <LoginForm closeLogin={setShowModal}/>
+                      </Modal>
+                    )}
+                  <div className='user-signup-button'>
+                    <button onClick={handleOpenSignupModal} >
+                      Create Account
+                    </button>
+
+                    {showSignupModal && !showLoginForm && (
+                      <Modal onClose={handleCloseSignupModal}>
+                        <SignupForm />
+                      </Modal>
+                      )}
+                  </div>
+                  </div>
+
+                </div>
+              </div>
           </li>
 
           <li className='nav1-icon-container'>
@@ -105,8 +161,7 @@ function Navigation() {
                 <path fill="currentColor" d="m14.692 8.885 6.769-7.193.667.629-6.769 7.192z"></path>
               </g>
             </svg>
-            {/* <span id="original-icon" class="icon"><FaRegComment /></span>
-            <span id="replacement-icon" class="icon"><FaComment /></span> */}
+          
             <div className="dropdown-content">
               <p>Live Chat</p>
             </div>

@@ -7,20 +7,21 @@ function LoginFormModal() {
 
   return (
     <>
-    <img src='/images/profile-icon.svg'/>
-    <div id='login-nav'>
-    
-      <button className="loginmodal-button"onClick={() => setShowModal(true)}>
-       
-        <strong>Sign In</strong>
-        <span>for FREE Shipping 🚚</span>
-      </button>
-    </div>
-      {showModal && (
-        <Modal onClose={() => setShowModal(false)}>
-          <LoginForm closeLogin={setShowModal}/>
-        </Modal>
-      )}
+   <div className='login-container'>
+      <img src='/images/profile-icon.svg'/>
+      <div id='login-nav'>
+        <button className="loginmodal-button"onClick={() => setShowModal(true)}>
+        
+          <strong>Sign In</strong>
+          <span>for FREE Shipping 🚚</span>
+        </button>
+      </div>
+        {showModal && (
+          <Modal onClose={() => setShowModal(false)}>
+            <LoginForm closeLogin={setShowModal}/>
+          </Modal>
+        )}
+   </div>
     </>
   );
 }

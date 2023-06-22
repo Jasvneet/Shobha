@@ -9,6 +9,7 @@ const ProductShow = () => {
     const product = useSelector(state => state.products[productId]);
     const dispatch = useDispatch();
     const [showIngredients, setShowIngredients] = useState(false);
+    const [showHow, setShowHow] = useState(false);
 
     useEffect(() => {
         if (productId){
@@ -24,6 +25,10 @@ const ProductShow = () => {
     const toggleIngredients = () => {
         setShowIngredients(!showIngredients);
     };
+
+    const toggleHow = () => {
+        setShowHow(!showHow)
+    }
    
     return (
         <>
@@ -38,13 +43,39 @@ const ProductShow = () => {
                         <p className='name'>{product.name}</p>
                     </div>
                     <b className='price'><strong>${product.price}0</strong> get 25% off you Shobha order when you open and use a Shobha Credit Card today. </b>
-                    <span className='size'>Size: {product.size} oz</span>
+                    <p className='size'>Size: {product.size} oz</p>
                 </div>
            </div>
+           <div className='divider'/>
 
-           <div className="ingredients">
+           <div className='section'>
+                <div>
+                    <h2>Highlights</h2>
+                </div>
+
+                <div>
+                    <ul>
+
+                    </ul>
+                </div>
+            </div>   
+
+            <div className='divider'/>
+
+            <div className='section'>
+                <div className='about-heading'>
+                    <h2>About the Product</h2>
+                </div>
+                <div className='what'>
+                    <p>{product.description}</p>
+                </div>
+            </div>
+
+            <div className='divider'/>
+
+            <div className="section-drop">
     
-                    <button onClick={toggleIngredients} className='ingredients-button'>
+                    <button onClick={toggleIngredients} className='section-button'>
                         <h2>Ingredients</h2>
                         <div>
                             {showIngredients ? '-' : '+'}
@@ -54,8 +85,36 @@ const ProductShow = () => {
                 {showIngredients && (
                     <p>{product.ingredients}</p>
                 )}
-              
             </div>
+
+            <div className='divider'/>
+
+            <div className='section-drop'>
+
+            <button onClick={toggleHow} className='section-button'>
+                        <h2>How to Use</h2>
+                        <div>
+                            {showHow ? '-' : '+'}
+                        </div>
+                    </button>
+
+                {showHow && (
+                    <p>Suggested Usage:</p>
+                )}
+            </div>
+
+            <div className='divider'/>
+
+            <div className='similar-products'>
+             <h2>You may Also Like </h2>
+            </div>
+
+            <div className='divider'/>
+            
+            <div className='reviews-show'>
+                    <h2>Ratings & Reviews</h2>
+            </div>
+
         </div>
            
         </>

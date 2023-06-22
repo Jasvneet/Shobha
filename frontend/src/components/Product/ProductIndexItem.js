@@ -13,7 +13,7 @@ const ProductIndexItem = ({product}) => {
             </div>
             <span className='brand-index'>{product.brand}</span>
             <NavLink to={`/products/${product.id}`} className="show-link">{product.name}</NavLink>
-            <span className='price-index'>${product.price}</span>
+            <b className='price-index'>${product.price}0</b>
         </li>
     )
 }

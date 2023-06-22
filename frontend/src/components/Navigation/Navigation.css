@@ -16,7 +16,6 @@
   margin: auto;
 }
 
-
 .freeShipping-text:hover {
   text-decoration: underline;
 }
@@ -45,8 +44,6 @@
   max-width: 100%;
 }
 
-
-
 .icon {
   display: inline-block;
   width: 24px; 
@@ -57,7 +54,6 @@
   padding-bottom: 16px;
   padding-left: 12px;
   padding-right: 12px;
-  
 }
 
 .nav-icon {
@@ -66,15 +62,12 @@
   font-size: 24px;
   margin-right: 12px;
   margin-top: -0.125em;
-  
-
 }
 
 .nav1-icon-container {
   padding-left: 12px;
   padding-right: 12px;
 }
-
 
 #icon-container:hover #replacement-icon {
   display: inline-block;
@@ -91,14 +84,13 @@
   left: 0;
 }
 
-
 .nav1 {
-    display: flex;
-    justify-content: center;
-    font-family: Arial, Helvetica, sans-serif;
-    margin-right: 12px;
-    margin-top: 12px;
-    margin-bottom: 12px;
+  display: flex;
+  justify-content: center;
+  font-family: Arial, Helvetica, sans-serif;
+  margin-right: 12px;
+  margin-top: 12px;
+  margin-bottom: 12px;
 }
 
 .nav1-home {
@@ -140,28 +132,101 @@ ul li {
   padding-right: 12px;
 }
 
+.user-dropdown {
+  position: relative;
+  display: inline-block;
+
+}
+.user-dropdown:hover .dropdown-content {
+  display: flex;
+  border-radius: 8px;
+  flex-direction: column;
+  width: 200%;
+}
+
+.dropdown-content img {
+  width: 50px;
+}
+
+.user-icon-msg {
+  display: flex;
+}
+
+.user-buttons {
+  display: flex;
+  flex-direction: row;
+  margin-top: 10px; 
+}
+
+.user-signin-button button {
+  background-color: black;
+  color: white;
+  border-style: none;
+  font-size: 12px;
+  font-family: Arial, Helvetica, sans-serif;
+  border-radius: 99999px;
+  border: 2px solid black;
+  height: 35px;
+  width: 155px;
+  align-items: center;
+  text-align: center;
+  margin-right: 10px;
+}
+
+.user-signup-button button {
+  background-color: white;
+  color: black;
+  border: 2px solid black;
+  border-radius: 99999px;
+  font-size: 12px;
+  font-weight: 700;
+  font-family: Arial, Helvetica, sans-serif;
+  height: 35px;
+  width: 155px;
+  align-items: center;
+  text-align: center;
+}
+
+.user-msg {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  margin-left: 10px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.user-msg h3 {
+  padding-bottom: 3px;
+  font-size: 14px;
+}
+
+.user-msg p {
+  font-size: 12px;
+}
 
 
 .dropdown {
     position: relative;
     display: inline-block;
     font-size: 14px;
-  }
+}
   
-  .dropdown-content {
-    display: none;
-    position: absolute;
-    background-color: #f9f9f9;
-    min-width: 160px;
-    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-    padding: 12px 16px;
-    z-index: 1;
-    
-  }
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  padding: 12px 16px;
+  z-index: 1;
+  transform: translateX(-20%);
+  width: 200%;
+}
   
-  .dropdown:hover .dropdown-content {
-    display: block;
-  }
+.dropdown:hover .dropdown-content {
+  display: block;
+  border-radius: 8px;
+}
 
 .nav2 {
   background-color: black;
@@ -185,7 +250,6 @@ ul li {
   padding-right: 16px;
   margin-left: auto;
   margin-right: auto;
- 
 }
 
 .nav2-link {
@@ -201,7 +265,6 @@ ul li {
   text-align: center;
   flex-wrap: wrap;
   padding-right: 20px;
-  
 }
 
 

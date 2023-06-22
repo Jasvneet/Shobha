@@ -23,13 +23,14 @@ const SearchBar = () => {
   };
 
   return (
-    <div>
+    <div className="search-bar">
       <input
         className="search-input"
         type="text"
         value={searchTerm}
         onChange={(e) => setSearchTerm(e.target.value)}
         onKeyDown={handleKeyPress}
+        placeholder="Search"
       />
      
     </div>
