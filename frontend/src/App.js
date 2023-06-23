@@ -3,6 +3,7 @@ import { Route, Switch } from 'react-router-dom';
 import Home from './components/Home/home';
 import SearchResults from './components/SearchBar/SearchResults';
 import Navigation from "./components/Navigation";
+import NavBar2 from './components/Navbar2';
 import ProductShow from './components/Products/ProductShow';
 import ProductIndex from './components/Products/ProductIndex';
 import BrandShow from './components/Brands/BrandShow';
@@ -11,6 +12,7 @@ function App() {
   return (
     <>
       <Navigation />
+      <NavBar2 />
           <Switch>
           <Route exact path="/" component={Home} />
           <Route exact path="/products/:productId" component={ProductShow} />
