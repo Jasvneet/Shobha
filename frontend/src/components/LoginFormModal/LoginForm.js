@@ -47,6 +47,16 @@ function LoginForm(props) {
       props.closeLogin();
     };
 
+    const handleDemoLogin = (e) => {
+      e.preventDefault();
+
+      const demoEmail = 'demo@user.io';
+      const demoPassword = 'password';
+      
+      setEmail(demoEmail);
+      setPassword(demoPassword);
+  }
+
 
 
     return (
@@ -87,9 +97,12 @@ function LoginForm(props) {
             <br />
             <div id='terms-of-use'>By clicking “Sign In”, you (1) agree to the current version of our <strong>TERMS OF USE</strong>, and (2) have read Sephora’s Privacy Policy</div>
             <div>
-            <button type="submit" className="login-button">Sign In</button>
+              <div className="login-buttons">
+                <button type="submit" className="login-button">Sign In</button>
+                <button onClick={handleDemoLogin} type="submit" className="login-button" id="demo-button">Demo Sign In</button>
+              </div>
             </div>
-             </div>
+            </div>
 
             
             <div className="line"></div>
