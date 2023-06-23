@@ -120,7 +120,7 @@
 
 .divider {
     border-bottom: 1px solid rgba(0, 0, 0, 0.063);
-   
+    width: 100%;
 }
 
 .section h2 {

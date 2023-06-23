@@ -110,6 +110,8 @@ function Navigation() {
             <div className='user-dropdown'>
               {sessionLinks}
               
+              {!sessionUser && (
+
               <div className="dropdown-content">
 
                 <div className='user-icon-msg'>
@@ -149,6 +151,7 @@ function Navigation() {
                   </div>
 
                 </div>
+              )}
               </div>
           </li>
 
