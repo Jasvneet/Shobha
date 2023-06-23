@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  get 'api/reviews'
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
 
   # Defines the root path route ("/")
@@ -10,9 +11,11 @@ Rails.application.routes.draw do
     resources :products, only: [:index, :show] do
       collection do
         get 'search'
+        get 'brands/:brand', action: :brand, as: :brand 
       end
     end
-  
+    resources :cart_items, only: [:create, :update, :destroy, :index]
+    resources :reviews, only: [:create, :update, :destroy, :index, :show]
   end 
   
   get '*path', to: "static_pages#frontend_index"

@@ -13,7 +13,6 @@
 #
 class User < ApplicationRecord
   has_secure_password
-
   validates :firstname, :lastname, presence: true
   validates :email, 
     uniqueness: true, 
@@ -23,6 +22,11 @@ class User < ApplicationRecord
   validates :password, length: { in: 6..255 }, allow_nil: true
 
   has_secure_password
+
+  has_many :reviews,
+    foreign_key: :user_id,
+    class_name: :Review, 
+    dependent: :destroy
 
   before_validation :ensure_session_token
 

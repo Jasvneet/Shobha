@@ -140,10 +140,29 @@ p6.photo.attach(io: URI.open('https://shobha-seeds.s3.us-west-1.amazonaws.com/Fe
 
 # )
 
+puts "Products Done!"
 
 
-    
+puts "Creating reviews..."
+
+Review.create!(
+  title: 'first review',
+  body: 'loved this product',
+  user_id: 1,
+  product_id: 1,
+  rating: 5
+)
+
+10.times do
+  Review.create!(
+    title: Faker::Lorem.sentence(word_count: 6),
+    user_id: User.all.sample.id,
+    product_id: Product.all.sample.id,
+    rating: Faker::Number.between(from: 1, to: 5),
+    body: Faker::Lorem.paragraph
+  )
+end
+puts "Reviews Done!"
+
   
-
-  
-  puts "Done!"
+puts "Done!"

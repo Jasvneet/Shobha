@@ -16,6 +16,11 @@ class Api::ProductsController < ApplicationController
     puts "Search Results: #{@products.inspect}" # Add this line to debug the search results
     render :search
   end
+
+  def brand
+    @products = Product.where(brand: params[:brand])
+    render :brand
+  end
 end
 
  

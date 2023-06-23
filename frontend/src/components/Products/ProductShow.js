@@ -2,6 +2,7 @@ import { useEffect, useState } from 'react';
 import { Link, useParams } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
 import { fetchProduct } from '../../store/products';
+import ReviewIndex from '../Reviews/ReviewIndex';
 import './Product.css'
 
 const ProductShow = () => {
@@ -16,7 +17,7 @@ const ProductShow = () => {
 
             dispatch(fetchProduct(productId))
         }
-    }, [dispatch, productId]);
+    }, [productId]);
 
     if (product === undefined) {
         return null 
@@ -42,7 +43,7 @@ const ProductShow = () => {
                     <div>
                         <p className='name'>{product.name}</p>
                     </div>
-                    <b className='price'><strong>${product.price}0</strong> get 25% off you Shobha order when you open and use a Shobha Credit Card today. </b>
+                    <b className='price'><strong>${product.price}0</strong> get 25% off your Shobha order when you open and use a Shobha Credit Card today. </b>
                     <p className='size'>Size: {product.size} oz</p>
                 </div>
            </div>
@@ -113,6 +114,7 @@ const ProductShow = () => {
             
             <div className='reviews-show'>
                     <h2>Ratings & Reviews</h2>
+                    <ReviewIndex />
             </div>
 
         </div>

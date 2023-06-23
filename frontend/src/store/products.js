@@ -1,11 +1,12 @@
 import csrfFetch from './csrf';
+import { receiveReviews } from './reviews';
 
 export const RECEIVE_PRODUCT = 'products/RECEIVE_PRODUCT'
 export const RECEIVE_PRODUCTS = 'products/RECEIVE_PRODUCTS'
 
-export const receiveProduct = (payload) => ({
+export const receiveProduct = (product) => ({
     type: RECEIVE_PRODUCT,
-    payload
+    product
 })
 
 export const receiveProducts = (products) => ({
@@ -13,12 +14,13 @@ export const receiveProducts = (products) => ({
     products
 })
 
-export const fetchProduct = (productId) => async(dispatch) => {
-    const response = await csrfFetch(`/api/products/${productId}`);
+export const fetchProduct = (product) => async(dispatch) => {
+    const response = await fetch(`/api/products/${product}`);
 
     if (response.ok) {
-        const product = await response.json();
-        dispatch(receiveProduct(product))
+        const data = await response.json();
+        dispatch(receiveProduct(data.product));
+        dispatch(receiveReviews(data.reviews))
     }
 }
 export const fetchProducts = () => async(dispatch) => {
@@ -26,7 +28,7 @@ export const fetchProducts = () => async(dispatch) => {
 
     if (response.ok) {
         const products = await response.json();
-        dispatch(receiveProducts(products))
+        dispatch(receiveProducts(products));
     }
 }
 
@@ -38,14 +40,27 @@ export const fetchSearchResults = (searchTerm) => async (dispatch) => {
     }
   };
 
-const productsReducer = (state = {}, action) => {
-    let newState = {...state}
+export const fetchProductsByBrand = (brand) => async (dispatch) => {
+    const response = await fetch(`/api/products/brands/${brand}`); // Fetch products by brand
+  
+    if (response.ok) {
+      const products = await response.json();
+      dispatch(receiveProducts(products));
+    }
+};
+
+const initialState = {
+    products: {}
+}
+
+const productsReducer = (state = initialState, action) => {
+    let newState = {...state};
 
     switch (action.type) {
         case RECEIVE_PRODUCTS:
                 return {...action.products};
         case RECEIVE_PRODUCT:
-                newState[action.payload.product.id] = action.payload.product;
+                newState[action.product.id] = action.product;
                 return newState;
             default:
                 return state;

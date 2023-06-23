@@ -19,9 +19,10 @@ class Product < ApplicationRecord
     has_one_attached :photo
 
 
-    # has_many :reviews,
-    #     foreign_key: :product_id,
-    #     class_name: :Review
+    has_many :reviews,
+        foreign_key: :product_id,
+        class_name: :Review, 
+        dependent: :destroy
 
     def self.search(query)
         result = where("name ILIKE :query OR description ILIKE :query OR CAST(price AS TEXT) ILIKE :query OR category ILIKE :query", query: "%#{query}%")

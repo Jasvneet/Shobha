@@ -1,6 +1,6 @@
 import { NavLink } from "react-router-dom/cjs/react-router-dom.min";
 import "./SearchBar.css";
-import '../Product/Product.css'
+import '../Products/Product.css'
 
 const SearchResultIndexItem = ({product}) => {
     
