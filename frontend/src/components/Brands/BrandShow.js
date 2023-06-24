@@ -14,7 +14,6 @@ function BrandShow() {
 
     return (
         <div>
-        <h1>{brand} Products</h1>
         {products &&
             Object.values(products).map((product) => (
             <div key={product.id}>

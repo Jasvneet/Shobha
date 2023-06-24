@@ -7,6 +7,7 @@ import NavBar2 from './components/Navbar2';
 import ProductShow from './components/Products/ProductShow';
 import ProductIndex from './components/Products/ProductIndex';
 import BrandShow from './components/Brands/BrandShow';
+import BrandsIndex from './components/Brands/BrandsIndex';
 
 function App() {
   return (
@@ -18,7 +19,8 @@ function App() {
           <Route exact path="/products/:productId" component={ProductShow} />
           <Route exact path="/products" component={ProductIndex} />
           <Route exact path="/search" component={SearchResults} />
-          <Route exact path="/:brand" component={BrandShow} />
+          <Route exact path="/brands/:brand" component={BrandShow} />
+          <Route exact path="/brands" component={BrandsIndex} />
           
           </Switch>
     </>

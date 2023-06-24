@@ -11,7 +11,9 @@ export default function NavBar2() {
                     <a className='nav2-link' href='#'>New</a>
                 </li>
                 <li>
-                    <a className='nav2-link' href='#'>Brands</a>
+                    <NavLink to={'/brands'} className='nav2-link'>
+                        Brands
+                    </NavLink>
                 </li>
                 <li>
                     <NavLink to={'/products'} className='nav2-link'>
