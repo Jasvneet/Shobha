@@ -31,7 +31,7 @@ export const deleteReview = (reviewId) => async(dispatch) => {
 }
 
 export const createReview = (review) => async(dispatch) => {
-    const response = await csrfFetch(`/api/reviews/${review.id}`, {
+    const response = await csrfFetch(`/api/reviews`, {
         method: 'POST',
         headers: {
             'Content-type' : 'application/json'

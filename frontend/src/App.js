@@ -8,6 +8,7 @@ import ProductShow from './components/Products/ProductShow';
 import ProductIndex from './components/Products/ProductIndex';
 import BrandShow from './components/Brands/BrandShow';
 import BrandsIndex from './components/Brands/BrandsIndex';
+import CreateReview from './components/Reviews/CreateReviewFormPage';
 
 function App() {
   return (
@@ -21,6 +22,7 @@ function App() {
           <Route exact path="/search" component={SearchResults} />
           <Route exact path="/brands/:brand" component={BrandShow} />
           <Route exact path="/brands" component={BrandsIndex} />
+          <Route exact path="/reviews/new/:productId" component={CreateReview} />
           
           </Switch>
     </>

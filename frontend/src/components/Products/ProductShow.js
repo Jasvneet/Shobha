@@ -1,9 +1,11 @@
 import { useEffect, useState } from 'react';
-import { Link, useParams } from 'react-router-dom';
+import { NavLink, useParams } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
 import { fetchProduct } from '../../store/products';
+import { Route } from 'react-router-dom/cjs/react-router-dom.min';
 import ReviewIndex from '../Reviews/ReviewIndex';
 import './Product.css'
+import CreateReview from '../Reviews/CreateReviewFormPage';
 
 const ProductShow = () => {
     const {productId} = useParams();
@@ -113,7 +115,12 @@ const ProductShow = () => {
             <div className='divider'/>
             
             <div className='reviews-show'>
+                <div className='reviews-header'>
                     <h2>Ratings & Reviews</h2>
+                    <NavLink to={`/reviews/new/${productId}`} className="write-review-link">Write a Review</NavLink>
+                  
+                </div>
+
                     <ReviewIndex />
             </div>
 

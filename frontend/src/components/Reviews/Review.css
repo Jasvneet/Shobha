@@ -32,3 +32,71 @@
 .review-user { 
     width: 170px;
 }
+
+
+.create-review-form-wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.create-review-form-wrapper h1 {
+    white-space: pre-wrap;
+    overflow-wrap: break-word;
+    font-size: 24px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    text-align: center;
+    line-height: 1.25;
+    margin-top: 16px;
+    margin-bottom: 16px;
+}
+
+.product-review-info-container {
+    display: flex;
+    width: 80vw;
+    margin-top: 24px;
+ 
+}
+
+.product-review-info-container img {
+    width: 30%;
+
+}
+
+.product-review-info {
+    margin-top: 24px;
+}
+
+.product-review-info p {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 16px;
+}
+
+.brand-review-form-link {
+    font-size: 14px;
+    font-weight: 700;
+    font-family: Arial, Helvetica, sans-serif;
+    width: 100%;
+    margin-bottom: 0px;
+    text-decoration: none;
+    color: black;
+}
+
+.brand-review-form-link:hover {
+    text-decoration: underline;
+}
+
+.create-review-form {
+    display: flex;
+    flex-direction: column;
+    margin-top: 24px;
+}
+
+
+.create-review-label {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
