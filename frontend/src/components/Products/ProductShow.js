@@ -13,6 +13,7 @@ const ProductShow = () => {
     const dispatch = useDispatch();
     const [showIngredients, setShowIngredients] = useState(false);
     const [showHow, setShowHow] = useState(false);
+    const currentUser = useSelector(state => state.session.user)
 
     useEffect(() => {
         if (productId){
@@ -121,7 +122,7 @@ const ProductShow = () => {
                   
                 </div>
 
-                    <ReviewIndex />
+                    <ReviewIndex currentUser={currentUser} />
             </div>
 
         </div>

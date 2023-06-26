@@ -2,11 +2,13 @@ import "./Review.css"
 import { useDispatch } from "react-redux"
 import { useSelector } from "react-redux"
 import { useState } from "react"
+import {deleteReview, updateReview} from "../../store/reviews"
+import { NavLink } from "react-router-dom/cjs/react-router-dom.min"
 import {FaStar, FaRegStar} from "react-icons/fa";
 
-export default function ReviewIndexItem({review}) {
-    const currentUser = useSelector(state => state.session.user)
-    const dispatch = useDispatch();
+export default function ReviewIndexItem({review, currentUser}) {
+   
+    
 
     const renderStarRating = (rating) => {
         const stars = [];
@@ -33,6 +35,9 @@ export default function ReviewIndexItem({review}) {
                 <div className="review-details">
                     <h3>{review.title}</h3>
                     <p>{review.body}</p>
+                    {currentUser && review.userId === currentUser.id && (
+                        <NavLink to={`/reviews/edit/${review.id}`} className="edit-review-link">Edit Review</NavLink>
+                    )}
                 </div>
 
                 <div className="review-user">

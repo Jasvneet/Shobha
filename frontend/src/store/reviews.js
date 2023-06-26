@@ -20,6 +20,15 @@ export const removeReview = (reviewId) => ({
     reviewId
 })
 
+export const fetchReview = (reviewId) => async(dispatch) => {
+    const response = await fetch(`/api/reviews/${reviewId}`)
+
+    if (response.ok) {
+        const review = await response.json();
+        dispatch(receiveReview(review));
+    }
+}
+
 export const deleteReview = (reviewId) => async(dispatch) => {
     const response = await csrfFetch(`/api/reviews/${reviewId}`, {
         method: 'DELETE'
