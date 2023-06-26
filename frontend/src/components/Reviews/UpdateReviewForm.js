@@ -1,5 +1,6 @@
 import { updateReview, deleteReview, fetchReview } from "../../store/reviews";
 import { useDispatch, useSelector } from "react-redux";
+import { NavLink } from "react-router-dom/cjs/react-router-dom";
 import { useState } from "react";
 import { useParams } from "react-router-dom/cjs/react-router-dom";
 import { useEffect } from "react";
@@ -9,6 +10,7 @@ import { useHistory } from "react-router-dom/cjs/react-router-dom.min";
 export default function UpdateReview(){
     const {reviewId} = useParams();
     const review = useSelector(state => state.reviews ? state.reviews[reviewId] : null)
+    const product = useSelector(state => state.products[review.productId]);
     const dispatch = useDispatch();
     const history = useHistory();
 
@@ -39,35 +41,56 @@ export default function UpdateReview(){
       };
 
       return (
-        <form className="edit-review-form">
+        <>
+        <div className="review-form-wrapper">
             <h1>Update Review</h1>
-            <label className="create-review-label">Headline
-                <input 
-                type="text" 
-                placeholder="headline" 
-                value={title} 
-                onChange={(e) => setTitle(e.target.value)} 
-                />
-            </label>
+            <div className="divider"></div>
+            <div className="review-form-container">
+                <img src={product.photoUrl}/>
+                <div className="product-review-info">
+                    <NavLink to={`/brands/${product.brand}`} className='brand-review-form-link'>
+                                {product.brand}
+                    </NavLink>
+                    <p>{product.name}</p>
+                    <form className="review-form">
+                        
+                        <label className="create-review-label">
+                            <h4>Headline</h4>
+                            <input 
+                            type="text" 
+                            placeholder="headline" 
+                            value={title} 
+                            onChange={(e) => setTitle(e.target.value)} 
+                            />
+                        </label>
+                        <div className="divider"></div>
 
-            <label className="create-review-label">Review
-                <textarea
-                value={body}
-                onChange={e => setBody(e.currentTarget.value)}
-                />
-            </label>
-  
-            <label className="create-review-label">Rate This Product 
-                <input 
-                type="number"
-                min="1"
-                max="5"
-                value={rating}
-                onChange={e => setRating(e.currentTarget.value)}
-                />
-            </label>
+                        <label className="create-review-label">
+                            <h4>Review </h4>
+                            <textarea
+                            value={body}
+                            onChange={e => setBody(e.currentTarget.value)}
+                            />
+                        </label>
+                        <div className="divider"></div>
+            
+                        <label className="create-review-label">
+                            <h4>Rate This Product </h4>
+                            <input 
+                            type="number"
+                            min="1"
+                            max="5"
+                            value={rating}
+                            onChange={e => setRating(e.currentTarget.value)}
+                            />
+                        </label>
+                        <div className="divider"></div>
 
-            <button type="submit" onClick={handleEdit}>Edit</button>
-        </form>
+                        <button type="submit" onClick={handleEdit}>Update</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+        </>
       )
 }

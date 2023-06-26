@@ -58,17 +58,17 @@ export default function CreateReview() {
 
     return (
         <>  
-            <div className="create-review-form-wrapper">
+            <div className="review-form-wrapper">
                 <h1>Rate & Review</h1>
                 <div className="divider"></div>
-                <div className="product-review-info-container">
+                <div className="review-form-container">
                     <img src={product.photoUrl}/>
                     <div className="product-review-info">
                         <NavLink to={`/brands/${product.brand}`} className='brand-review-form-link'>
                                 {product.brand}
                         </NavLink>
                         <p>{product.name}</p>
-                        <form className='create-review-form' onSubmit={handleSubmit}>
+                        <form className='review-form' onSubmit={handleSubmit}>
                             <label className="create-review-label">
                                 <h4>Rate This Product </h4>
                                 <input 
@@ -102,7 +102,7 @@ export default function CreateReview() {
 
                             <div className="divider"></div>
 
-                            <button type="submit" className="create-button">Submit</button>
+                            <button type="submit" className="review-form-button">Submit</button>
                             {showModal && (
                                     <Modal onClose={() => setShowModal(false)}>
                                     <LoginForm closeLogin={setShowModal}/>

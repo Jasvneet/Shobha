@@ -2,10 +2,9 @@ import { useEffect, useState } from 'react';
 import { NavLink, useParams } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
 import { fetchProduct } from '../../store/products';
-import { Route } from 'react-router-dom/cjs/react-router-dom.min';
 import ReviewIndex from '../Reviews/ReviewIndex';
 import './Product.css'
-import CreateReview from '../Reviews/CreateReviewFormPage';
+
 
 const ProductShow = () => {
     const {productId} = useParams();
@@ -42,7 +41,9 @@ const ProductShow = () => {
                     <img src={product.photoUrl} />
                 </div>
                 <div className='name-price-size'>
-                    <a  className='brand' href='#'>{product.brand}</a>
+                    <NavLink to={`/brands/${product.brand}`} className='brand'>
+                                    {product.brand}
+                    </NavLink>
                     <div>
                         <p className='name'>{product.name}</p>
                     </div>
