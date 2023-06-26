@@ -17,11 +17,16 @@ const ProductIndex = ()=> {
 
     return (
         <>
+        <div className='product-index-wrapper'>
+            <div className='product-index-heading'>
+                Makeup
+            </div>
             <ul className='products'>
                 {products.map(product => 
                     <ProductIndexItem product={product}/> 
                     )}
             </ul>
+        </div>
         </>
     )
 }

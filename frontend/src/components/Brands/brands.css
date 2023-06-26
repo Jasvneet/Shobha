@@ -45,7 +45,7 @@
     padding-right: 30px;
     display: flex;
     flex-direction: column;
-    width: 20vw;
+    width: 12vw;
    
 }
 
@@ -59,4 +59,8 @@
 }
 .brand-show-item span {
     padding-bottom: 5px;
+}
+
+.show-link {
+    font-size: 14px;
 }

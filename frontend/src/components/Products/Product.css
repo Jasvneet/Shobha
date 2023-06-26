@@ -1,7 +1,21 @@
+.product-index-wrapper {
+    display: flex;
+    padding-top: 30px;
+    font-family: Arial, Helvetica, sans-serif;
+    justify-content: center;
+}
+
+.product-index-heading {
+    font-size: 24px;
+    font-weight: 700;
+}
+
+
 .products {
     display: flex;
-    margin: 200px;
+    margin: 100px;
     flex-wrap: wrap;
+    width: 40vw;
 }
 
 .show-page {
