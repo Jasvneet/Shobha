@@ -69,10 +69,13 @@
 }
 
 .index-image-container img {
-    height: 100%;
     width: 100%;
-    display: flex;
-    justify-content: center;
+    height: 100%;
+    display: inline-block;
+    max-width: 100%;
+    top: 0px;
+    left: 0px;
+    object-fit: contain;
 }
 
 

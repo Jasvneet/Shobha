@@ -1,15 +1,16 @@
 import { NavLink } from "react-router-dom/cjs/react-router-dom.min";
+import './brands.css'
 
 const BrandsIndexItem = ({brand}) => {
 
 
     return (
         <>
-            <li>
-            <NavLink to={`/brands/${brand}`}>
-                        {brand}
-            </NavLink>
-            </li>
+            <div className="brand-name">
+                <NavLink to={`/brands/${brand}`} className='brand-show-link'>
+                            {brand}
+                </NavLink>
+            </div>
         </>
     )
 };

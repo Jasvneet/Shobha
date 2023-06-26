@@ -2,7 +2,7 @@ import { useEffect } from "react";
 import { useSelector, useDispatch } from "react-redux";
 import { fetchProducts } from "../../store/products";
 import BrandsIndexItem from "./BrandsIndexItem";
-
+import './brands.css'
 
 export default function BrandsIndex(){
     const dispatch = useDispatch();
@@ -28,11 +28,12 @@ export default function BrandsIndex(){
 
     return (
         <>
-        <h1>Brands</h1>
-        <p>{uniqueBrands.map(brand => (
+     
+        <div className="brands-container">
+          {uniqueBrands.map(brand => (
             <BrandsIndexItem brand={brand}/>
         ))}
-        </p>
+        </div>
         </>
     )
 
