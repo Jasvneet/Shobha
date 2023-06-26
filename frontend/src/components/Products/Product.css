@@ -75,6 +75,29 @@
     text-decoration: none;
 }
 
+.cart-button {
+    font-size: 14px;
+    padding: 0.25em 1.125em 0.25em 58px;
+    min-height: 44px;
+    font-weight: bold;
+    border-width: 2px;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    line-height: 1;
+    border-color: transparent;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 99999px;
+    appearance: none;
+    color: rgb(255, 255, 255);
+    transition: background-color 0.2s ease 0s;
+    background-color: rgb(207, 17, 44);
+    min-width: 10.47em;
+    width: 282px;
+    margin-top: 310px;
+}
+
 .image-container img {
     height: 500px;
     width: 500px;

@@ -49,6 +49,7 @@ const ProductShow = () => {
                     </div>
                     <b className='price'><strong>${product.price}0</strong> get 25% off your Shobha order when you open and use a Shobha Credit Card today. </b>
                     <p className='size'>Size: {product.size} oz</p>
+                    <button className='cart-button'>Add to Basket</button>
                 </div>
            </div>
            <div className='divider'/>
