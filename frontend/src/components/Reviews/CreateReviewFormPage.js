@@ -69,7 +69,8 @@ export default function CreateReview() {
                         </NavLink>
                         <p>{product.name}</p>
                         <form className='create-review-form' onSubmit={handleSubmit}>
-                            <label className="create-review-label">Rate This Product 
+                            <label className="create-review-label">
+                                <h4>Rate This Product </h4>
                                 <input 
                                 type="number"
                                 min="1"
@@ -78,28 +79,35 @@ export default function CreateReview() {
                                 onChange={e => setRating(e.currentTarget.value)}
                                 />
                             </label>
-                            <label className="create-review-label">Review
+                            <div className="divider"></div>
+                            <label className="create-review-label"> 
+                                <h4>Review</h4>
                                 <textarea
                                 value={body}
+                                placeholder="Example: After using this product over the past few weeks, I'm loving the results! It has helped keep my dry skin hydrated, Application is easy, and the formula is... "
                                 onChange={e => setBody(e.currentTarget.value)}
                                 />
                             </label>
-                            <label className="create-review-label">Headline
+                            <div className="divider"></div>
+                            <label className="create-review-label">
+                                <h4>Headline</h4>
                                 <input 
                                 type="text"
+                                placeholder="Add a headline
+                                Example: Daily Go to product!"
                                 value={title}
                                 onChange={e => setTitle(e.currentTarget.value)}
                                 />
                             </label>
 
+                            <div className="divider"></div>
 
-
-                        <button type="submit">Submit</button>
-                        {showModal && (
-                                <Modal onClose={() => setShowModal(false)}>
-                                <LoginForm closeLogin={setShowModal}/>
-                                </Modal>
-                            )}
+                            <button type="submit" className="create-button">Submit</button>
+                            {showModal && (
+                                    <Modal onClose={() => setShowModal(false)}>
+                                    <LoginForm closeLogin={setShowModal}/>
+                                    </Modal>
+                                )}
                         </form>
                     </div>
                 </div>

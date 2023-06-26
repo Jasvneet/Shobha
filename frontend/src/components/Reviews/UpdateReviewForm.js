@@ -17,8 +17,8 @@ export default function UpdateReview(){
          
           dispatch(fetchReview(reviewId));
         }
-      }, [dispatch, reviewId]);
-      console.log(review);
+    }, [dispatch, reviewId]);
+     
     const [title, setTitle] = useState(review.title)
     const [body, setBody] = useState(review.body)
     const [rating, setRating] = useState(review.rating)
@@ -40,11 +40,34 @@ export default function UpdateReview(){
 
       return (
         <form className="edit-review-form">
-        <h1>Edit Review</h1>
-        <input type="text" placeholder="title" value={title} onChange={(e) => setTitle(e.target.value)} />
-        <input type="text" placeholder="body" value={body} onChange={(e) => setBody(e.target.value)} />
-        <input type="number" placeholder="rating" min="1" max="5" value={rating} onChange={(e) => setRating(e.target.value)} />
-        <button type="submit" onClick={handleEdit}>Edit</button>
+            <h1>Update Review</h1>
+            <label className="create-review-label">Headline
+                <input 
+                type="text" 
+                placeholder="headline" 
+                value={title} 
+                onChange={(e) => setTitle(e.target.value)} 
+                />
+            </label>
+
+            <label className="create-review-label">Review
+                <textarea
+                value={body}
+                onChange={e => setBody(e.currentTarget.value)}
+                />
+            </label>
+  
+            <label className="create-review-label">Rate This Product 
+                <input 
+                type="number"
+                min="1"
+                max="5"
+                value={rating}
+                onChange={e => setRating(e.currentTarget.value)}
+                />
+            </label>
+
+            <button type="submit" onClick={handleEdit}>Edit</button>
         </form>
       )
 }
