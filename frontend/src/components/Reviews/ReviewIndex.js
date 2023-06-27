@@ -12,9 +12,9 @@ export default function ReviewIndex({currentUser}) {
           {reviews.map(review => (
             <>
 
-          <p className="review-index-container">
+          <div className="review-index-container">
             <ReviewIndexItem review={review} currentUser={currentUser}/>
-          </p>
+          </div>
           <div className="divider"></div>
           </>
           ))}

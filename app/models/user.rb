@@ -28,6 +28,16 @@ class User < ApplicationRecord
     class_name: :Review, 
     dependent: :destroy
 
+  has_many :cart_items,
+    foreign_key: :user_id,
+    class_name: :CartItem,
+    dependent: :destroy
+
+  has_many :products,
+    through: :cart_items,
+    source: :product,
+    dependent: :destroy
+
   before_validation :ensure_session_token
 
   def self.find_by_credentials(email, password)

@@ -3,6 +3,7 @@ import { NavLink, useParams } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
 import { fetchProduct } from '../../store/products';
 import ReviewIndex from '../Reviews/ReviewIndex';
+import { createCartItem } from '../../store/cart_items';
 import './Product.css'
 
 
@@ -23,6 +24,18 @@ const ProductShow = () => {
 
     if (product === undefined) {
         return null 
+    }
+
+    const HandleAddCartItem = (e) => {
+        e.preventDefault();
+
+        const cartItem = {
+            product_id: productId,
+            user_id: currentUser.id,
+            quantity: 1
+        };
+        dispatch(createCartItem(cartItem));
+
     }
 
     const toggleIngredients = () => {
@@ -49,7 +62,7 @@ const ProductShow = () => {
                     </div>
                     <b className='price'><strong>${product.price}0</strong> get 25% off your Shobha order when you open and use a Shobha Credit Card today. </b>
                     <p className='size'>Size: {product.size} oz</p>
-                    <button className='cart-button'>Add to Basket</button>
+                    <button onClick={HandleAddCartItem} className='cart-button'>Add to Basket</button>
                 </div>
            </div>
            <div className='divider'/>

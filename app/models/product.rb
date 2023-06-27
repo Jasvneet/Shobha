@@ -24,6 +24,11 @@ class Product < ApplicationRecord
         class_name: :Review, 
         dependent: :destroy
 
+    has_many :carts,
+        foreign_key: :product_id,
+        class_name: :CartItem,
+        dependent: :destroy
+
     def self.search(query)
         result = where("name ILIKE :query OR description ILIKE :query OR CAST(price AS TEXT) ILIKE :query OR category ILIKE :query", query: "%#{query}%")
         puts "Searching for: #{query}"
