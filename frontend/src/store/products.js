@@ -32,6 +32,15 @@ export const fetchProducts = () => async(dispatch) => {
     }
 }
 
+export const fetchCartProducts = () => async(dispatch) => {
+    const response = await fetch(`/api/products/cart_items`);
+
+    if (response.ok) {
+        const cartItems = await response.json();
+        dispatch(receiveProducts(cartItems))
+    }
+}
+
 export const fetchSearchResults = (searchTerm) => async (dispatch) => {
     const response = await fetch(`/api/products/search?query=${encodeURIComponent(searchTerm)}`);
     if (response.ok) {

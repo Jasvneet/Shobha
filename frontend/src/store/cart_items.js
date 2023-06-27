@@ -28,6 +28,7 @@ export const fetchCartItems = () => async(dispatch) => {
     }
 }
 
+
 export const fetchCartItem = (cartItemId) => async(dispatch) => {
     const response = await fetch(`/api/cart_items/${cartItemId}`);
 

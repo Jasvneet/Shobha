@@ -4,6 +4,7 @@ class Api::CartItemsController < ApplicationController
         render :index
     end
 
+
     
     def create
         @cart_item = CartItem.find_by(user_id: current_user.id, product_id: cart_item_params[:product_id])

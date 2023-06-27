@@ -10,6 +10,15 @@ class Api::ProductsController < ApplicationController
     render :show
   end 
 
+  def cart_items
+    cart_items = CartItem.all # Fetch all cart items
+    product_ids = cart_items.pluck(:product_id).uniq # Get unique product IDs from cart items
+
+    @products = Product.where(id: product_ids) # Fetch products with matching IDs
+
+    render :index
+  end
+
   def search
     @products = Product.search(params[:query])
     puts "Search Query: #{params[:query]}" # Add this line to debug the query
