@@ -135,4 +135,23 @@
     font-size: 12px;
     color: red;
     font-family: Arial, Helvetica, sans-serif;
+    margin-top: 2px;
+}
+
+.edit-delete-review {
+    display: flex;
+    margin-top: 10px;
+    
+    
+}
+
+.edit-delete-review button {
+    background-color: transparent;
+    border: none;
+    margin-left: 20px;
+    font-size: 12px;
+    text-decoration: underline;
+    color: red;
+    font-family: Arial, Helvetica, sans-serif;
+    
 }
