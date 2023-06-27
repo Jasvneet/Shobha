@@ -78,11 +78,11 @@ export const createCartItem = (cartItem) => async(dispatch) => {
     }
 }
 
-const initialState = {
-    cartItems: {}
-}
+// const initialState = {
+//     cartItems: {}
+// }
 
-export default function cartItemsReducer(state = initialState, action) {
+export default function cartItemsReducer(state = {}, action) {
     let newState = {...state}
     switch (action.type) {
         case RECEIVE_CART_ITEMS: 

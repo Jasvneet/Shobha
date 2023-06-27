@@ -48,20 +48,23 @@ require "open-uri"
     brand: 'Supergoop!',
     category: 'Skincare, Face Sunscreen',
     description: 
-    'What it is: A hydrating, makeup-gripping primer with SPF 40 and blue-light protection that has a pearlescent finish to leave skin luminous with an instant glow.
+    'A hydrating, makeup-gripping primer with SPF 40 and blue-light protection that has a pearlescent finish to leave skin luminous with an instant glow.
 
-    Skincare Concerns: Dullness, Dryness, and Fine Lines and Wrinkles
+    Skincare Concerns: Dullness, Dryness, and Fine Lines and Wrinkles.
 
-    Formulation: Lotion
+    Formulation: Lotion.
 
     Highlighted Ingredients:
     - Hyaluronic Acid and Vitamin B5: Help boost moisture in the skin, leaving it feeling soft and nurtured.
     - Sea Lavender: Helps provide powerful antioxidant protection while also supporting long-lasting hydration.
-    - Cocoa Peptides: Help protect the skin from blue-light damage.
+    - Cocoa Peptides: Help protect the skin from blue-light damage.',
 
-    Ingredient Callouts: This product is cruelty-free, and gluten-free.
+    callouts: 'This product is cruelty-free, and gluten-free.',
 
-    What Else You Need to Know: This multitasking primer with SPF gives skin an instant glow-up. Formulated with hyaluronic acid, niacinamide & vitamin B5 to hydrate & perfect, this broad spectrum tinted sunscreen creates an instant glow on its own or under makeup. Plus, it helps filter blue light from tech!'
+    how_to_use: '-Apply generously and evenly as the last step in your skincare routine, before your favorite foundation, and after your moisturizer.
+    -You can also wear this on its own for a no-makeup makeup glow.',
+
+    other_info: 'This multitasking primer with SPF gives skin an instant glow-up. Formulated with hyaluronic acid, niacinamide & vitamin B5 to hydrate & perfect, this broad spectrum tinted sunscreen creates an instant glow on its own or under makeup. Plus, it helps filter blue light from tech!'
  
 })
 

@@ -12,11 +12,11 @@ Rails.application.routes.draw do
       collection do
         get 'search'
         get 'brands/:brand', action: :brand, as: :brand 
+        get 'cart_items'
       end
     end
     resources :cart_items, only: [:create, :update, :destroy, :index]
     resources :reviews, only: [:create, :update, :destroy, :index, :show]
-    get 'products/cart_items', to: 'products#cart_items'
   end 
   
   get '*path', to: "static_pages#frontend_index"

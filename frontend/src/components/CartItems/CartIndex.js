@@ -11,20 +11,18 @@ export default function CartIndex(){
     const products = useSelector(state => Object.values(state.products))
 
     useEffect(() => {
-        // dispatch(fetchCartProducts());
-        dispatch(fetchCartItems());
+        dispatch(fetchCartProducts());
+        // dispatch(fetchCartItems());
       }, [dispatch]);
 
-    // const totalPrice = cartItems.reduce((acc, cartItem) => {
-    // const product = products[cartItem.productId];
-    // if (product && product.price && cartItem.quantity) {
-    //     const price = product.price * cartItem.quantity;
-    //     return acc + price;
-    // }
-    // return acc;
-    // }, 0);
-
-    const totalPrice = 0
+  
+      let totalPrice = 0;
+      cartItems.forEach(cartItem => {
+        const product = products.find(product => product.id === cartItem.productId);
+        if (product) {
+          totalPrice += product.price * cartItem.quantity;
+        }
+      });
 
     return (
         <>  

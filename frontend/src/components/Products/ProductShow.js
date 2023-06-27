@@ -86,7 +86,9 @@ const ProductShow = () => {
                     <h2>About the Product</h2>
                 </div>
                 <div className='what'>
-                    <p>{product.description}</p>
+                    <p><strong>What It Is: </strong>{product.description}</p>
+                    <p><strong>Ingredient Callouts:</strong> {product.callouts}</p>
+                    <p><strong>What Else You Need to Know:</strong> {product.otherInfo} </p>
                 </div>
             </div>
 
@@ -118,7 +120,7 @@ const ProductShow = () => {
                     </button>
 
                 {showHow && (
-                    <p>Suggested Usage:</p>
+                    <p><strong>Suggested Usage:</strong> {product.howToUse}</p>
                 )}
             </div>
 

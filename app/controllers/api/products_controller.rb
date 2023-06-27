@@ -11,12 +11,12 @@ class Api::ProductsController < ApplicationController
   end 
 
   def cart_items
-    cart_items = CartItem.all # Fetch all cart items
-    product_ids = cart_items.pluck(:product_id).uniq # Get unique product IDs from cart items
+    @cart_items = current_user.cart_items # Fetch all cart items
+    product_ids = @cart_items.pluck(:product_id).uniq # Get unique product IDs from cart items
 
     @products = Product.where(id: product_ids) # Fetch products with matching IDs
 
-    render :index
+    render :cart_items
   end
 
   def search

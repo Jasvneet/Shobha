@@ -1,3 +1,4 @@
+import { receiveCartItems } from './cart_items';
 import csrfFetch from './csrf';
 import { receiveReviews } from './reviews';
 
@@ -36,8 +37,9 @@ export const fetchCartProducts = () => async(dispatch) => {
     const response = await fetch(`/api/products/cart_items`);
 
     if (response.ok) {
-        const cartItems = await response.json();
-        dispatch(receiveProducts(cartItems))
+        const data = await response.json();
+        dispatch(receiveProducts(data.products))
+        dispatch(receiveCartItems(data.cartItems))
     }
 }
 

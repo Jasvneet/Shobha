@@ -8,13 +8,15 @@ export default function CartIndexItem({cartItem}) {
     const product = useSelector(state => state.products[cartItem.productId])
     const dispatch = useDispatch();
     const [quantity, setQuantity] = useState(cartItem.quantity);
+    console.log(cartItem);
 
     useEffect(() => {
-        if (cartItem) {
-            dispatch(fetchProduct(cartItem.productId))
+        if (cartItem.productId) {
+            // dispatch(fetchProduct(cartItem.productId))
         }
-        dispatch(updateCartItem(cartItem));
+     
     }, [dispatch])
+
 
     const handleDelete = () => {
         dispatch(deleteCartItem(cartItem.id));
