@@ -1,8 +1,24 @@
 import { NavLink } from "react-router-dom/cjs/react-router-dom.min"
 import './Navbar2.css';
+import { useSelector, useDispatch } from 'react-redux';
+import { useEffect } from "react";
+import { fetchProducts } from "../../store/products";
 
 
 export default function NavBar2() {
+    const products = useSelector(state => Object.values(state.products))
+    const dispatch = useDispatch();
+
+    useEffect(() => {
+        dispatch(fetchProducts());
+    }, [dispatch]);
+
+    const categories = [];
+    products.forEach((product) => {
+        if (!categories.includes(product.category)) {
+        categories.push(product.category);
+        }
+    });
 
     return (
         <div className="nav2">
@@ -20,7 +36,15 @@ export default function NavBar2() {
                      Makeup
                     </NavLink>
                 </li>
-                <li>
+
+                {categories.map(category => (
+                    <li>
+                        <NavLink to={`/categories/${category}`} className='nav2-link'>
+                            {category}
+                        </NavLink>
+                    </li>
+                ))}
+                {/* <li>
                     <a className='nav2-link' href='#'>Skincare</a>
                 </li>
                 <li>
@@ -49,7 +73,7 @@ export default function NavBar2() {
                 </li>
                 <li>
                     <a className='nav2-link' href='#'>Clean Beauty</a>
-                </li>
+                </li> */}
             </ul>
         </div>
         )

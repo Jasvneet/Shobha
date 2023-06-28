@@ -43,7 +43,7 @@ export const fetchCartProducts = () => async(dispatch) => {
     }
 }
 
-export const fetchSearchResults = (searchTerm) => async (dispatch) => {
+export const fetchSearchResults = (searchTerm) => async(dispatch) => {
     const response = await fetch(`/api/products/search?query=${encodeURIComponent(searchTerm)}`);
     if (response.ok) {
       const data = await response.json();
@@ -51,14 +51,23 @@ export const fetchSearchResults = (searchTerm) => async (dispatch) => {
     }
   };
 
-export const fetchProductsByBrand = (brand) => async (dispatch) => {
-    const response = await fetch(`/api/products/brands/${brand}`); // Fetch products by brand
+export const fetchProductsByBrand = (brand) => async(dispatch) => {
+    const response = await fetch(`/api/products/brands/${brand}`); 
   
     if (response.ok) {
       const products = await response.json();
       dispatch(receiveProducts(products));
     }
 };
+
+export const fetchProductsByCategory = (category) => async(dispatch) => {
+    const response = await fetch(`/api/products/categories/${category}`);
+
+    if (response.ok) {
+        const products = await response.json();
+        dispatch(receiveProducts(products))
+    }
+}
 
 const initialState = {
     products: {}

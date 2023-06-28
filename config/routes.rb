@@ -12,6 +12,7 @@ Rails.application.routes.draw do
       collection do
         get 'search'
         get 'brands/:brand', action: :brand, as: :brand 
+        get 'categories/:category', action: :category, as: 'category'
         get 'cart_items'
       end
     end

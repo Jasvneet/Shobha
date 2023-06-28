@@ -30,6 +30,13 @@ class Api::ProductsController < ApplicationController
     @products = Product.where(brand: params[:brand])
     render :brand
   end
+
+  def category
+    @category = params[:category]
+    @products = Product.where(category: @category)
+    render :category
+  end
+
 end
 
  

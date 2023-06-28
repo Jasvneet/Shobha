@@ -1,5 +1,5 @@
 .header {
-  width: 100%;
+  width: 100vw;
 }
 
 .freeShipping-button {
@@ -94,7 +94,7 @@
   margin-right: 12px;
   margin-top: 12px;
   margin-bottom: 12px;
-  width: 100%;
+  width: 100vw;
 }
 
 .nav1-home {

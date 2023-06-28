@@ -11,6 +11,8 @@ import BrandsIndex from './components/Brands/BrandsIndex';
 import CreateReview from './components/Reviews/CreateReviewFormPage';
 import UpdateReview from './components/Reviews/UpdateReviewForm';
 import CartIndex from './components/CartItems/CartIndex';
+import CategoryShowPage from './components/Navbar2/CategoryShowPage';
+import Footer from './components/Footer';
 
 function App() {
   return (
@@ -27,8 +29,10 @@ function App() {
           <Route exact path="/reviews/new/:productId" component={CreateReview} />
           <Route exact path="/reviews/edit/:reviewId" component={UpdateReview} />
           <Route exact path="/cart" component={CartIndex} />
+          <Route exact path="/categories/:category" component={CategoryShowPage} />
           
           </Switch>
+      <Footer />
     </>
   );
 }

@@ -13,9 +13,10 @@
 
 .products {
     display: flex;
-    margin: 100px;
+    margin: 100px 0px;
     flex-wrap: wrap;
-    width: 40vw;
+    width: 50%;
+    padding-left: 50px;
 }
 
 .show-page {

@@ -9,7 +9,7 @@ const Home = () => {
   
   return (
     <>
-      <div className='slider-comp'>
+      <div className='home-wrapper'>
         <MainCarousel />
       </div>
     </>
