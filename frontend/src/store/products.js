@@ -2,9 +2,10 @@ import { receiveCartItems } from './cart_items';
 import csrfFetch from './csrf';
 import { receiveReviews } from './reviews';
 
-export const RECEIVE_PRODUCT = 'products/RECEIVE_PRODUCT'
-export const RECEIVE_PRODUCTS = 'products/RECEIVE_PRODUCTS'
+export const RECEIVE_PRODUCT = 'products/RECEIVE_PRODUCT';
+export const RECEIVE_PRODUCTS = 'products/RECEIVE_PRODUCTS';
 export const CLEAR_PRODUCTS = 'products/CLEAR_PRODUCTS';
+
 
 export const receiveProduct = (product) => ({
     type: RECEIVE_PRODUCT,
@@ -19,6 +20,9 @@ export const receiveProducts = (products) => ({
 export const clearProducts = () => ({
     type: CLEAR_PRODUCTS
   });
+
+
+  
 
 export const fetchProduct = (product) => async(dispatch) => {
     const response = await fetch(`/api/products/${product}`);
@@ -70,11 +74,18 @@ export const fetchProductsByCategory = (category) => async(dispatch) => {
 
     if (response.ok) {
         const products = await response.json();
-        dispatch(receiveProducts(products))
-    }
+            dispatch(receiveProducts(products))
+
+        }
 }
 
-const initialState = {};
+
+
+
+const initialState = {
+    newProducts: {},
+   
+  };
 
 const productsReducer = (state = initialState, action) => {
     let newState = {...state};
@@ -91,5 +102,7 @@ const productsReducer = (state = initialState, action) => {
             return state;
         }
     }
+
+    
   
 export default productsReducer;

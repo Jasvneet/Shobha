@@ -13,6 +13,7 @@ import UpdateReview from './components/Reviews/UpdateReviewForm';
 import CartIndex from './components/CartItems/CartIndex';
 import CategoryShowPage from './components/Navbar2/CategoryShowPage';
 import Footer from './components/Footer';
+import MinisCarousel from './components/Home/MinisCarousel';
 
 function App() {
   return (
@@ -20,7 +21,9 @@ function App() {
       <Navigation />
       <NavBar2 />
           <Switch>
-          <Route exact path="/" component={Home} />
+          <Route exact path="/">
+            <Home />
+          </Route>
           <Route exact path="/products/:productId" component={ProductShow} />
           <Route exact path="/products" component={ProductIndex} />
           <Route exact path="/search" component={SearchResults} />

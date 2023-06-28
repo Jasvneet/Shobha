@@ -6,13 +6,15 @@ import productsReducer from './products';
 import reviewsReducer from './reviews';
 import cartItemsReducer from './cart_items';
 import lovesReducer from './loves';
+import newProductsReducer from './new_products';
 
 const rootReducer = combineReducers({
    session: sessionReducer,
    products: productsReducer,
    reviews: reviewsReducer,
    cartItems: cartItemsReducer,
-   loves: lovesReducer
+   loves: lovesReducer,
+   newProducts: newProductsReducer
 });
 
 let enhancer;

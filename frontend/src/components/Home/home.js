@@ -1,12 +1,25 @@
 import React from 'react'
+import {useSelector, useDispatch} from 'react-redux';
+import { useEffect } from 'react';
+import { fetchProductsByCategory, clearProducts } from '../../store/products';
 import MainCarousel from './MainCarousel';
 import './home.css'
 import NewProductCarousel from './NewProductsCarousel';
+import MinisCarousel from './MinisCarousel';
 
 const Home = () => {
-    
+  const products = useSelector(state => Object.values(state.products))
+  const dispatch = useDispatch();
+
+  useEffect(() => {
+      
+      dispatch(fetchProductsByCategory('Mini Size'))
+  }, [dispatch])
   
-  
+  // useEffect(() => {
+  //   dispatch(fetchProductsByCategory('New'))
+  // }, [dispatch])
+
   
   return (
     <>
@@ -17,6 +30,11 @@ const Home = () => {
         <div className='new-prod-caro'>
           <h2>Just Dropped!</h2>
           <NewProductCarousel />
+        </div>
+        <div className='minis-caro'>
+          <h2>Adventure-ready beauty, perfectly portable!  ✈️💄</h2>
+          <MinisCarousel />
+         
         </div>
       </div>
 

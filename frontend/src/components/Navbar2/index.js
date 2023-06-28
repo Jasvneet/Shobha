@@ -45,6 +45,12 @@ export default function NavBar2() {
                         Mini Size
                     </NavLink>
                 </li>
+
+                <li>
+                    <NavLink to={`/categories/Hair`} className='nav2-link'>
+                        Hair
+                    </NavLink>
+                </li>
               
                 {/* <li>
                     <a className='nav2-link' href='#'>Skincare</a>

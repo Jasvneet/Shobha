@@ -4,17 +4,17 @@ import {useSelector, useDispatch} from 'react-redux';
 import { useEffect } from 'react';
 import { fetchProductsByCategory, clearProducts } from '../../store/products';
 import './home.css'
-import { fetchNewProducts } from "../../store/new_products";
 
 
-export default function NewProductCarousel(){
-    const products = useSelector(state => Object.values(state.newProducts))
+export default function MinisCarousel(){
+    const category = 'Mini Size';
+    const products = useSelector(state => Object.values(state.products))
     const dispatch = useDispatch();
 
     useEffect(() => {
-        dispatch(fetchNewProducts())
+        dispatch(clearProducts())
+        dispatch(fetchProductsByCategory('Mini Size'))
     }, [dispatch])
-  
 
     return (
         <div className="new-prod-carousel-wrapper">

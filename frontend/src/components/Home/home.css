@@ -31,9 +31,18 @@
 .new-prod-caro {
   display: flex;
   flex-direction: column;
+
 }
 
 .new-prod-caro h2 {
+  margin-left: 130px;
+  margin-top: 30px;
+  font-size: 20px;
+  font-weight: 700;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.minis-caro h2 {
   margin-left: 130px;
   margin-top: 30px;
   font-size: 20px;
@@ -50,19 +59,19 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 100%;
+  width: 80%;
   height: 100%;
   
 }
 
 .new-product-card {
-  width: 100%;
-  height: 100%;
+  width: 98%;
+  height: 98%;
   box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.1);
   border-radius: 4px;
   overflow: hidden;
   text-align: left;
-  margin-right: 10px;
+  
 }
 
 .new-product-image {
@@ -72,7 +81,7 @@
 }
 
 .new-product-details {
-  padding: 0px 12px;
+  padding: 8px 12px;
 }
 
 .brand-prod-carousel {
