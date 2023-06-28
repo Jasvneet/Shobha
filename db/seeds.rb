@@ -335,6 +335,104 @@ p16 = Product.create!(
 p16.photo.attach(io: URI.open('https://shobha-seeds.s3.us-west-1.amazonaws.com/Shobha-Images-New/Rio-radiance-Sol48.webp'), filename: 'Shobha-Images-New/Rio-radiance-Sol48.webp')
 
 
+#Mini Size Products
+
+p17 = Product.create!( 
+  name: 'Mini Airbrush Flawless Finish Setting Powder', 
+  price: 28.00, 
+  size: 0.11, 
+  brand: 'Charlotte Tilbury', 
+  category: 'Mini Size,Makeup',
+  description: 'An ultra-fine setting powder in a perfect try-me mini size that blurs the look of imperfections and visibly reduces shine.',
+  callouts: 'Free of parabens and sulfates SLS & SLES. It is also vegan, gluten-free, and cruelty-free.',
+  other_info: "This breathable, micro-fine powder gives you an immaculate-looking complexion and acts like a luxe, micro-fine cashmere veil on top of skin for a bright, flawless finish. This product doesn’t cake or sit in lines and is perfect if you have an oily T-zone or complexion.", 
+  ingredients: 'Talc, Mica, Polymethyl Methacrylate, Dimethicone, Silica, Pentaerythrityl Tetraisostearate, Cetearyl Ethylhexanoate, Zinc Stearate, Zea Mays (Corn) Starch, Caprylyl Glycol, Ethylhexylglycerin, Potassium Sorbate, Chlorphenesin, Tocopheryl Acetate, Pei-10, Prunus Amygdalus Dulcis (Sweet Almond) Oil, Rosa Multiflora Flower Wax, Tetrasodium Edta, Dimethiconol, [+/- Iron Oxides (Ci 77491, Ci 77492, Ci 77499)].',
+  how_to_use: 
+  '-Using the Sculpt Brush (sold separately), apply Airbrush Flawless Finish Setting Powder around the nose, T-zone, and any other oily areas that need to be mattified.
+  -It can be used on its own or on top of foundation and concealer to set them in place.
+  -For oily skin types looking for a truly flawless finish, apply Airbrush Flawless Finish Setting Powder all over the face. For even more coverage, start from the T-zone and work outwards and upwards.'
+)
+
+p17.photo.attach(io: URI.open('https://shobha-seeds.s3.us-west-1.amazonaws.com/Shobha-Images-Mini/Mini-Airbrush-Powder-Tilbury28.webp'), filename: 'Shobha-Images-Mini/Mini-Airbrush-Powder-Tilbury28.webp')
+
+p18 = Product.create!( 
+  name: 'Mini Dewy Skin Mist', 
+  price: 22.00, 
+  size: 0.4, 
+  brand: 'Tatcha', 
+  category: 'Mini Size,Skincare',
+  description: 'A silky, fine mist moisturizer that can be used under or over makeup for dewy glowing skin anytime, anywhere.',
+  callouts: 'This product is cruelty-free and comes in recyclable packaging.',
+  other_info: 'This product is non-irritating, non-sensitizing, dermatologist tested, and cruelty-free. It is also formulated without mineral oil, synthetic fragrances, urea, DEA, or TEA. Beauty that gives back: Your purchase of a full-sized Tatcha skincare item will fund a day of school for incredible girls through the brand’s Beautiful Faces, Beautiful Futures partnership with Room to Read.', 
+  ingredients: 'AQUA/WATER/EAU, GLYCERIN, SQUALANE, PROPANEDIOL, DIMETHICONE, TRIETHYLHEXANOIN, POLYGLYCERYL-2 DIISOSTEARATE, PPG-5-CETETH-10 PHOSPHATE, SACCHAROMYCES/RICE FERMENT FILTRATE, CAMELLIA SINENSIS LEAF EXTRACT, CLADOSIPHON OKAMURANUS EXTRACT, CAMELLIA JAPONICA SEED OIL, SODIUM HYALURONATE, SERICIN, GLYCYRRHIZA GLABRA (LICORICE) ROOT EXTRACT, ORYZA SATIVA (RICE) GERM OIL, CHONDRUS CRISPUS EXTRACT, PANAX GINSENG ROOT EXTRACT, ROYAL JELLY EXTRACT, ZIZIPHUS JUJUBA FRUIT EXTRACT, THYMUS SERPYLLUM EXTRACT, SCUTELLARIA BAICALENSIS ROOT EXTRACT, TOCOPHEROL, TRIDECETH-12, SODIUM LAUROYL LACTYLATE, SORBITAN STEARATE, ETHYLHEXYLGLYCERIN, BEHENYL ALCOHOL, GLYCERYL STEARATE SE, SODIUM BENZOATE, GLUCONOLACTONE, PARFUM/FRAGRANCE, ALCOHOL, PHENOXYETHANOL, LIMONENE, LINALOOL',
+  how_to_use: 
+  '-Shake the mist gently and spritz two to three times from six inches away.
+  -Use before makeup to soothe and hydrate, or use after makeup to set and smooth.
+  -Can be sprayed on foundation brush or sponge to use with foundation for a dewy glow
+  -Can be used throughout the day on top of makeup to rehydrate and re-energize the complexion
+  -Apply on airplanes or during winter for extra hydration.
+  -Apply on hair for a beautiful sheen or as a detangler for kids.'
+)
+
+p18.photo.attach(io: URI.open('https://shobha-seeds.s3.us-west-1.amazonaws.com/Shobha-Images-Mini/Mini-Dewy-Skin-Mist-Tatcha22.webp'), filename: 'Shobha-Images-Mini/Mini-Dewy-Skin-Mist-Tatcha22.webp')
+
+p19 = Product.create!( 
+  name: 'Mini SOS Daily Rescue Facial Spray', 
+  price: 12.00, 
+  size: 1.0 , 
+  brand: 'Tower 28 Beauty', 
+  category: 'Mini Size,Skincare',
+  description: 'A simple-but-effective, pH-balancing hypochlorous acid toner that helps minimize visible skin irritation and redness and keep flare-ups at bay.',
+  callouts: 'This product is vegan, gluten-free, cruelty-free, and comes in recyclable packaging.',
+  other_info: 'This multihyphenate spray, powered by stable hypochlorous acid, helps to soothe and nourish stressed-out skin on the face and body (including visible blemishes and sunburns) while supporting the skin barrier. This product also has the National Eczema Association Seal of Acceptance™.', 
+  ingredients: 'Water, Sodium Chloride, Hypochlorous Acid.',
+  how_to_use: 
+  '-Use morning and evening.
+  -For best results, spray on dry, freshly- cleansed skin.
+  -Let dry down completely before applying moisturizer.
+  -Use for blemishes, sunburns, rashes, eczema, post-workout, and post-procedure.'
+)
+
+p19.photo.attach(io: URI.open('https://shobha-seeds.s3.us-west-1.amazonaws.com/Shobha-Images-Mini/Mini-SOS-Spray-Tower28-12.webp'), filename: 'Shobha-Images-Mini/Mini-SOS-Spray-Tower28-12.webp')
+
+p20 = Product.create!( 
+  name: 'Mini Radiant Creamy Concealer', 
+  price: 15.00, 
+  size: 0.05, 
+  brand: 'NARS', 
+  category: 'Mini Size,Makeup',
+  description: 'A travel size concealer that brightens, corrects, and perfects for 16 hours with a creamy, medium-to-buildable coverage and natural, radiant finish.',
+  callouts: 'Free of parabens, formaldehydes, formaldehyde-releasing agents, phthalates, mineral oil, retinyl palmitate, oxybenzone, coal tar, hydroquinone, sulfates SLS & SLES, triclocarban, triclosan, and contains less than one percent synthetic fragrance. It is also vegan.',
+  other_info: 'A long-lasting, skincare-infused formula that evens skin tone, blurs the appearance of dark spots and blemishes, and brightens undereyes, while retaining moisture for 24-hour hydration. May be used to highlight and contour. Crease-resistant and transfer-proof. Available in 30 shades.', 
+  ingredients: 'Water, Dimethicone, Titanium Dioxide, Iron Oxides, Hydrogenated Polydecene, Propanediol, Butylene Glycol, Peg-9 Polydimethylsiloxyethyl Dimethicone, Glycerin, Disteardimonium Hectorite, Peg-10 Dimethicone, Methyl Methacrylate Crosspolymer, Bis-Butyldimethicone Polyglyceryl-3, Mica, Sorbitan Sesquiisostearate, Dimethicone/Vinyl Dimethicone Crosspolymer, Isostearic Acid, Phenoxyethanol, Aluminum Hydroxide, Polysilicone-2, Maltodextrin, Trisodium Edta, Lecithin, Silica, Tin Oxide, Triethoxycaprylylsilane, Tocopheryl Acetate, Sodium Metabisulfite, Magnolia Officinalis Bark Extract, Tocopherol, Vitis Vinifera (Grape) Seed Extract.',
+  how_to_use: 
+  '-Can be applied directly from the applicator, with fingertips, or with the #10 Radiant Creamy Concealer Brush (sold separately).
+  -To use as a highlighter, select one to three shades lighter than your concealer shade and place on high points of the face.
+  -To add contour and dimension, apply concealer in the hollows of the cheeks, on temples, and along the hair and jaw lines.'
+)
+
+p20.photo.attach(io: URI.open('https://shobha-seeds.s3.us-west-1.amazonaws.com/Shobha-Images-Mini/Mini-Radiant-Concealer-NARS15.webp'), filename: 'Shobha-Images-Mini/Mini-Radiant-Concealer-NARS15.webp')
+
+p21 = Product.create!( 
+  name: 'Mini Indigo Overnight Repair Serum in Cream Treatment', 
+  price: 22.00, 
+  size: 0.34, 
+  brand: 'Tatcha', 
+  category: 'Mini Size,Skincare',
+  description: 'A serum-in-moisturizer treatment that visibly calms irritation, strengthens skin’s barrier, and balances the microbiome for a healthy, hydrated glow.',
+  callouts: 'This product is cruelty-free and comes in recyclable packaging.',
+  other_info: ' At the end of the day, skin can look irritated or feel dry and tight due to pollution and environmental stressors. Soothe, hydrate, and help strengthen your skin with this hybrid serum and moisturizer treatment, which maximizes the nightly renewal process so you wake up with healthy-looking, radiant skin.', 
+  ingredients: 'Aqua/Water/Eau, Dimethicone, Diglycerin, Saccharomyces/Camellia Sinensis Leaf/Cladosiphon Okamuranus/Rice Ferment Filtrate*, Glycerin, Diphenylsiloxy Phenyl Trimethicone, Neopentyl Glycol Diethylhexanoate, Butylene Glycol, Diisostearyl Malate, Peg-10 Dimethicone, Propanediol, Disteardimonium Hectorite, Ophiopogon Japonicus Root Extract, Indigofera Tinctoria Leaf Extract, Ceramide Ng, Palmitic Acid, Linoleic Acid, Sodium Hyaluronate, Polygonum Tinctorium Leaf/Stem Extract, Cetyl Alcohol, Sucrose Stearate, Sucrose Palmitate, Maltodextrin, Sargassum Vulgare Extract, Saccharomyces Ferment Filtrate, Hydrolyzed Lagenaria Siceraria Fruit Juice, Salvia Miltiorrhiza Root Extract, Tocopherol, Lauryl Peg-9 Polydimethylsiloxyethyl Dimethicone, Magnesium Sulfate, Hydrogenated Lecithin, Phytosterols, Ethylhexylglycerin, Phenoxyethanol, Mica (Ci 77019), Tin Oxide (Ci 77861), Titanium Dioxide (Ci 77891)',
+  how_to_use: 
+  '-At night, use directly after cleansing or as the final step in your ritual.
+  -Massage a pearl-size amount onto face, neck, and décolletage in upward strokes.'
+)
+
+p21.photo.attach(io: URI.open('https://shobha-seeds.s3.us-west-1.amazonaws.com/Shobha-Images-Mini/Mini-Indigo-Overnight-Tatcha22.webp'), filename: 'Shobha-Images-Mini/Mini-Indigo-Overnight-Tatcha22.webp')
+
+
+
+
 puts "Products Done!"
 
 
