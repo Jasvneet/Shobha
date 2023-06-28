@@ -49,8 +49,9 @@
     padding-right: 30px;
     display: flex;
     flex-direction: column;
-    width: 12vw;
-    padding-top: 20px;
+    width: 14vw;
+    margin-top: 40px;
+ 
    
 }
 
@@ -68,6 +69,7 @@
 
 .show-link {
     font-size: 14px;
+    height: 35px;
 }
 
 .brand-index {

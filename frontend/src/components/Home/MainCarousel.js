@@ -1,5 +1,6 @@
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
+import './home.css'
 
 
 export default function MainCarousel(){
@@ -20,6 +21,7 @@ export default function MainCarousel(){
         itemClass=""
         keyBoardControl
         minimumTouchDrag={80}
+        partialVisbile
         pauseOnHover
         renderArrowsWhenDisabled={false}
         renderButtonGroupOutside={false}

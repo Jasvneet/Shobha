@@ -1,9 +1,5 @@
 import { NavLink } from "react-router-dom/cjs/react-router-dom.min"
 import './Navbar2.css';
-import { useSelector, useDispatch } from 'react-redux';
-import { useEffect } from "react";
-import { fetchProducts } from "../../store/products";
-
 
 export default function NavBar2() {
 

@@ -221,6 +221,119 @@ p10 = Product.create!(
 
 p10.photo.attach(io: URI.open('https://shobha-seeds.s3.us-west-1.amazonaws.com/Shobha+Product+Images/Pure-Moisturizer-NARS-46.webp'), filename: 'Shobha Product Images/Pure-Moisturizer-NARS-46.webp')
 
+#New Products
+
+p11 = Product.create!( 
+  name: 'Nutritive 8H Magic Night Serum Hydrating Treatment for Dry Hair', 
+  price: 59.00, 
+  size: 3.04, 
+  brand: 'Kérastase', 
+  category: 'New,Hair',
+  description: 'A luxurious overnight nourishing leave-in serum that hydrates, strengthens, detangles, and enhance shine while you sleep.',
+  callouts: ' FREE of parabens, sulfates, and phthalates.',
+  other_info: 'This intensely nourishing leave-in serum hydrates, adds deep nutrition to moisturize, and detangles to leave hair soft and shiny by morning. It is formulated with plant-based proteins and niacinamide and protects from pillow friction, providing less frizz and strength. This serum is also loved by pro stylists and hydrates hair in just eight hours while giving hair instant suppleness and radiant shine with a smooth satin touch.', 
+  ingredients: 'Aqua / Water, Dimethicone, C13-16 Isoalkane, Niacinamide, Glycerin, Polyacrylamide, Phenoxyethanol, C13-14 Isoalkane, Laureth-7, Panthenol, Ascorbyl Glucoside, Butylene Glycol, Linalool, Hydroxycitronellal, Benzyl Salicylate, Benzyl Alcohol, Hexyl Cinnamal, Citronellol, Hydrolyzed Wheat Protein, Alpha-Isomethyl Ionone, Coumarin, Hydrolyzed Corn Protein, Hydrolyzed Soy Protein, Limonene, Iris Florentina Root Extract, Citric Acid, Ci 19140 / Yellow 5, Ci 14700 / Red 4, Parfum / Fragrance.',
+  how_to_use: 
+  '-Before going to sleep, apply one to two pumps, depending on hair length, then massage into lengths and ends of dry or damp hair.
+  -Leave in overnight.
+  -No need to rinse in the morning.
+  -Repeat three nights a week or as directed by a stylist.',
+  fragrance: 'This serum smells like a fresh and floral composition, with top notes of ylang, royal jelly, and violet leaves for a clean scent, middle notes of wild rose, jasmine, and tonka bean to capture the floral aroma, and bottom notes of sandalwood, white cedarwood, and cinnamon.'
+)
+
+p11.photo.attach(io: URI.open('https://shobha-seeds.s3.us-west-1.amazonaws.com/Shobha-Images-New/Nutritive-Magic-Hair-Kerastase59.webp'), filename: 'Shobha-Images-New/Nutritive-Magic-Hair-Kerastase59.webp')
+
+p12 = Product.create!( 
+  name: 'Rosy Glow Blush', 
+  price: 40.00, 
+  size: 0.6, 
+  brand: 'Dior', 
+  category: 'New,Makeup',
+  description: 'A secret weapon to create the appearance of naturally rosy cheeks for a fresh, glowy effect.',
+  callouts: 'FREE of parabens, sulfates, and phthalates.',
+  other_info: "Infused with color reviver technology, this innovative blush reacts to the skin's moisture level upon application to deliver a customized rosy effect. The result is a natural, instant healthy glow that lasts all day long.", 
+  ingredients: 'Synthetic Fluorphlogopite, Mica, Dimethicone, Boron Nitride, Lauroyl Lysine, Zinc Stearate, Silica, Cellulose, Ethylhexylglycerin, Sodium Dehydroacetate, Pentylene Glycol, Stearic Acid, Aqua (Water), Tocopherol, [+/- Ci 77891 (Titanium Dioxide), Ci 45410 (Red 27)].',
+  how_to_use: 
+  '-Apply Dior Rosy Glow Blush using the N°16 blush brush, lightly stroking the tops of the cheekbones.
+  -Wait a few moments for the custom, ultra-natural pink shade to be revealed.
+  -Use with the coordinating Lip Glow shade (sold separately) for a fresh, natural, and custom result.'
+)
+
+p12.photo.attach(io: URI.open('https://shobha-seeds.s3.us-west-1.amazonaws.com/Shobha-Images-New/Rosy-Glow-Blush-Dior40.webp'), filename: 'Shobha-Images-New/Rosy-Glow-Blush-Dior40.webp')
+
+p13 = Product.create!( 
+  name: 'Glow Sculpt Multi-Use Cream Highlighting Blush', 
+  price: 32.00, 
+  size: 0.20, 
+  brand: 'Saie', 
+  category: 'New,Makeup',
+  description: 'The flush of blush meets a hydrating, smoothing highlighter. This silky-cream, talc-free formula achieves a radiant, lifted effect while moisturizing and nourishing skin.',
+  callouts: 'This product is vegan, gluten-free, cruelty-free, and comes in recyclable packaging.',
+  other_info: 'These clean pigments blend with fine micropearls to create the ultimate buildable shimmery blush or sculpting glowy highlighter. Formulated with hydrating Hyaluronic Acid and moisturizing Kukui Oil, Glow Sculpt’s formula leaves a weightless, diffused glow that’s never chalky or glittery.', 
+  ingredients: 'Caprylic/Capric Triglyceride, Octyldodecanol, Simmondsia Chinensis Seed Oil (Simmondsia Chinensis (Jojoba) Seed Oil, Mica, Calcium Sodium Borosilicate, Synthetic Fluorphlogopite, Synthetic Beeswax, Helianthus Annuus Seed Cera (Helianthus Annuus (Sunflower) Seed Wax, Tin Oxide, Aleurites Moluccana Seed Oil (Aleurites Moluccanus (Kukui) Seed Oil, Passiflora Edulis Seed Oil, (Passiflora Edulis (Maracuja) Seed Oil, Ethylhexyl Palmitate, Helianthus Annuus Seed Oil (Helianthus Annuus (Sunflower) Seed Oil, Victoria Amazonica Flower Extract, Trihydroxystearin, Sodium Hyaluronate, Glucomannan. [+/- May Contain/ Peut Contenir: Ci 77891 (Titanium Dioxide), Ci 15850 (Red 6 Lake), Ci 77491 (Iron Oxides), Ci 77492 (Iron Oxides), Ci 77499 (Iron Oxides), Ci 77510 (Ferric Ferrocyanide)].',
+  how_to_use: 
+  "-After applying your typical complexion routine, layer Glow Sculpt on top. Glow Sculpt stacks nicely on top of or below your blush or bronzer.
+
+  -Use your fingertips or The Double Brush, specifically designed for Glow Sculpt, for seamless application anywhere you want to add a touch of blushy glow like the high points of cheekbones, eyes, cupid's bow, or bridge of nose. The large end of the brush works to sculpt the cheeks while the smaller end works for precise application like highlighting."
+)
+
+p13.photo.attach(io: URI.open('https://shobha-seeds.s3.us-west-1.amazonaws.com/Shobha-Images-New/Glow-Sculpt-Blush-Saie32.webp'), filename: 'Shobha-Images-New/Glow-Sculpt-Blush-Saie32.webp')
+
+p14 = Product.create!( 
+  name: 'Lip Power Matte Long Lasting Lipstick', 
+  price: 45.00, 
+  size: 0.10, 
+  brand: 'Armani Beauty', 
+  category: 'New,Makeup',
+  description: 'A long-lasting matte lipstick with rich color and a unique, soft-glide technology that delivers moisture, all-day comfort, and a creamy application.',
+  callouts: 'FREE of parabens, sulfates, and phthalates.',
+  other_info: 'This lipstick delivers rich color in one swipe. Formulated with a hydrating olive and jojoba oil blend, it sets with a non-drying, matte finish. All shades are made with coated pigment to enhance wear and color. The drop-shaped bullet carefully lines and shapes lips, giving you total control.', 
+  ingredients: 'Romanza Trimethylsiloxyphenyl Dimethicone, Isohexadecane, Octyldodecyl Neopentanoate, Polyethylene, Hydrogenated Styrene/Methylstyrene/Indene Copolymer, Synthetic Fluorphlogopite, VP/Hexadecene Copolymer, Hydrogenated Polyisobutene, Acrylic Acid/Isobutyl Acrylate/Isobornyl Acrylate Copolymer, CI 77891/Titanium Dioxide, Paraffin, Cera Microcristallina/Microcrystalline Wax, VP/Eicosene Copolymer, Mica, Synthetic Wax, CI 77491/Iron Oxides, CI 77492/Iron Oxides, CI 77499/Iron Oxides, Pentaerythrityl Tetra-Di-T-Butyl Hydroxyhydrocinnamate, CI 15850/Red 7, Aluminum Hydroxide, Silica, Tocopherol.',
+  how_to_use: 
+  "-For the most intense color, apply to clean, bare lips.
+  -Start by shaping lip with tip of drop-shaped bullet at center of Cupid's bow, then fill in remaining lip, working from center outward.
+  -For a more muted look, fill in color at center of your lips and dab outward with your finger."
+)
+
+p14.photo.attach(io: URI.open('https://shobha-seeds.s3.us-west-1.amazonaws.com/Shobha-Images-New/Lip-Power-Armani45.webp'), filename: 'Shobha-Images-New/Lip-Power-Armani45.webp')
+
+p15 = Product.create!( 
+  name: 'I Want Choo Forever Eau de Parfum', 
+  price: 132.00, 
+  size: 3.4, 
+  brand: 'JIMMY CHOO', 
+  category: 'New,Fragrance',
+  description: 'I Want Choo Forever encapsulates a sense of confidence and elegance unlike any other. The I Want Choo Forever woman is fearless, seductive, a bit unexpected, passionate, and here to have fun—she evolves in a joyful environment, always with her girlfriends.',
+  callouts: 'FREE of parabens, sulfates, and phthalates.',
+  other_info: 'The modern bottle design is shaped to reflect a feminine silhouette embellished with a jewel-like JC monogram on an elegant black, degrade lacquer color. The bottle is topped with a gold spray cap with a hammered effect, echoing the craftsmanship of the brand. The intense, sparkling, black and gold glitter box packaging reveals the precious JC monogram signature.', 
+  ingredients: 'Alcohol Denat. (Sd Alcohol 40-B), Benzyl Salicylate, Linalool, Hydroxycitronellal, Coumarin, Limonene, Citronellol, Citral, Farnesol, Benzyl Alcohol, Geraniol, Water, Ethylhexyl Methoxycinnamate, Ethylhexyl Salicylate, Butyl Methoxydibenzoylmethane, BHT.',
+  how_to_use: 
+  '-Fragrance is intensified by the warmth of your own body. Apply in the creases of your knees and elbows for a longer-lasting, stronger scent. 
+  -After applying, avoid rubbing or dabbing skin. This breaks down the fragrance, causing it to wear off more quickly. 
+  -If you prefer placing fragrance on your wrists, be sure to reapply after frequent handwashing, as this tends to rinse off the scent. 
+  -Replace fragrance after 12 months. Expired perfumes more than a year old lose the integrity of the original scent.',
+  fragrance: 'I Want Choo Forever is a chypre amber gourmand fragrance with notes of juicy rose, black cherry liquor, and moss accord. This eau de parfum encapsulates a sense of confidence and elegance unlike any other. The I Want Choo Forever Woman is fearless, seductive, and a bit unexpected.'
+)
+
+p15.photo.attach(io: URI.open('https://shobha-seeds.s3.us-west-1.amazonaws.com/Shobha-Images-New/I-Want-Choo132.webp'), filename: 'Shobha-Images-New/I-Want-Choo132.webp')
+
+p16 = Product.create!( 
+  name: 'Rio Radiance Illuminating Body Cream', 
+  price: 48.00, 
+  size: 8.1, 
+  brand: 'Sol de Janeiro', 
+  category: 'New,Body',
+  description: 'An illuminating, fast-absorbing body cream that provides lightweight hydration for gorgeous, radiant skin.',
+  callouts: 'FREE of parabens, sulfates, and phthalates.',
+  other_info: 'This limited-edition body moisturizer is infused with ethically sourced mica and squalane for glowing, hydrated skin—without feeling greasy. Beachy notes of solar tuberose and leite de coco capture the nostalgic scent of sunshine on skin and warm sand for carefree vacation vibes.', 
+  ingredients: 'Ethically Sourced Mica: Immediately adds luminosity to the skin. Squalane: Keeps skin moisturized. Carrot Seed Oil: Nourishes skin with vitamin C and omega-6.',
+  how_to_use: 
+  '-Massage in a circular motion to promote optimal absorption and circulation.
+  -Use all over your body for the ultimate glow.'
+)
+
+p16.photo.attach(io: URI.open('https://shobha-seeds.s3.us-west-1.amazonaws.com/Shobha-Images-New/Rio-radiance-Sol48.webp'), filename: 'Shobha-Images-New/Rio-radiance-Sol48.webp')
+
 
 puts "Products Done!"
 

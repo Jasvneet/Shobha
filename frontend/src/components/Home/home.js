@@ -1,6 +1,7 @@
 import React from 'react'
 import MainCarousel from './MainCarousel';
 import './home.css'
+import NewProductCarousel from './NewProductsCarousel';
 
 const Home = () => {
     
@@ -10,8 +11,16 @@ const Home = () => {
   return (
     <>
       <div className='home-wrapper'>
-        <MainCarousel />
+        <div className='main-caro'>
+          <MainCarousel />
+        </div>
+        <div className='new-prod-caro'>
+          <h2>Just Dropped!</h2>
+          <NewProductCarousel />
+        </div>
       </div>
+
+      
     </>
   );
 } ; 

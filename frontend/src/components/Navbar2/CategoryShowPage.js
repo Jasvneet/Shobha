@@ -2,7 +2,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import { useParams } from 'react-router-dom/cjs/react-router-dom.min'
 import { useEffect } from 'react';
 import { NavLink } from 'react-router-dom/cjs/react-router-dom.min';
-import { fetchProductsByCategory, fetchProducts, clearProducts } from '../../store/products';
+import { fetchProductsByCategory, clearProducts } from '../../store/products';
 import './Navbar2.css'
 
 export default function CategoryShowPage() {
