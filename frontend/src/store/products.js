@@ -4,6 +4,7 @@ import { receiveReviews } from './reviews';
 
 export const RECEIVE_PRODUCT = 'products/RECEIVE_PRODUCT'
 export const RECEIVE_PRODUCTS = 'products/RECEIVE_PRODUCTS'
+export const CLEAR_PRODUCTS = 'products/CLEAR_PRODUCTS';
 
 export const receiveProduct = (product) => ({
     type: RECEIVE_PRODUCT,
@@ -14,6 +15,10 @@ export const receiveProducts = (products) => ({
     type: RECEIVE_PRODUCTS,
     products
 })
+
+export const clearProducts = () => ({
+    type: CLEAR_PRODUCTS
+  });
 
 export const fetchProduct = (product) => async(dispatch) => {
     const response = await fetch(`/api/products/${product}`);
@@ -69,9 +74,7 @@ export const fetchProductsByCategory = (category) => async(dispatch) => {
     }
 }
 
-const initialState = {
-    products: {}
-}
+const initialState = {};
 
 const productsReducer = (state = initialState, action) => {
     let newState = {...state};
@@ -82,6 +85,8 @@ const productsReducer = (state = initialState, action) => {
         case RECEIVE_PRODUCT:
             newState[action.product.id] = action.product;
             return newState;
+        case CLEAR_PRODUCTS:
+            return {};
         default:
             return state;
         }

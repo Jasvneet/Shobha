@@ -6,25 +6,14 @@ import { fetchProducts } from "../../store/products";
 
 
 export default function NavBar2() {
-    const products = useSelector(state => Object.values(state.products))
-    const dispatch = useDispatch();
-
-    useEffect(() => {
-        dispatch(fetchProducts());
-    }, [dispatch]);
-
-    const categories = [];
-    products.forEach((product) => {
-        if (!categories.includes(product.category)) {
-        categories.push(product.category);
-        }
-    });
 
     return (
         <div className="nav2">
             <ul className='nav2-links'>
                 <li>
-                    <a className='nav2-link' href='#'>New</a>
+                    <NavLink to={`/categories/New`} className='nav2-link'>
+                        New
+                    </NavLink>
                 </li>
                 <li>
                     <NavLink to={'/brands'} className='nav2-link'>
@@ -37,13 +26,30 @@ export default function NavBar2() {
                     </NavLink>
                 </li>
 
-                {categories.map(category => (
-                    <li>
-                        <NavLink to={`/categories/${category}`} className='nav2-link'>
-                            {category}
-                        </NavLink>
-                    </li>
-                ))}
+                <li>
+                    <NavLink to={`/categories/Skincare`} className='nav2-link'>
+                        Skincare
+                    </NavLink>
+                </li>
+
+                <li>
+                    <NavLink to={`/categories/Fragrance`} className='nav2-link'>
+                        Fragrance
+                    </NavLink>
+                </li>
+
+                <li>
+                    <NavLink to={`/categories/Body`} className='nav2-link'>
+                        Bath & Body
+                    </NavLink>
+                </li>
+
+                <li>
+                    <NavLink to={`/categories/Mini Size`} className='nav2-link'>
+                        Mini Size
+                    </NavLink>
+                </li>
+              
                 {/* <li>
                     <a className='nav2-link' href='#'>Skincare</a>
                 </li>

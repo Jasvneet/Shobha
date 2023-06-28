@@ -2,7 +2,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import { useParams } from 'react-router-dom/cjs/react-router-dom.min'
 import { useEffect } from 'react';
 import { NavLink } from 'react-router-dom/cjs/react-router-dom.min';
-import { fetchProductsByCategory, fetchProducts } from '../../store/products';
+import { fetchProductsByCategory, fetchProducts, clearProducts } from '../../store/products';
 import './Navbar2.css'
 
 export default function CategoryShowPage() {
@@ -11,9 +11,9 @@ export default function CategoryShowPage() {
     const products = useSelector(state => Object.values(state.products));
 
     useEffect(() => {
-       
+        dispatch(clearProducts()); 
         dispatch(fetchProductsByCategory(category))
-    }, [dispatch])
+    }, [dispatch, category])
 
     return (
         <>

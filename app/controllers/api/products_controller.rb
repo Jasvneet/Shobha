@@ -32,8 +32,14 @@ class Api::ProductsController < ApplicationController
   end
 
   def category
-    @category = params[:category]
-    @products = Product.where(category: @category)
+    categories = params[:category].split(',') 
+
+    product_ids = nil
+    categories.each do |category|
+      category_products = Product.where('category LIKE ?', "%#{category}%").pluck(:id)
+      product_ids = product_ids.nil? ? category_products : product_ids & category_products
+    end
+    @products = Product.where(id: product_ids)
     render :category
   end
 
