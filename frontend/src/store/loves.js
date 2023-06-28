@@ -38,18 +38,19 @@ export const deleteLove = (loveId) => async(dispatch) => {
     }
 }
 
-export const createLove = (love) => async(dispatch) => {
+export const createLove = (like) => async(dispatch) => {
+  
     const response = await csrfFetch(`/api/loves`, {
         method: 'POST',
         headers: {
             'Content-type' : 'application/json'
         },
-        body: JSON.stringify(love)
+        body: JSON.stringify({like})
     })
 
     if (response.ok) {
-        const love = await response.json();
-        dispatch(receiveLove(love))
+        const data = await response.json();
+        dispatch(receiveLove(data.like))
     }
 }
 

@@ -1,0 +1,12 @@
+
+.rating-input .filled {
+    color: rgb(13, 6, 2);
+  }
+  
+.rating-input .empty {
+    color: rgb(198, 188, 184);
+}
+
+.rating-input {
+    display: flex;
+}

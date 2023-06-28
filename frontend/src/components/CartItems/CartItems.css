@@ -1,5 +1,6 @@
 .cart-index-wrapper {
     display: flex;
+    height: 100vh
 }
 
 .cart-items-wrapper {
@@ -84,7 +85,7 @@
     border: 1px solid rgb(204, 204, 204);
     border-radius: 4px;
     display: block;
-    height: 100%;
+    height: 22%;
     width: 15%;
     margin-right: auto;
     margin-top: 87px;

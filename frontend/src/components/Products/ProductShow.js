@@ -5,6 +5,9 @@ import { fetchProduct } from '../../store/products';
 import ReviewIndex from '../Reviews/ReviewIndex';
 import { createCartItem } from '../../store/cart_items';
 import { createLove } from '../../store/loves';
+import LoginForm from '../LoginFormModal/LoginForm';
+import { Modal } from '../../context/Modal';
+
 import './Product.css'
 
 
@@ -15,7 +18,7 @@ const ProductShow = () => {
     const dispatch = useDispatch();
     const [showIngredients, setShowIngredients] = useState(false);
     const [showHow, setShowHow] = useState(false);
-
+    const [showModal, setShowModal] = useState(false);
 
     useEffect(() => {
         if (productId){
@@ -28,9 +31,23 @@ const ProductShow = () => {
         return null 
     }
 
+    const HandleOnClick = (e) => {
+        if (!currentUser){
+            setShowModal(true);
+            return;
+        } else {
+            // Redirect to the create page for reviews
+            // Replace the placeholder '/create-page-url' with your actual route
+            window.location.href = `/reviews/new/${productId}`;
+        }
+    }
+
     const HandleAddCartItem = (e) => {
         e.preventDefault();
-
+        if (!currentUser){
+            setShowModal(true);
+            return;
+        } 
         const cartItem = {
             product_id: productId,
             user_id: currentUser.id,
@@ -43,12 +60,12 @@ const ProductShow = () => {
     const HandleAddLove = (e) => {
         e.preventDefault();
 
-        const love = {
+        const like = {
             product_id: productId,
             user_id: currentUser.id
         };
 
-        dispatch(createLove(love));
+        dispatch(createLove(like));
     }
 
     const toggleIngredients = () => {
@@ -155,8 +172,15 @@ const ProductShow = () => {
             <div className='reviews-show'>
                 <div className='reviews-header'>
                     <h2>Ratings & Reviews</h2>
-                    <NavLink to={`/reviews/new/${productId}`} className="write-review-link">Write a Review</NavLink>
-                  
+                    <button onClick={HandleOnClick} className='write-review-link'>
+                        Write a Review
+                    </button>
+                    {showModal && (
+                        <Modal onClose={() => setShowModal(false)}>
+                        <LoginForm closeLogin={setShowModal}/>
+                        </Modal>
+                    )}
+        
                 </div>
 
                     <ReviewIndex currentUser={currentUser} />

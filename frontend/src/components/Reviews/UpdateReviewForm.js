@@ -1,4 +1,5 @@
 import { updateReview, deleteReview, fetchReview } from "../../store/reviews";
+import StarRatingInput from "./Ratings/StarRatingInput";
 import { useDispatch, useSelector } from "react-redux";
 import { NavLink } from "react-router-dom/cjs/react-router-dom";
 import { useState } from "react";
@@ -40,6 +41,10 @@ export default function UpdateReview(){
 
       };
 
+      const onChange = (number) => {
+        setRating(parseInt(number));
+      };
+
       return (
         <>
         <div className="review-form-wrapper">
@@ -76,12 +81,10 @@ export default function UpdateReview(){
             
                         <label className="create-review-label">
                             <h4>Rate This Product </h4>
-                            <input 
-                            type="number"
-                            min="1"
-                            max="5"
-                            value={rating}
-                            onChange={e => setRating(e.currentTarget.value)}
+                            <StarRatingInput
+                                    disabled={false}
+                                    onChange={onChange}
+                                    rating={rating}
                             />
                         </label>
                         <div className="divider"></div>

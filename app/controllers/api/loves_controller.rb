@@ -5,6 +5,8 @@ class Api::LovesController < ApplicationController
     end 
 
     def create 
+    
+
         @love = Love.new(love_params)
         @love.user_id = current_user.id
         if @love.save
@@ -21,6 +23,6 @@ class Api::LovesController < ApplicationController
     end 
 
     def love_params 
-        params.require(:love).permit(:product_id, :user_id, :id)
+        params.require(:like).permit(:product_id, :user_id, :id)
     end 
 end
