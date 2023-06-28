@@ -8,17 +8,6 @@ import NewProductCarousel from './NewProductsCarousel';
 import MinisCarousel from './MinisCarousel';
 
 const Home = () => {
-  const products = useSelector(state => Object.values(state.products))
-  const dispatch = useDispatch();
-
-  useEffect(() => {
-      
-      dispatch(fetchProductsByCategory('Mini Size'))
-  }, [dispatch])
-  
-  // useEffect(() => {
-  //   dispatch(fetchProductsByCategory('New'))
-  // }, [dispatch])
 
   
   return (
@@ -31,7 +20,7 @@ const Home = () => {
           <h2>Just Dropped!</h2>
           <NewProductCarousel />
         </div>
-        <div className='minis-caro'>
+        <div className='new-prod-caro'>
           <h2>Adventure-ready beauty, perfectly portable!  ✈️💄</h2>
           <MinisCarousel />
          

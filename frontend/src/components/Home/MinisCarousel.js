@@ -1,5 +1,6 @@
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
+import { NavLink } from 'react-router-dom';
 import {useSelector, useDispatch} from 'react-redux';
 import { useEffect } from 'react';
 import { fetchProductsByCategory, clearProducts } from '../../store/products';
@@ -74,14 +75,18 @@ export default function MinisCarousel(){
         >
             {products.map(product => (
 
-                <div className="new-product-slide">
-                   <div className="new-product-card">
-                        <img src={product.photoUrl} alt={product.name} className="new-product-image" />
-                        <div className="new-product-details">
+                <div className="caro-product-slide">
+                  
+                   <div className="caro-product-card">
+                        <NavLink to={`/products/${product.id}`} >
+                              <img src={product.photoUrl} alt={product.name} className="caro-product-image" />
+                        </NavLink>
+                        <div className="caro-product-details">
                             <div className="brand-prod-carousel">{product.brand}</div>
                             <div className="name-prod-carousel">{product.name}</div>
                         </div>
-                    </div>
+                    </div>     
+               
                 </div>
             
             ))}

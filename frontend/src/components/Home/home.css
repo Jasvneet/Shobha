@@ -20,12 +20,94 @@
   margin-left: -10px;
 }
 
+.slide-isle-link {
+  display: flex;
+  background-color: #FC6D89;
+  height: 12vh;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+}
+
+.slide-lips-link {
+  display: flex;
+  background-color: rgb(225, 147, 137);
+  height: 12vh;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+}
+
+.slide-farmacy-link {
+  display: flex;
+  background-color: rgb(183, 245, 157);
+  height: 12vh;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+}
+
+.slide-newprod-link{
+  display: flex;
+  background-color: #C5ABD3;
+  height: 12vh;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+}
+
+.slide-sunscreen-link{
+  display: flex;
+  background-color: rgb(250, 233, 156);
+  height: 12vh;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+}
+
+
+
+.slide-minis-link {
+  display: flex;
+  background-color: #FBCD53;
+  height: 12vh;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+
+}
 .slide-img-link {
   display: flex;
   background-color: black;
-  height: 10vh;
+  height: 12vh;
   border-bottom-left-radius: 5px;
   border-bottom-right-radius: 5px;
+}
+
+.slide-link-container {
+  font-family: Arial, Helvetica, sans-serif;
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  line-height: 1.25;
+  padding: 18px;
+  flex: 1 1 0%;
+}
+
+.slide-link-container h3 {
+  font-size: 20px;
+  font-weight: 700;
+  padding-bottom: 2px;
+  
+}
+
+.slide-link {
+  text-decoration: none;
+  color: black;
+  font-size: 14px;
+}
+
+.slide-link span {
+  font-weight: 700;
+
+}
+
+.slide-link p {
+  padding-bottom: 21px;
 }
 
 .new-prod-caro {
@@ -42,6 +124,11 @@
   font-family: Arial, Helvetica, sans-serif;
 }
 
+.mini-car0 {
+  display: flex;
+  flex-direction: column;
+}
+
 .minis-caro h2 {
   margin-left: 130px;
   margin-top: 30px;
@@ -55,7 +142,7 @@
 
 }
 
-.new-product-slide {
+.caro-product-slide {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -64,7 +151,7 @@
   
 }
 
-.new-product-card {
+.caro-product-card {
   width: 98%;
   height: 98%;
   box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.1);
@@ -74,13 +161,13 @@
   
 }
 
-.new-product-image {
+.caro-product-image {
   width: 100%;
   height: auto;
   
 }
 
-.new-product-details {
+.caro-product-details {
   padding: 8px 12px;
 }
 
