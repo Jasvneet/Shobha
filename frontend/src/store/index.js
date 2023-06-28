@@ -5,12 +5,14 @@ import sessionReducer from './session';
 import productsReducer from './products';
 import reviewsReducer from './reviews';
 import cartItemsReducer from './cart_items';
+import lovesReducer from './loves';
 
 const rootReducer = combineReducers({
    session: sessionReducer,
    products: productsReducer,
    reviews: reviewsReducer,
-   cartItems: cartItemsReducer
+   cartItems: cartItemsReducer,
+   loves: lovesReducer
 });
 
 let enhancer;

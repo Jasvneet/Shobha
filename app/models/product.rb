@@ -12,6 +12,10 @@
 #  ingredients :text             not null
 #  created_at  :datetime         not null
 #  updated_at  :datetime         not null
+#  how_to_use  :text
+#  callouts    :text
+#  other_info  :text
+#  color       :string
 #
 class Product < ApplicationRecord
     validates :name, :description, :price, :size, :category, :brand, :ingredients, presence: true 
@@ -27,6 +31,11 @@ class Product < ApplicationRecord
     has_many :carts,
         foreign_key: :product_id,
         class_name: :CartItem,
+        dependent: :destroy
+
+    has_many :loves,
+        foreign_key: :product_id,
+        class_name: :Love,
         dependent: :destroy
 
     def self.search(query)

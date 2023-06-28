@@ -4,16 +4,18 @@ import { useDispatch, useSelector } from 'react-redux';
 import { fetchProduct } from '../../store/products';
 import ReviewIndex from '../Reviews/ReviewIndex';
 import { createCartItem } from '../../store/cart_items';
+import { createLove } from '../../store/loves';
 import './Product.css'
 
 
 const ProductShow = () => {
     const {productId} = useParams();
     const product = useSelector(state => state.products[productId]);
+    const currentUser = useSelector(state => state.session.user)
     const dispatch = useDispatch();
     const [showIngredients, setShowIngredients] = useState(false);
     const [showHow, setShowHow] = useState(false);
-    const currentUser = useSelector(state => state.session.user)
+
 
     useEffect(() => {
         if (productId){
@@ -36,6 +38,17 @@ const ProductShow = () => {
         };
         dispatch(createCartItem(cartItem));
 
+    }
+
+    const HandleAddLove = (e) => {
+        e.preventDefault();
+
+        const love = {
+            product_id: productId,
+            user_id: currentUser.id
+        };
+
+        dispatch(createLove(love));
     }
 
     const toggleIngredients = () => {
@@ -62,7 +75,14 @@ const ProductShow = () => {
                     </div>
                     <b className='price'><strong>${product.price}0</strong> get 25% off your Shobha order when you open and use a Shobha Credit Card today. </b>
                     <p className='size'>Size: {product.size} oz</p>
-                    <button onClick={HandleAddCartItem} className='cart-button'>Add to Basket</button>
+                    <div className='product-show-buttons'>
+                        <button onClick={HandleAddCartItem} className='cart-button'>Add to Basket</button>
+                        <button onClick={HandleAddLove} className='add-love-button'>
+                        <svg className="nav-icon" id='original-icon'>
+                            <path d="M22 3.1c2.7 2.2 2.6 7.2.1 9.7-2.2 2.8-7.4 8.1-9.3 9.6-.5.4-1.1.4-1.6 0-1.8-1.5-7-6.8-9.2-9.6-2.6-2.6-2.7-7.6 0-9.7C4.6.5 9.7.7 12 4.2 14.3.8 19.3.5 22 3.1zm-.7.8c-2.4-2.4-7.2-2-8.9 1.5-.1.3-.4.4-.7.2-.1 0-.2-.1-.2-.2-1.6-3.5-6.5-4-8.9-1.5C.4 5.6.5 10 2.7 12.2c2.2 2.7 7.3 8 9.1 9.4.1.1.2.1.3 0 1.8-1.4 6.9-6.7 9.1-9.5 2.3-2.1 2.4-6.5.1-8.2z"></path>
+                        </svg>
+                        </button>
+                    </div>
                 </div>
            </div>
            <div className='divider'/>

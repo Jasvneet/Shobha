@@ -76,6 +76,17 @@
     text-decoration: none;
 }
 
+.product-show-buttons {
+    display: flex;
+}
+
+.add-love-button {
+    background-color: transparent;
+    border: none;
+    margin-top: 310px;
+    margin-left: 40px;
+}
+
 .cart-button {
     font-size: 14px;
     padding: 0.25em 1.125em 0.25em 58px;

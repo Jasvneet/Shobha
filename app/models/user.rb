@@ -38,6 +38,11 @@ class User < ApplicationRecord
     source: :product,
     dependent: :destroy
 
+  has_many :loves,
+    foreign_key: :user_id,
+    class_name: :Love,
+    dependent: :destroy
+
   before_validation :ensure_session_token
 
   def self.find_by_credentials(email, password)
