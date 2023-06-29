@@ -1,5 +1,5 @@
 json.product do 
-    json.extract! @product, :id, :name, :price, :size, :category, :brand, :ingredients, :description, :how_to_use, :other_info, :callouts
+    json.extract! @product, :id, :name, :price, :size, :category, :brand, :ingredients, :description, :how_to_use, :other_info, :callouts, :fragrance
     json.photoUrl @product.photo.attached? ? @product.photo.url : nil
 end 
     

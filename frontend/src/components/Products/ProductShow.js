@@ -15,10 +15,10 @@ const ProductShow = () => {
     const {productId} = useParams();
     const product = useSelector(state => state.products[productId]);
     const currentUser = useSelector(state => state.session.user)
-    const dispatch = useDispatch();
     const [showIngredients, setShowIngredients] = useState(false);
     const [showHow, setShowHow] = useState(false);
     const [showModal, setShowModal] = useState(false);
+    const dispatch = useDispatch();
 
     useEffect(() => {
         if (productId){
@@ -125,6 +125,7 @@ const ProductShow = () => {
                     <p><strong>What It Is: </strong>{product.description}</p>
                     <p><strong>Ingredient Callouts:</strong> {product.callouts}</p>
                     <p><strong>What Else You Need to Know:</strong> {product.otherInfo} </p>
+                    
                 </div>
             </div>
 

@@ -16,11 +16,18 @@ export default function LovesIndex() {
 
     return (
         <>
-            {loves.map(love => (
-                <>
-                <LovesIndexItem love={love} />
-                </>
-            ))}
+                <div className='loves-index-wrapper'>
+                    <div className='loves-wrapper>'></div>
+                    <h1 className='loves-heading'>Loves</h1>
+                    <div className='divider-loves'></div>
+                    {loves.map(love => (
+                        <>
+                            <div className='loves-container'>
+                                <LovesIndexItem love={love} />
+                            </div>
+                        </>
+                    ))}
+            </div>
 
         </>
     )
