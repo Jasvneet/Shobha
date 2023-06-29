@@ -44,9 +44,11 @@ export default function LovesIndexItem({love}) {
             <div className='love-details-container'>
                 <img src={product.photoUrl} />
                 <div className='love-details'>
-                    <div className='brand-index'>{product.brand}</div>
+                    <NavLink to={`/brands/${product.brand}`} className='brand-link'>
+                        <div className='brand-index'>{product.brand}</div>
+                    </NavLink>
                     <NavLink to={`/products/${product.id}`} className="show-link">{product.name}</NavLink>
-                    <div className='size'>{product.size}</div>
+                    <div className='love-size'>SIZE {product.size} oz</div>
                 </div>
                 <div className='price-love'><strong>${product.price}0</strong></div>
                 <div className='loves-buttons-container'>

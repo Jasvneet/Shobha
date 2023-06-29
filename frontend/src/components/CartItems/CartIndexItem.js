@@ -1,8 +1,8 @@
 import './CartItems.css'
 import {useSelector, useDispatch} from "react-redux";
 import { useState, useEffect } from 'react';
-import { fetchProduct } from '../../store/products';
 import { deleteCartItem, updateCartItem } from '../../store/cart_items';
+import { NavLink } from 'react-router-dom/cjs/react-router-dom.min';
 
 export default function CartIndexItem({cartItem}) {
     const product = useSelector(state => state.products[cartItem.productId])
@@ -45,9 +45,11 @@ if (product === undefined) {
             <div className='cart-item-card'>
                 <img src={product.photoUrl} />
                 <div className='cart-item-details'>
-                    <div className='cart-item-brand'><strong>{product.brand}</strong></div>
+                    <NavLink to={`/brands/${product.brand}`} className='brand-link'>
+                        <div className='cart-item-brand'><strong>{product.brand}</strong></div>
+                    </NavLink>
                     <h1>{product.name}</h1>
-                    <div className='cart-item-size'>Size: {product.size} oz</div>
+                    <div className='cart-item-size'>SIZE {product.size} oz</div>
                     <div className='edit-delete-cart-item'>
                         <select value={quantity} onChange={handleQuantityChange}>
                             {[...Array(10)].map((_, index) => (

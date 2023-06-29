@@ -7,7 +7,6 @@ import { createCartItem } from '../../store/cart_items';
 import { createLove } from '../../store/loves';
 import LoginForm from '../LoginFormModal/LoginForm';
 import { Modal } from '../../context/Modal';
-
 import './Product.css'
 
 
@@ -29,7 +28,6 @@ const ProductShow = () => {
     }, [productId]);
 
     useEffect(() => {
-        // Check if the product is loved by the current user
         if (currentUser && product && product.loves && product.loves.some(love => love.product_id === product.id)) {
           setIsLoved(true);
         } else {
@@ -57,18 +55,24 @@ const ProductShow = () => {
             setShowModal(true);
             return;
         } 
+
         const cartItem = {
             product_id: productId,
             user_id: currentUser.id,
             quantity: 1
         };
         dispatch(createCartItem(cartItem));
-
     }
 
     const HandleAddLove = (e) => {
         e.preventDefault();
-
+        if (!currentUser){
+            setShowModal(true);
+            return;
+        } 
+        if (isLoved) {
+            return;
+        }
         const love = {
             product_id: productId,
             user_id: currentUser.id
@@ -77,6 +81,11 @@ const ProductShow = () => {
         dispatch(createLove(love));
         setIsLoved(true);
     }
+
+    const handleLoginSuccess = () => {
+        setShowModal(false); // Close the modal upon successful sign-in
+      };
+      
 
     const toggleIngredients = () => {
         setShowIngredients(!showIngredients);
@@ -105,7 +114,7 @@ const ProductShow = () => {
                     <div className='product-show-buttons'>
                         <button onClick={HandleAddCartItem} className='cart-button'>Add to Basket</button>
                         {isLoved ? (
-                            <button onClick={HandleAddLove} className='add-love-button'>
+                            <button onClick={HandleAddLove} className='add-love-button' id='loved-active'>
                                 <svg className="nav-icon" id='original-icon'>
                                     <path d="M22 3.1c2.7 2.2 2.6 7.2.1 9.7-2.2 2.8-7.4 8.1-9.3 9.6-.5.4-1.1.4-1.6 0-1.8-1.5-7-6.8-9.2-9.6-2.6-2.6-2.7-7.6 0-9.7C4.6.5 9.7.7 12 4.2 14.3.8 19.3.5 22 3.1z"></path>
                                 </svg>
@@ -197,7 +206,7 @@ const ProductShow = () => {
                     </button>
                     {showModal && (
                         <Modal onClose={() => setShowModal(false)}>
-                        <LoginForm closeLogin={setShowModal}/>
+                        <LoginForm closeLogin={setShowModal} onLoginSuccess={handleLoginSuccess}/>
                         </Modal>
                     )}
         

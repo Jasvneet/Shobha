@@ -21,6 +21,9 @@ function LoginForm(props) {
     const handleSubmit = (e) => {
         e.preventDefault();
         setErrors([]);
+        if (typeof props.onLoginSuccess === 'function') {
+          props.onLoginSuccess();
+        }
         return dispatch(sessionActions.login({ email, password }))
           .catch(async (res) => {
             let data;

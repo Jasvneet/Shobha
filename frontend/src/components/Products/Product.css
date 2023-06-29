@@ -87,9 +87,11 @@
     border: none;
     margin-top: 310px;
     margin-left: 40px;
-    
 }
 
+#loved-active {
+    fill: rgb(207, 17, 44);
+}
 
 .cart-button {
     font-size: 14px;
