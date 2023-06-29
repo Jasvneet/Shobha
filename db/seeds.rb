@@ -62,111 +62,25 @@ require "open-uri"
  
 })
 
-  p1.photo.attach(io: URI.open('https://shobha-seeds.s3.us-west-1.amazonaws.com/Supergoop-GlowScreen-Value-Size.webp'), filename: 'Supergoop-GlowScreen-Value-Size.webp')
+p1.photo.attach(io: URI.open('https://shobha-seeds.s3.us-west-1.amazonaws.com/Supergoop-GlowScreen-Value-Size.webp'), filename: 'Supergoop-GlowScreen-Value-Size.webp')
 
-   p2 = Product.create!({
-    name: 'Glowscreen SPF 40 Sunscreen with Hyaluronic Acid + Niacinamide',
-    description:
-    'A hydrating, makeup-gripping primer with SPF 40 and blue-light protection that has a pearlescent finish to leave skin luminous with an instant glow.\n\nSkincare Concerns: Dullness, Dryness, and Fine Lines and Wrinkles\n\nFormulation: Lotion.',
-    callouts: 'This product is cruelty-free, and gluten-free.',
-    other_info: 'This multitasking primer with SPF gives skin an instant glow-up. Formulated with hyaluronic acid, niacinamide & vitamin B5 to hydrate & perfect, this broad spectrum tinted sunscreen creates an instant glow on its own or under makeup. Plus, it helps filter blue light from tech!',
-    price: 38.00,
-    size: 1.7,
-    ingredients: 'Active: Avobenzone 3%, Octisalate 5%, Octocrylene 10% Inactive: Water, Propanediol, Butyloctyl Salicylate, Glycerin, C12-15 Alkyl Benzoate, Polymethylsilsesquioxane, Niacinamide, Glyceryl Stearate Citrate, Bismuth Oxychloride, Mica, Titanium Dioxide, Lauryl Lactate, Isododecane, Isodecyl Neopentanoate, Glyceryl Stearate, Diisopropyl Sebacate, Cetyl Phosphate, Caprylic/Capric Triglyceride, Coco-Caprylate, Ethylhexyl Hydroxystearate, Butylene Glycol, Arginine, Hydroxyacetophenone, Caprylyl Glycol, 1,2-Hexanediol, Iron Oxides, Sodium Hyaluronate, Chlorphenesin, Acrylates/C10-30 Alkyl Acrylate Crosspolymer, Trisodium Ethylenediamine Disuccinate, Phospholipids, Limonium Gerberi Extract, Leuconostoc/ Radish Root Ferment Filtrate, Theobroma Cacao (Cocoa) Seed Extract, Pantothenic Acid, Tocopherol, Helianthus Annuus (Sunflower) Seed Oil, Ferulic Acid', 
-    brand: 'Supergoop!',
-    category: 'Skincare,Body',
-    how_to_use: 
-    '-Apply generously and evenly as the last step in your skincare routine, before your favorite foundation, and after your moisturizer.
-    -You can also wear this on its own for a no-makeup makeup glow.'
-})
-
-p2.photo.attach(io: URI.open('https://shobha-seeds.s3.us-west-1.amazonaws.com/Supergoop-Glowscreen-48.webp'), filename: 'Supergoop-Glowscreen-48.webp')
-    
-
-  p3 = Product.create!({
-    name: 'Mini Glowscreen SPF 40 Sunscreen with Hyaluronic Acid + Niacinamide',
-    description:
-    'A hydrating, makeup-gripping primer with SPF 40 and blue-light protection that has a pearlescent finish to leave skin luminous with an instant glow.\n\nSkincare Concerns: Dullness, Dryness, and Fine Lines and Wrinkles\n\nFormulation: Lotion.',
-    callouts: 'This product is cruelty-free, and gluten-free.',
-    other_info: 'This multitasking primer with SPF gives skin an instant glow-up. Formulated with hyaluronic acid, niacinamide & vitamin B5 to hydrate & perfect, this broad spectrum tinted sunscreen creates an instant glow on its own or under makeup. Plus, it helps filter blue light from tech!',
-    price: 22.00,
-    size: 0.68,
-    ingredients: 'Active: Avobenzone 3%, Octisalate 5%, Octocrylene 10% Inactive: Water, Propanediol, Butyloctyl Salicylate, Glycerin, C12-15 Alkyl Benzoate, Polymethylsilsesquioxane, Niacinamide, Glyceryl Stearate Citrate, Bismuth Oxychloride, Mica, Titanium Dioxide, Lauryl Lactate, Isododecane, Isodecyl Neopentanoate, Glyceryl Stearate, Diisopropyl Sebacate, Cetyl Phosphate, Caprylic/Capric Triglyceride, Coco-Caprylate, Ethylhexyl Hydroxystearate, Butylene Glycol, Arginine, Hydroxyacetophenone, Caprylyl Glycol, 1,2-Hexanediol, Iron Oxides, Sodium Hyaluronate, Chlorphenesin, Acrylates/C10-30 Alkyl Acrylate Crosspolymer, Trisodium Ethylenediamine Disuccinate, Phospholipids, Limonium Gerberi Extract, Leuconostoc/ Radish Root Ferment Filtrate, Theobroma Cacao (Cocoa) Seed Extract, Pantothenic Acid, Tocopherol, Helianthus Annuus (Sunflower) Seed Oil, Ferulic Acid', 
-    brand: 'Supergoop!',
-    category: 'Skincare,Mini Size',
-    how_to_use: 
-    '-Apply generously and evenly as the last step in your skincare routine, before your favorite foundation, and after your moisturizer.
-    -You can also wear this on its own for a no-makeup makeup glow.'
-})
-
-p3.photo.attach(io: URI.open('https://shobha-seeds.s3.us-west-1.amazonaws.com/mini-glowscreen.webp'), filename: 'mini-glowscreen.webp')
-
- p4 = Product.create!({
-    name: 'CC+ Cream Full Coverage Color Correcting Foundation with SPF 50+',
-    description: "The #1 SPF foundation in America* is a full-coverage foundation, hydrating & anti-aging serum, and SPF 50+ sunscreen in one—now in extended shades.\n\nSkincare Concerns: Dullness, Dryness, and Fine Lines and Wrinkles\n\nFormulation: Lotion.",
-    callouts: 'Free of sulfates parabens and phthalates.',
-    other_info: 'The full coverage, natural finish of a CC cream foundation meets hydration to color correct and camouflage skin concerns like acne scars, wrinkles, redness, dark circles under eyes, large pores & uneven skin tone. Made with skin-loving ingredients, it moisturizes for visibly healthy & smooth skin.',
-    price: 47.00,
-    size: 1.08,
-    ingredients: 'Active Ingredients Titanium Dioxide 9% Zinc Oxide 6.3% Cosmetic Ingredients Water, Phenyl Trimethicone, Dimethicone, Butylene Glycol. Butylene Glycol Dicaprylate/Dicaprate, Orbignya Oleifera Seed Oil, Butyloctyl Salicylate, Cetyl Peg/Ppg-10/1 Dimethicone, Cyclopentasiloxane, Snail Secretion Filtrate, Aluminum Hydroxide, Magnesium Sulfate, Polyglyceryl-4 Isostearate, Stearic Acid, Cyclohexasiloxane, Dimethicone/Vinyl Dimethicone Crosspolymer, Hexyl Laurate, Calcium Stearate, Triethoxycaprylylsilane, Caprylyl Glycol, Ethyl Hexanediol, Ethylhexylglycerin, Limonene, Citrus Limon (Lemon) Peel Oil, Sorbitan Isostearate, Tocopheryl Acetate, Phenoxyethanol, Citrus Aurantium Bergamia (Bergamot) Fruit Oil, 1,2-Hexanediol, Adenosine, Citrus Aurantium Dulcis (Orange) Peel Oil, Citrus Aurantifolia (Lime) Oil, Pinus Sylvestris Leaf Oil, Linalool, Eucalyptus Globulus Leaf Oil, Glycerin, Citral, Niacinamide, Hyaluronic Acid, Colloidal Oatmeal, Hydrolyzed Collagen, Steareth-20, Pentaerythrityl Tetra-Di-T-Butyl Hydroxyhydrocinnamate, Camellia Sinensis Leaf Extract, Olea Europaea (Olive) Leaf Extract, Chlorhexidine Digluconate, N-Hydroxysuccinimide, Silk Extract, Hydrolyzed Silk, Sodium Citrate, Potassium Sorbate, Palmitoyl Tripeptide-1, Chrysin, Palmitoyl Tetrapeptide-7, Citric Acid, Biotin May Contain Titanium Dioxide, Iron Oxides', 
-    brand: 'IT Cosmetics',
-    category: 'Skincare, ',
-    how_to_use: 
-    "- Apply 1-2 pumps of CC+ Cream SPF 50+ to clean skin.
-
-    - For best results, use a foundation makeup brush IT Cosmetics Heavenly Luxe Complexion Perfection Brush #7 (sold separately) to buff and blend a smooth, even layer of foundation onto your face, neck and décolleté.
-    
-    - To set, use Bye Bye Pores Translucent Pressed Setting Powder (sold separately) and finish it off with It's Your Skin But Better Setting Spray for a flawless finish that lasts."
-})
-
-p4.photo.attach(io: URI.open('https://shobha-seeds.s3.us-west-1.amazonaws.com/IT-CC-SPF50-47.webp'), filename: 'IT-CC-SPF50-47.webp')
-    
-p5 = Product.create!({
-    name: 'CC+ Cream Full Coverage Color Correcting Foundation with SPF 50+',
-    description: 
-    "The #1 SPF foundation in America* is a full-coverage foundation, hydrating & anti-aging serum, and SPF 50+ sunscreen in one—now in extended shades.\n\nSkincare Concerns: Dullness, Dryness, and Fine Lines and Wrinkles\n\nFormulation: Lotion.",
-    callouts: 'Free of sulfates parabens and phthalates.',
-    other_info: "The full coverage, natural finish of a CC cream foundation meets hydration to color correct and camouflage skin concerns like acne scars, wrinkles, redness, dark circles under eyes, large pores & uneven skin tone. Made with skin-loving ingredients, it moisturizes for visibly healthy & smooth skin.",
-    price: 21.00,
-    size: 0.4,
-    ingredients: 'Active Ingredients Titanium Dioxide 9% Zinc Oxide 6.3% Cosmetic Ingredients Water, Phenyl Trimethicone, Dimethicone, Butylene Glycol. Butylene Glycol Dicaprylate/Dicaprate, Orbignya Oleifera Seed Oil, Butyloctyl Salicylate, Cetyl Peg/Ppg-10/1 Dimethicone, Cyclopentasiloxane, Snail Secretion Filtrate, Aluminum Hydroxide, Magnesium Sulfate, Polyglyceryl-4 Isostearate, Stearic Acid, Cyclohexasiloxane, Dimethicone/Vinyl Dimethicone Crosspolymer, Hexyl Laurate, Calcium Stearate, Triethoxycaprylylsilane, Caprylyl Glycol, Ethyl Hexanediol, Ethylhexylglycerin, Limonene, Citrus Limon (Lemon) Peel Oil, Sorbitan Isostearate, Tocopheryl Acetate, Phenoxyethanol, Citrus Aurantium Bergamia (Bergamot) Fruit Oil, 1,2-Hexanediol, Adenosine, Citrus Aurantium Dulcis (Orange) Peel Oil, Citrus Aurantifolia (Lime) Oil, Pinus Sylvestris Leaf Oil, Linalool, Eucalyptus Globulus Leaf Oil, Glycerin, Citral, Niacinamide, Hyaluronic Acid, Colloidal Oatmeal, Hydrolyzed Collagen, Steareth-20, Pentaerythrityl Tetra-Di-T-Butyl Hydroxyhydrocinnamate, Camellia Sinensis Leaf Extract, Olea Europaea (Olive) Leaf Extract, Chlorhexidine Digluconate, N-Hydroxysuccinimide, Silk Extract, Hydrolyzed Silk, Sodium Citrate, Potassium Sorbate, Palmitoyl Tripeptide-1, Chrysin, Palmitoyl Tetrapeptide-7, Citric Acid, Biotin May Contain Titanium Dioxide, Iron Oxides', 
-    brand: 'IT Cosmetics',
-    category: 'Skincare,Mini Size'
-})
-
-p5.photo.attach(io: URI.open('https://shobha-seeds.s3.us-west-1.amazonaws.com/mini-IT-CC-SPF50-21.webp'), filename: 'mini-IT-CC-SPF50-21.webp')
-
-
-p6 = Product.create!({
-    name: 'Gloss Bomb Universal Lip Luminizer',
-    description: "A lip gloss that delivers explosive shine in three universal shades handpicked by Rihanna herself.",
-    callouts: 'Free of parabens and phthalates. This product is also cruelty-free.',
-    other_info: "Gloss Bomb Universal Lip Luminizer is the ultimate finishing touch to any look. The non-sticky formula is super shiny and has an addictive peach-vanilla scent. Plus, it's enriched with skin-loving ingredients to make your lips look smooth, plump, and kissable. “I made it because I wanted the girls to get kissed more.”—Rihanna, Brand Founder",
-    price: 21.00,
-    size: 0.3,
-    ingredients: 'Polybutene, Octyldodecanol, Bis-Diglyceryl Polyacyladipate-2, Tricaprylin, Cera Microcristallina/Microcrystalline Wax/Cire Microcristalline, Polyethylene, Silica Dimethyl Silylate, Vp/Eicosene Copolymer, Vp/Hexadecene Copolymer, Butyrospermum Parkii (Shea) Butter, Mica, Sorbitan Oleate, Silica, Octyldodecyl Neopentanoate, Ethylhexyl Palmitate, Caprylyl Glycol, Butyrospermum Parkii (Shea) Butter Unsaponifiables, Aroma/Flavor, Parfum/Fragrance, Tribehenin, Pentaerythrityl Tetra-Di-T-Butyl Hydroxyhydrocinnamate, Sorbitan Isostearate, Tocopherol, Tocopheryl Acetate, Synthetic Fluorphlogopite, Tetrahexyldecyl Ascorbate, Lactic Acid, Calcium Sodium Borosilicate, Calcium Aluminum Borosilicate, Polyethylene Terephthalate, Palmitoyl Tripeptide-1, Acrylates Copolymer, Tin Oxide. May Contain/Peut Contenir (+/-): Titanium Dioxide (Ci 77891), Iron Oxides (Ci 77491), Benzyl Benzoate.',
-    brand: 'Fenty Beauty by Rihanna',
-    category: 'Lips,New'
-})
-
-p6.photo.attach(io: URI.open('https://shobha-seeds.s3.us-west-1.amazonaws.com/Fenty-Gloss-Bomb-Universal-21.webp'), filename: 'Fenty-Gloss-Bomb-Universal-21.webp')
-
-p7 = Product.create!( 
-  name: 'ShineOn Lip Jelly Non-Sticky Gloss', 
-  description: 'A non-sticky, moisturizing gloss for soft, shiny lips.',
-  callouts: 'This product is vegan, cruelty-free, and gluten-free.',
-  other_info: 'ShineOn Lip Jelly is a lip gloss that has the shine of a gloss, the comfort of a balm, and a touch of juicy translucent color. It uses a unique blend of five nurturing oils to soothe and protect lips from drying and peeling. Plus, it has an addictive apricot-vanilla scent. Choose from six juicy shades inspired by some of our favorite colors and the meanings behind them.', 
-  price: 16.00, 
-  size: 0.13, 
-  ingredients: 'Polybutene, Hydrogenated Polyisobutene, Hydrogenated Polybutene, Prunus Armeniaca (Apricot) Kernel Oil, Ethylene/Propylene/Styrene Copolymer, Octyldodecanol, Silica Dimethyl Silylate, Ricinus Communis (Castor) Seed Oil, Persea Gratissima (Avocado) Oil, Rosa Canina Seed Oil, Rubus Idaeus (Raspberry) Seed Oil, Oryza Sativa (Rice) Bran Extract, Helianthus Annuus (Sunflower) Extract, Rosmarinus Officinalis (Rosemary) Leaf Extract, Butylene/Ehtylene/Styrene Copolymer, Aroma/Flavor, Caprylyl Glycol, Ethylhexylglycerin, Tocopherol, Pentaerythrityl Tetra-di-t-butyl Hydroxyhydrocinnamate, MAY CONTAIN (+/-): Iron Oxides (CI 77492), Iron Oxides (CI 77491), Iron Oxides (CI 77499), Titanium Dioxide (CI 77891), Red 7 Lake (CI 15850).',
-  brand: 'Tower 28 Beauty', 
+p2 = Product.create!({
+  name: 'Gloss Bomb Universal Lip Luminizer',
+  description: "A lip gloss that delivers explosive shine in three universal shades handpicked by Rihanna herself.",
+  callouts: 'Free of parabens and phthalates. This product is also cruelty-free.',
+  other_info: "Gloss Bomb Universal Lip Luminizer is the ultimate finishing touch to any look. The non-sticky formula is super shiny and has an addictive peach-vanilla scent. Plus, it's enriched with skin-loving ingredients to make your lips look smooth, plump, and kissable. “I made it because I wanted the girls to get kissed more.”—Rihanna, Brand Founder",
+  price: 21.00,
+  size: 0.3,
+  ingredients: 'Polybutene, Octyldodecanol, Bis-Diglyceryl Polyacyladipate-2, Tricaprylin, Cera Microcristallina/Microcrystalline Wax/Cire Microcristalline, Polyethylene, Silica Dimethyl Silylate, Vp/Eicosene Copolymer, Vp/Hexadecene Copolymer, Butyrospermum Parkii (Shea) Butter, Mica, Sorbitan Oleate, Silica, Octyldodecyl Neopentanoate, Ethylhexyl Palmitate, Caprylyl Glycol, Butyrospermum Parkii (Shea) Butter Unsaponifiables, Aroma/Flavor, Parfum/Fragrance, Tribehenin, Pentaerythrityl Tetra-Di-T-Butyl Hydroxyhydrocinnamate, Sorbitan Isostearate, Tocopherol, Tocopheryl Acetate, Synthetic Fluorphlogopite, Tetrahexyldecyl Ascorbate, Lactic Acid, Calcium Sodium Borosilicate, Calcium Aluminum Borosilicate, Polyethylene Terephthalate, Palmitoyl Tripeptide-1, Acrylates Copolymer, Tin Oxide. May Contain/Peut Contenir (+/-): Titanium Dioxide (Ci 77891), Iron Oxides (Ci 77491), Benzyl Benzoate.',
+  brand: 'Fenty Beauty by Rihanna',
   category: 'Lips,New',
-  how_to_use: '-Swipe on over bare lips or over your favorite lip color for soft, glossy lips.'
-)
+  how_to_use: "-Wear Gloss Bomb alone or layer over lipstick as the finishing touch to the FENTY Face.
+  -Artistry Pro Tip: Try Gloss Bomb over your favorite lip color for super-lustrous dimension."
+})
 
-p7.photo.attach(io: URI.open('https://shobha-seeds.s3.us-west-1.amazonaws.com/Shobha+Product+Images/Shine-On-Lip-Tower28-16.webp'), filename: 'Shobha Product Images/Shine-On-Lip-Tower28-16.webp')
+p2.photo.attach(io: URI.open('https://shobha-seeds.s3.us-west-1.amazonaws.com/Fenty-Gloss-Bomb-Universal-21.webp'), filename: 'Fenty-Gloss-Bomb-Universal-21.webp')
 
-p8 = Product.create!( 
+p3 = Product.create!( 
   name: "Brazilian Crush Cheirosa '62 Bum Bum Hair & Body Fragrance Mist", 
   price: 38.00, 
   size: 8.1, 
@@ -181,28 +95,48 @@ p8 = Product.create!(
   -Spray on hair, clothes, and lingerie for that lingering scent of pistachio caramel.'
 )
 
-p8.photo.attach(io: URI.open('https://shobha-seeds.s3.us-west-1.amazonaws.com/Shobha+Product+Images/Brazilian-Crush-Mist-38.webp'), filename: 'Shobha Product Images/Brazilian-Crush-Mist-38.webp')
+p3.photo.attach(io: URI.open('https://shobha-seeds.s3.us-west-1.amazonaws.com/Shobha+Product+Images/Brazilian-Crush-Mist-38.webp'), filename: 'Shobha Product Images/Brazilian-Crush-Mist-38.webp')
 
 
-p9 = Product.create!( 
-  name: "Brazilian Crush Cheirosa '62 Bum Bum Hair & Body Fragrance Mist", 
-  price: 24.00, 
-  size: 3.04, 
-  brand: 'Sol de Janeiro', 
-  category: 'Fragrance,Mini Size',
-  description: 'A body fragrance mist, bursting with an alluring pistachio and salted caramel scent, to be used on body, hair, and lingerie.',
-  callouts: 'FREE of parabens, sulfates, and phthalates.',
-  other_info: 'Sol de Janeiro came together with a mutual love of the distinctly Brazilian attitude towards beauty, their secrets, and their know-how. This product supports the Brazilian philosophy that beauty isn’t a standard to reach, it’s an attitude to take. A head-to-toe sensuality that comes through in a smile, a saunter, a samba. Based in the USA, Sol de Janeiro is excited to be able to bring you the most effective, transformative, and fun beauty care experiences—incorporating the latest and greatest super ingredients from the Amazon.', 
-  ingredients: 'Alcohol Denat., Aqua (Water, Eau), Parfum (Fragrance), Benzyl Alcohol, Benzyl Salicylate, Hydroxycitronellal, Coumarin, Limonene, Linalool, Benzyl Benzoate, Citral, Eugenol.',
+p4 = Product.create!({
+  name: 'Mini Glowscreen SPF 40 Sunscreen with Hyaluronic Acid + Niacinamide',
+  description:
+  'A hydrating, makeup-gripping primer with SPF 40 and blue-light protection that has a pearlescent finish to leave skin luminous with an instant glow.\n\nSkincare Concerns: Dullness, Dryness, and Fine Lines and Wrinkles\n\nFormulation: Lotion.',
+  callouts: 'This product is cruelty-free, and gluten-free.',
+  other_info: 'This multitasking primer with SPF gives skin an instant glow-up. Formulated with hyaluronic acid, niacinamide & vitamin B5 to hydrate & perfect, this broad spectrum tinted sunscreen creates an instant glow on its own or under makeup. Plus, it helps filter blue light from tech!',
+  price: 22.00,
+  size: 0.68,
+  ingredients: 'Active: Avobenzone 3%, Octisalate 5%, Octocrylene 10% Inactive: Water, Propanediol, Butyloctyl Salicylate, Glycerin, C12-15 Alkyl Benzoate, Polymethylsilsesquioxane, Niacinamide, Glyceryl Stearate Citrate, Bismuth Oxychloride, Mica, Titanium Dioxide, Lauryl Lactate, Isododecane, Isodecyl Neopentanoate, Glyceryl Stearate, Diisopropyl Sebacate, Cetyl Phosphate, Caprylic/Capric Triglyceride, Coco-Caprylate, Ethylhexyl Hydroxystearate, Butylene Glycol, Arginine, Hydroxyacetophenone, Caprylyl Glycol, 1,2-Hexanediol, Iron Oxides, Sodium Hyaluronate, Chlorphenesin, Acrylates/C10-30 Alkyl Acrylate Crosspolymer, Trisodium Ethylenediamine Disuccinate, Phospholipids, Limonium Gerberi Extract, Leuconostoc/ Radish Root Ferment Filtrate, Theobroma Cacao (Cocoa) Seed Extract, Pantothenic Acid, Tocopherol, Helianthus Annuus (Sunflower) Seed Oil, Ferulic Acid', 
+  brand: 'Supergoop!',
+  category: 'Skincare,Mini Size',
   how_to_use: 
-  '-Use all over the body any time, anywhere.
-  -Spray on hair, clothes, and lingerie for that lingering scent of pistachio caramel.'
-)
+  '-Apply generously and evenly as the last step in your skincare routine, before your favorite foundation, and after your moisturizer.
+  -You can also wear this on its own for a no-makeup makeup glow.'
+})
 
-p9.photo.attach(io: URI.open('https://shobha-seeds.s3.us-west-1.amazonaws.com/Shobha+Product+Images/Mini-Brazilian-Crush-Mist.webp'), filename: 'Shobha Product Images/Mini-Brazilian-Crush-Mist.webp')
+p4.photo.attach(io: URI.open('https://shobha-seeds.s3.us-west-1.amazonaws.com/mini-glowscreen.webp'), filename: 'mini-glowscreen.webp')
 
+p5 = Product.create!({
+  name: 'CC+ Cream Full Coverage Color Correcting Foundation with SPF 50+',
+  description: "The #1 SPF foundation in America* is a full-coverage foundation, hydrating & anti-aging serum, and SPF 50+ sunscreen in one—now in extended shades.\n\nSkincare Concerns: Dullness, Dryness, and Fine Lines and Wrinkles\n\nFormulation: Lotion.",
+  callouts: 'Free of sulfates parabens and phthalates.',
+  other_info: 'The full coverage, natural finish of a CC cream foundation meets hydration to color correct and camouflage skin concerns like acne scars, wrinkles, redness, dark circles under eyes, large pores & uneven skin tone. Made with skin-loving ingredients, it moisturizes for visibly healthy & smooth skin.',
+  price: 47.00,
+  size: 1.08,
+  ingredients: 'Active Ingredients Titanium Dioxide 9% Zinc Oxide 6.3% Cosmetic Ingredients Water, Phenyl Trimethicone, Dimethicone, Butylene Glycol. Butylene Glycol Dicaprylate/Dicaprate, Orbignya Oleifera Seed Oil, Butyloctyl Salicylate, Cetyl Peg/Ppg-10/1 Dimethicone, Cyclopentasiloxane, Snail Secretion Filtrate, Aluminum Hydroxide, Magnesium Sulfate, Polyglyceryl-4 Isostearate, Stearic Acid, Cyclohexasiloxane, Dimethicone/Vinyl Dimethicone Crosspolymer, Hexyl Laurate, Calcium Stearate, Triethoxycaprylylsilane, Caprylyl Glycol, Ethyl Hexanediol, Ethylhexylglycerin, Limonene, Citrus Limon (Lemon) Peel Oil, Sorbitan Isostearate, Tocopheryl Acetate, Phenoxyethanol, Citrus Aurantium Bergamia (Bergamot) Fruit Oil, 1,2-Hexanediol, Adenosine, Citrus Aurantium Dulcis (Orange) Peel Oil, Citrus Aurantifolia (Lime) Oil, Pinus Sylvestris Leaf Oil, Linalool, Eucalyptus Globulus Leaf Oil, Glycerin, Citral, Niacinamide, Hyaluronic Acid, Colloidal Oatmeal, Hydrolyzed Collagen, Steareth-20, Pentaerythrityl Tetra-Di-T-Butyl Hydroxyhydrocinnamate, Camellia Sinensis Leaf Extract, Olea Europaea (Olive) Leaf Extract, Chlorhexidine Digluconate, N-Hydroxysuccinimide, Silk Extract, Hydrolyzed Silk, Sodium Citrate, Potassium Sorbate, Palmitoyl Tripeptide-1, Chrysin, Palmitoyl Tetrapeptide-7, Citric Acid, Biotin May Contain Titanium Dioxide, Iron Oxides', 
+  brand: 'IT Cosmetics',
+  category: 'Skincare, ',
+  how_to_use: 
+  "- Apply 1-2 pumps of CC+ Cream SPF 50+ to clean skin.
 
-p10 = Product.create!( 
+  - For best results, use a foundation makeup brush IT Cosmetics Heavenly Luxe Complexion Perfection Brush #7 (sold separately) to buff and blend a smooth, even layer of foundation onto your face, neck and décolleté.
+  
+  - To set, use Bye Bye Pores Translucent Pressed Setting Powder (sold separately) and finish it off with It's Your Skin But Better Setting Spray for a flawless finish that lasts."
+})
+
+p5.photo.attach(io: URI.open('https://shobha-seeds.s3.us-west-1.amazonaws.com/IT-CC-SPF50-47.webp'), filename: 'IT-CC-SPF50-47.webp')
+
+p6 = Product.create!( 
   name: 'Pure Radiant Tinted Moisturizer Broad Spectrum SPF 30', 
   price: 46.00, 
   size: 1.9, 
@@ -219,7 +153,72 @@ p10 = Product.create!(
   -Build to desired coverage.'
 )
 
-p10.photo.attach(io: URI.open('https://shobha-seeds.s3.us-west-1.amazonaws.com/Shobha+Product+Images/Pure-Moisturizer-NARS-46.webp'), filename: 'Shobha Product Images/Pure-Moisturizer-NARS-46.webp')
+p6.photo.attach(io: URI.open('https://shobha-seeds.s3.us-west-1.amazonaws.com/Shobha+Product+Images/Pure-Moisturizer-NARS-46.webp'), filename: 'Shobha Product Images/Pure-Moisturizer-NARS-46.webp')
+
+p7 = Product.create!({
+  name: 'Glowscreen SPF 40 Sunscreen with Hyaluronic Acid + Niacinamide',
+  description:
+  'A hydrating, makeup-gripping primer with SPF 40 and blue-light protection that has a pearlescent finish to leave skin luminous with an instant glow.\n\nSkincare Concerns: Dullness, Dryness, and Fine Lines and Wrinkles\n\nFormulation: Lotion.',
+  callouts: 'This product is cruelty-free, and gluten-free.',
+  other_info: 'This multitasking primer with SPF gives skin an instant glow-up. Formulated with hyaluronic acid, niacinamide & vitamin B5 to hydrate & perfect, this broad spectrum tinted sunscreen creates an instant glow on its own or under makeup. Plus, it helps filter blue light from tech!',
+  price: 38.00,
+  size: 1.7,
+  ingredients: 'Active: Avobenzone 3%, Octisalate 5%, Octocrylene 10% Inactive: Water, Propanediol, Butyloctyl Salicylate, Glycerin, C12-15 Alkyl Benzoate, Polymethylsilsesquioxane, Niacinamide, Glyceryl Stearate Citrate, Bismuth Oxychloride, Mica, Titanium Dioxide, Lauryl Lactate, Isododecane, Isodecyl Neopentanoate, Glyceryl Stearate, Diisopropyl Sebacate, Cetyl Phosphate, Caprylic/Capric Triglyceride, Coco-Caprylate, Ethylhexyl Hydroxystearate, Butylene Glycol, Arginine, Hydroxyacetophenone, Caprylyl Glycol, 1,2-Hexanediol, Iron Oxides, Sodium Hyaluronate, Chlorphenesin, Acrylates/C10-30 Alkyl Acrylate Crosspolymer, Trisodium Ethylenediamine Disuccinate, Phospholipids, Limonium Gerberi Extract, Leuconostoc/ Radish Root Ferment Filtrate, Theobroma Cacao (Cocoa) Seed Extract, Pantothenic Acid, Tocopherol, Helianthus Annuus (Sunflower) Seed Oil, Ferulic Acid', 
+  brand: 'Supergoop!',
+  category: 'Skincare,Body',
+  how_to_use: 
+  '-Apply generously and evenly as the last step in your skincare routine, before your favorite foundation, and after your moisturizer.
+  -You can also wear this on its own for a no-makeup makeup glow.'
+})
+
+p7.photo.attach(io: URI.open('https://shobha-seeds.s3.us-west-1.amazonaws.com/Supergoop-Glowscreen-48.webp'), filename: 'Supergoop-Glowscreen-48.webp')
+    
+p8 = Product.create!({
+  name: 'CC+ Cream Full Coverage Color Correcting Foundation with SPF 50+',
+  description: 
+  "The #1 SPF foundation in America* is a full-coverage foundation, hydrating & anti-aging serum, and SPF 50+ sunscreen in one—now in extended shades.\n\nSkincare Concerns: Dullness, Dryness, and Fine Lines and Wrinkles\n\nFormulation: Lotion.",
+  callouts: 'Free of sulfates parabens and phthalates.',
+  other_info: "The full coverage, natural finish of a CC cream foundation meets hydration to color correct and camouflage skin concerns like acne scars, wrinkles, redness, dark circles under eyes, large pores & uneven skin tone. Made with skin-loving ingredients, it moisturizes for visibly healthy & smooth skin.",
+  price: 21.00,
+  size: 0.4,
+  ingredients: 'Active Ingredients Titanium Dioxide 9% Zinc Oxide 6.3% Cosmetic Ingredients Water, Phenyl Trimethicone, Dimethicone, Butylene Glycol. Butylene Glycol Dicaprylate/Dicaprate, Orbignya Oleifera Seed Oil, Butyloctyl Salicylate, Cetyl Peg/Ppg-10/1 Dimethicone, Cyclopentasiloxane, Snail Secretion Filtrate, Aluminum Hydroxide, Magnesium Sulfate, Polyglyceryl-4 Isostearate, Stearic Acid, Cyclohexasiloxane, Dimethicone/Vinyl Dimethicone Crosspolymer, Hexyl Laurate, Calcium Stearate, Triethoxycaprylylsilane, Caprylyl Glycol, Ethyl Hexanediol, Ethylhexylglycerin, Limonene, Citrus Limon (Lemon) Peel Oil, Sorbitan Isostearate, Tocopheryl Acetate, Phenoxyethanol, Citrus Aurantium Bergamia (Bergamot) Fruit Oil, 1,2-Hexanediol, Adenosine, Citrus Aurantium Dulcis (Orange) Peel Oil, Citrus Aurantifolia (Lime) Oil, Pinus Sylvestris Leaf Oil, Linalool, Eucalyptus Globulus Leaf Oil, Glycerin, Citral, Niacinamide, Hyaluronic Acid, Colloidal Oatmeal, Hydrolyzed Collagen, Steareth-20, Pentaerythrityl Tetra-Di-T-Butyl Hydroxyhydrocinnamate, Camellia Sinensis Leaf Extract, Olea Europaea (Olive) Leaf Extract, Chlorhexidine Digluconate, N-Hydroxysuccinimide, Silk Extract, Hydrolyzed Silk, Sodium Citrate, Potassium Sorbate, Palmitoyl Tripeptide-1, Chrysin, Palmitoyl Tetrapeptide-7, Citric Acid, Biotin May Contain Titanium Dioxide, Iron Oxides', 
+  brand: 'IT Cosmetics',
+  category: 'Skincare,Mini Size'
+})
+
+p8.photo.attach(io: URI.open('https://shobha-seeds.s3.us-west-1.amazonaws.com/mini-IT-CC-SPF50-21.webp'), filename: 'mini-IT-CC-SPF50-21.webp')
+
+p9 = Product.create!( 
+  name: 'ShineOn Lip Jelly Non-Sticky Gloss', 
+  description: 'A non-sticky, moisturizing gloss for soft, shiny lips.',
+  callouts: 'This product is vegan, cruelty-free, and gluten-free.',
+  other_info: 'ShineOn Lip Jelly is a lip gloss that has the shine of a gloss, the comfort of a balm, and a touch of juicy translucent color. It uses a unique blend of five nurturing oils to soothe and protect lips from drying and peeling. Plus, it has an addictive apricot-vanilla scent. Choose from six juicy shades inspired by some of our favorite colors and the meanings behind them.', 
+  price: 16.00, 
+  size: 0.13, 
+  ingredients: 'Polybutene, Hydrogenated Polyisobutene, Hydrogenated Polybutene, Prunus Armeniaca (Apricot) Kernel Oil, Ethylene/Propylene/Styrene Copolymer, Octyldodecanol, Silica Dimethyl Silylate, Ricinus Communis (Castor) Seed Oil, Persea Gratissima (Avocado) Oil, Rosa Canina Seed Oil, Rubus Idaeus (Raspberry) Seed Oil, Oryza Sativa (Rice) Bran Extract, Helianthus Annuus (Sunflower) Extract, Rosmarinus Officinalis (Rosemary) Leaf Extract, Butylene/Ehtylene/Styrene Copolymer, Aroma/Flavor, Caprylyl Glycol, Ethylhexylglycerin, Tocopherol, Pentaerythrityl Tetra-di-t-butyl Hydroxyhydrocinnamate, MAY CONTAIN (+/-): Iron Oxides (CI 77492), Iron Oxides (CI 77491), Iron Oxides (CI 77499), Titanium Dioxide (CI 77891), Red 7 Lake (CI 15850).',
+  brand: 'Tower 28 Beauty', 
+  category: 'Lips,New',
+  how_to_use: '-Swipe on over bare lips or over your favorite lip color for soft, glossy lips.'
+)
+
+p9.photo.attach(io: URI.open('https://shobha-seeds.s3.us-west-1.amazonaws.com/Shobha+Product+Images/Shine-On-Lip-Tower28-16.webp'), filename: 'Shobha Product Images/Shine-On-Lip-Tower28-16.webp')
+
+p10 = Product.create!( 
+  name: "Mini Brazilian Crush Cheirosa '62 Bum Bum Hair & Body Fragrance Mist", 
+  price: 24.00, 
+  size: 3.04, 
+  brand: 'Sol de Janeiro', 
+  category: 'Fragrance,Mini Size',
+  description: 'A body fragrance mist, bursting with an alluring pistachio and salted caramel scent, to be used on body, hair, and lingerie.',
+  callouts: 'FREE of parabens, sulfates, and phthalates.',
+  other_info: 'Sol de Janeiro came together with a mutual love of the distinctly Brazilian attitude towards beauty, their secrets, and their know-how. This product supports the Brazilian philosophy that beauty isn’t a standard to reach, it’s an attitude to take. A head-to-toe sensuality that comes through in a smile, a saunter, a samba. Based in the USA, Sol de Janeiro is excited to be able to bring you the most effective, transformative, and fun beauty care experiences—incorporating the latest and greatest super ingredients from the Amazon.', 
+  ingredients: 'Alcohol Denat., Aqua (Water, Eau), Parfum (Fragrance), Benzyl Alcohol, Benzyl Salicylate, Hydroxycitronellal, Coumarin, Limonene, Linalool, Benzyl Benzoate, Citral, Eugenol.',
+  how_to_use: 
+  '-Use all over the body any time, anywhere.
+  -Spray on hair, clothes, and lingerie for that lingering scent of pistachio caramel.'
+)
+
+p10.photo.attach(io: URI.open('https://shobha-seeds.s3.us-west-1.amazonaws.com/Shobha+Product+Images/Mini-Brazilian-Crush-Mist.webp'), filename: 'Shobha Product Images/Mini-Brazilian-Crush-Mist.webp')
 
 #New Products
 
@@ -421,7 +420,7 @@ p21 = Product.create!(
   category: 'Mini Size,Skincare',
   description: 'A serum-in-moisturizer treatment that visibly calms irritation, strengthens skin’s barrier, and balances the microbiome for a healthy, hydrated glow.',
   callouts: 'This product is cruelty-free and comes in recyclable packaging.',
-  other_info: ' At the end of the day, skin can look irritated or feel dry and tight due to pollution and environmental stressors. Soothe, hydrate, and help strengthen your skin with this hybrid serum and moisturizer treatment, which maximizes the nightly renewal process so you wake up with healthy-looking, radiant skin.', 
+  other_info: 'At the end of the day, skin can look irritated or feel dry and tight due to pollution and environmental stressors. Soothe, hydrate, and help strengthen your skin with this hybrid serum and moisturizer treatment, which maximizes the nightly renewal process so you wake up with healthy-looking, radiant skin.', 
   ingredients: 'Aqua/Water/Eau, Dimethicone, Diglycerin, Saccharomyces/Camellia Sinensis Leaf/Cladosiphon Okamuranus/Rice Ferment Filtrate*, Glycerin, Diphenylsiloxy Phenyl Trimethicone, Neopentyl Glycol Diethylhexanoate, Butylene Glycol, Diisostearyl Malate, Peg-10 Dimethicone, Propanediol, Disteardimonium Hectorite, Ophiopogon Japonicus Root Extract, Indigofera Tinctoria Leaf Extract, Ceramide Ng, Palmitic Acid, Linoleic Acid, Sodium Hyaluronate, Polygonum Tinctorium Leaf/Stem Extract, Cetyl Alcohol, Sucrose Stearate, Sucrose Palmitate, Maltodextrin, Sargassum Vulgare Extract, Saccharomyces Ferment Filtrate, Hydrolyzed Lagenaria Siceraria Fruit Juice, Salvia Miltiorrhiza Root Extract, Tocopherol, Lauryl Peg-9 Polydimethylsiloxyethyl Dimethicone, Magnesium Sulfate, Hydrogenated Lecithin, Phytosterols, Ethylhexylglycerin, Phenoxyethanol, Mica (Ci 77019), Tin Oxide (Ci 77861), Titanium Dioxide (Ci 77891)',
   how_to_use: 
   '-At night, use directly after cleansing or as the final step in your ritual.
@@ -430,13 +429,179 @@ p21 = Product.create!(
 
 p21.photo.attach(io: URI.open('https://shobha-seeds.s3.us-west-1.amazonaws.com/Shobha-Images-Mini/Mini-Indigo-Overnight-Tatcha22.webp'), filename: 'Shobha-Images-Mini/Mini-Indigo-Overnight-Tatcha22.webp')
 
+#Hair Products
+p22 = Product.create!( 
+  name: 'Sunday Clarifying Shampoo', 
+  price: 32.00, 
+  size: 8.0, 
+  brand: 'Bumble and bumble', 
+  category: 'Hair,Gifts',
+  description: 'A deep clarifying shampoo that lifts away product residue, excess oil, and built-up pollutants for a full hair reset for the week ahead.',
+  callouts: 'Free of parabens, formaldehydes, phthalates, and mineral oil. It is also vegan, and cruelty-free.',
+  other_info: "Sunday Shampoo is a deep, effective hair and scalp cleanser with a generous, bubbly lather that lifts away impurities that can give hair that end-of-week dullness. But remember, it's not a pick for color-treated hair.", 
+  fragrance: "A clean, effervescent scent with notes of sparkling cassis, watery cyclamen, and mint leaf to complement hair's Sunday start.",
+  ingredients: 'Water\Aqua\Eau, Sodium Laureth Sulfate, Cocamidopropyl Betaine, Sodium Chloride, Panax Ginseng Root Extract, Salvia Officinalis (Sage) Leaf Extract, Glycerin, Magnesium Chloride, Rosmarinus Officinalis Leaf Oil, Magnesium Nitrate, Sodium Hydroxide, Citric Acid, Isoceteth-20, PPG-2 Hydroxyethyl Cocamide, Fragrance (Parfum), Limonene, Tetrasodium EDTA, Phenoxyethanol, Chlorphenesin, Methylchloroisothiazolinone, Methylisothiazolinone, Green 5 (CI 61570), Ext. Violet 2 (CI 60730).',
+  how_to_use: 
+  '-Work a dab through wet hair, lather well and rinse thoroughly. Follow with a hydrating Bumble and bumble conditioner or mask.'
+)
 
+p22.photo.attach(io: URI.open('https://shobha-seeds.s3.us-west-1.amazonaws.com/Shobha-Images-Hair/Sunday-Shampoo-B%26B32.webp'), filename: 'Shobha-Images-Hair/Sunday-Shampoo-B&B32.webp')
 
+p23 = Product.create!( 
+  name: 'Cocomino™ Glossing Shampoo', 
+  price: 27.00, 
+  size: 8.0, 
+  brand: 'Drunk Elephant', 
+  category: 'Hair,',
+  description: 'A sulfate-free, color-safe glossing shampoo formulated with scalp and hair in mind, removing dirt and product buildup without damaging the hair shaft or stripping color.',
+  callouts: 'This product is vegan, cruelty-free, and comes in recyclable packaging.',
+  other_info: 'Amino acids smooth and strengthen hair, add shine, and give visible body and bounce. Antioxidant and fatty-acid-rich oils add moisture without weighing hair down. It is formulated without sulfates for a gentle, low-foam cleanse. A blend of moisturizing sweet almond oil and extract has a naturally sweet almond scent that dissipates quickly.', 
+  ingredients: 'Water/Aqua/Eau, Sodium Lauroyl Methyl Isethionate, Cocamidopropyl Betaine, Sodium Methyl Oleoyl Taurate, Sodium Cocoyl Isethionate, Coconut Alkanes, Sclerocarya Birrea Seed Oil, Argania Spinosa Kernel Oil, Passiflora Edulis Seed Oil, Plukenetia Volubilis Seed Oil, Prunus Amygdalus Dulcis (Sweet Almond) Oil, Rosa Canina Fruit Oil, Glycerin, Sodium PCA, Caprylic/Capric Triglyceride, Helianthus Annuus (Sunflower) Seed Oil, Panthenol, Glycol Distearate, Sodium Lactate, Equisetum Arvense Extract, PCA, Alanine, Arginine, Glycine, Histidine, Isoleucine, Phenylalalnine, Proline, Serine, Threonine, Valine, Adansonia Digitata Seed, Extract, Trisodium Ethylenediamine Disuccinate, Prunus Amygdalus Dulcis (Sweet Almond) Seed Extract, Citric Acid, Aspartic Acid, Polyquaternium-10, Polyquaternium-7, Laureth-4, Coco-Caprylate/Caprate, Caprylyl Glycol, Sodium Benzoate, Sodium Chloride, Chlorphenesin, Phenoxyethanol',
+  how_to_use: 
+  '-Apply to wet hair and massage.
+  -Add a little more water to get it nice and sudsy.
+  -Rinse well.
+  -Do not repeat.
+  -Follow with Cocomino™ Marula Cream Conditioner (sold separately) for best results.'
+)
 
-puts "Products Done!"
+p23.photo.attach(io: URI.open('https://shobha-seeds.s3.us-west-1.amazonaws.com/Shobha-Images-Hair/Cocoamino-Shampoo-DElephant.webp'), filename: 'Shobha-Images-Hair/Cocoamino-Shampoo-DElephant.webp')
 
+p24 = Product.create!( 
+  name: 'Final Call Humidity & Static Control Hair Spray', 
+  price: 29.00, 
+  size: 5.0, 
+  brand: 'Drybar', 
+  category: 'Hair,',
+  description: 'A touchable finishing spray that creates an invisible shield to provide long-lasting humidity and static resistance, fights frizz, and tames flyaways.',
+  callouts: 'Free of parabens, phthalates, and sulfates SLS & SLES. fragrance. It is also vegan, gluten-free, and cruelty-free.',
+  other_info: 'This silicone-free, lightweight finishing spray provides instant frizz and static control for up to 24 hours. It creates a water-resistant barrier for long-lasting blowouts in both dry and humid climates. This spray also adds softness and shine, defends against UV damage, and leaves a smooth finish without hold.',
+  fragrance: 'This spray has notes of coconut, amber, and vanilla.', 
+  ingredients: 'Alcohol Denat., Hydrofluorocarbon 152a, Hexadecene, Neopentyl Glycol Diheptanoate, Octylacrylamide/Acrylates/Butylaminoethyl Methacrylate Copolymer, Isododecane, Behentrimonium Chloride (as an anti-static statement/ en tant qu’agent anti-statique), Diheptyl Succinate, Jojoba Esters, Helianthus Annuus (Sunflower) Seed Wax, Gardenia Taitensis Flower, Vanilla Planifolia Fruit Extract, Polyglycerin-3, Tocopherol, Tetrahexyldecyl Ascorbate, Capryloyl Glycerin/Sebacic Acid Copolymer, Ethylhexyl Methoxycinnamate, Cocos Nucifera (Coconut) Oil, Glycerin, Octadecene, Aminomethyl Propanol, Aqua / Water / Eau, Isopropyl Alcohol, Leuconostoc/Radish Root Ferment Filtrate, BHT, Parfum / Fragrance, Coumarin.',
+  how_to_use: 
+  '-Use as a final step on dry hair.
+  -Shake well.
+  -Hold can six to eight inches from hair and mist evenly throughout.
+  -Use lightly on fine hair.'
+)
 
-puts "Creating reviews..."
+p24.photo.attach(io: URI.open('https://shobha-seeds.s3.us-west-1.amazonaws.com/Shobha-Images-Hair/Final-Call-Hair-Drybar29.webp'), filename: 'Shobha-Images-Hair/Final-Call-Hair-Drybar29.webp')
+
+p25 = Product.create!( 
+  name: 'Complete Instant Recovery Heat Protectant Leave-In Serum', 
+  price: 29.00, 
+  size: 3.4, 
+  brand: 'JVN', 
+  category: 'Hair,',
+  description: 'An intense, nourishing, transformative leave-in treatment designed to repair and smooth weak, ultra-damaged, over-processed hair with a silky finish.',
+  callouts: 'This product is vegan, cruelty-free, and comes in recyclable packaging.',
+  other_info: "The silky, lightweight texture of this formula penetrates without greasiness or heaviness while providing heat protection. It features patented, sugarcane derived Hemisqualane—JVN's hero ingredient that improves hair over time by creating healthier, stronger strands—niacinamide to support keratin repair and increase body and sheen, and charged lemon protein to restore strength. It's also silicone-free, sulfate-free. The packaging is 99 percent free of plastic and recyclable.", 
+  ingredients: 'Water/Aqua/Eau, Hydrogenated Farnesene*, Glycerin, Sodium Acrylates Copolymer, Squalane, Hydroxypropyltrimonium Lemon Protein, Niacinamide, Lecithin, Tocopherol, Citrus Reticulata (Tangerine) Peel Oil, Jasminum Officinale (Jasmine) Oil, Leuconostoc/Radish Root Ferment Filtrate, Sodium Gluconate, Ethylhexylglycerin, Benzyl Alcohol, Citric Acid, Fragrance/Parfum, Limonene, Linalool.',
+  how_to_use: 
+  '- Apply to palms and rub together before gently smoothing down wet to damp mid-lengths and ends. Style as usual. Use before your other products to enhance their performance - or by itself for a smooth, protected, no-hold style.
+
+  - JVN TIP: Start with a blueberry sized amount on wet to damp hair for finer strands, adding more if needed.'
+)
+
+p25.photo.attach(io: URI.open('https://shobha-seeds.s3.us-west-1.amazonaws.com/Shobha-Images-Hair/Complete-Instant-JVN29.webp'), filename: 'Shobha-Images-Hair/Complete-Instant-JVN29.webp')
+
+p26 = Product.create!( 
+  name: "Hairdresser's Invisible Oil Heat Protectant Leave In Conditioner Primer", 
+  price: 34.00, 
+  size: 8.5, 
+  brand: 'Bumble and bumble', 
+  category: 'Hair,',
+  description: 'A primer that starts your styling routine by instantly cutting frizz by 50 percent all day versus untreated hair (even in extreme humidity).',
+  callouts: 'Free of parabens, formaldehydes, phthalates, mineral oil, and sulfates SLS & SLES. It is also cruelty-free',
+  other_info: 'Meet Bumble and bumble’s number-one bestseller. This multitasking leave-in provides heat protection up to 450°F/232°C, has UV filters to protect hair against the drying effects of the sun, protects color from fading for up to 16 washes, detangles to protect against breakage, smooths, softens, and adds shine.', 
+  fragrance: "This is a luxe yet light scent of fruit and tropical florals, anchored with rich musk and woodsy notes.",
+  ingredients: 'Water\Aqua\Eau, Cetearyl Alcohol, Butylene Glycol, PEG-12 Glyceryl Dimyristate, Vitis Vinifera (Grape) Seed Oil, Prunus Amygdalus Dulcis (Sweet Almond) Oil, Macadamia Integrifolia Seed Oil, Cocos Nucifera (Coconut) Oil, Gardenia Taitensis Flower Extract, Argania Spinosa Kernel Oil, Carthamus Tinctorius (Safflower) Seed Oil, Hydroxypropyltrimonium Hydrolyzed Corn Starch, Hydrolyzed Vegetable Protein PG-Propyl Silanetriol, Hydrolyzed Wheat Protein PG-Propyl Silanetriol, Dimethicone, Glycerin, Sodium Hyaluronate, Behentrimonium Methosulfate, Distearyldimonium Chloride, Dimethiconol, Cetrimonium Chloride, Butyl Methoxydibenzoylmethane, Ethylhexyl Methoxycinnamate, Sodium Chloride, Citric Acid, BHT, Fragrance (Parfum), Hexyl Cinnamal, Linalool, Limonene, Potassium Sorbate, Phenoxyethanol. The Signature 6-Oil Blend Includes: Cocos Nucifera (Coconut) Oil, Argania Spinosa Kernel (Argan) Oil, Vitis Vinifera (Grape) Seed Oil, Macadamia Integrifolia Seed (Macadamia) Oil, Prunus Amygdalus Dulcis (Sweet Almond) Oil, and Carthamus Tinctorius (Safflower) Seed Oil.',
+  how_to_use: 
+  '-On day one, apply to damp hair, rake through, and style.
+  -On day two (and so on), apply to dry hair to refresh and restyle.'
+)
+
+p26.photo.attach(io: URI.open('https://shobha-seeds.s3.us-west-1.amazonaws.com/Shobha-Images-Hair/Hairdressers-Oil-B%26B34.webp'), filename: 'Shobha-Images-Hair/Hairdressers-Oil-B&B34.webp')
+
+p27 = Product.create!( 
+  name: 'Embody Daily Volumizing Shampoo', 
+  price: 21.00, 
+  size: 10.0, 
+  brand: 'JVN', 
+  category: 'Hair,',
+  description: 'A sulfate-free shampoo with a luxurious lather that builds body and bounce without drying out your hair. It removes buildup without stripping, adds bounce, body, and shine while visibly enhancing fullness',
+  callouts: 'This product is vegan, cruelty-free, and comes in recyclable packaging.',
+  other_info: 'Powered by patented sugarcane-derived hemi-squalane (a hero ingredient that improves hair health over time time) plus follicle-stimulating caffeine and soothing, hydrating aloe leaf juice, this shampoo strengthens and detoxifies for visibly fuller hair. The 98 percent-plastic-free packaging consists of an infinitely recyclable aluminum base and PCR pump.', 
+  fragrance: 'Lush jasmine, sparkling cassis, and radiant bergamot accent rich notes of sandalwood and amber.',
+  ingredients: 'Water/Aqua/Eau, Aloe Barbadensis Leaf Juice, Sodium Methyl Cocoyl Taurate, Sodium Lauroyl Methyl Isethionate, Cocamidopropyl Hydroxysultaine, Coco-Glucoside, Hydrogenated Farnesene*, Caffeine, Glycerin, Panthenol, Stearamidopropyl Dimethylamine Lactate, Glyceryl Oleate, Sorbitan Oleate Decylglucoside Crosspolymer, Sodium Gluconate, Sodium Levulinate, Sodium Chloride, Potassium Sorbate, Citric Acid, Fragrance/Parfum, Linalool.',
+  how_to_use: 
+  '-Apply to wet hair and gently massage into scalp with the pads of your fingers, adding more if needed to make sure your entire scalp gets lathered up. Rinse.
+  -Follow up with your fave JVN conditioner.'
+)
+
+p27.photo.attach(io: URI.open('https://shobha-seeds.s3.us-west-1.amazonaws.com/Shobha-Images-Hair/Embody-Daily-JVN21.webp'), filename: 'Shobha-Images-Hair/Embody-Daily-JVN21.webp')
+
+p28 = Product.create!( 
+  name: 'Liquid Glass Moisture-Rich Miracle Smoothing Sealant', 
+  price: 34.00, 
+  size: 6.4, 
+  brand: 'Drybar', 
+  category: 'Hair,',
+  description: 'A heat-activated spray that lasts through up to three washes, delivering frizz resistance, intensive moisturization, and a super-glossy finish.',
+  callouts: 'Free of parabens, phthalates, and sulfates SLS & SLES. It is also vegan, gluten-free, cruelty-free, and comes in recyclable packaging.',
+  other_info: "Perfect for coarse-to-thick hair, curls, and coils, this formula tames frizz, amplifies shine, and provides superior hydration while protecting hair from heat (up to 450°F/232°C). Pair it with Drybar's Liquid Glass Collection (sold separately) for a silky, super-smooth blowout that lasts through up to three washes.", 
+  fragrance: "Drybar's velvet scent features notes of cardamom, banana leaf, and velvet musk.",
+  ingredients: 'Aqua (Water, Eau), Dipropylene Glycol, Cetyl Triethylmonium Dimethicone PEG-8 Succinate, Polysilicone-29, Mangifera Indica (Mango) Seed Butter, Cocos Nucifera (Coconut) Oil, Brassica Campestris (Rapeseed) Seed Oil, Linum Usitatissimum (Linseed) Seed Oil, Emblica Officinalis Fruit Extract, Sodium Coco PG-Dimonium Chloride Phosphate, Tetrasodium Glutamate Diacetate, Sodium Hydroxide, Polysorbate 20, Hydroxypropylgluconamide, Silicone Quaternium-18, Trideceth-6, Trideceth-12, Hydroxypropylammonium Gluconate, Tartaric Acid, Cetrimonium Chloride, Glycolic Acid, Caprylyl Glycol, Hexylene Glycol, Phenoxyethanol, Potassium Sorbate, BHT, Citric Acid, Sodium Benzoate, Benzyl Alcohol, Parfum (Fragrance), Linalool, Hexyl Cinnamal, Benzyl Salicylate.',
+  how_to_use: 
+  '-Use on damp hair.
+  -For best results, do not apply with any other pre-styling products.
+  -Begin with clean, towel-dried, detangled hair.
+  -Work in sections, spraying generously from roots to ends.
+  -Comb through to evenly distribute.
+  -To activate and seal in the formula, blow-dry thoroughly and finish with a flatiron or hot tool of your choice.'
+)
+
+p28.photo.attach(io: URI.open('https://shobha-seeds.s3.us-west-1.amazonaws.com/Shobha-Images-Hair/Liquid-Glass-Drybar34.webp'), filename: 'Shobha-Images-Hair/Liquid-Glass-Drybar34.webp')
+
+p29 = Product.create!( 
+  name: 'Mini Sunday Clarifying Shampoo', 
+  price: 16.00, 
+  size: 2.0, 
+  brand: 'Bumble and bumble', 
+  category: 'Hair,Mini Size',
+  description: 'A deep clarifying shampoo that lifts away product residue, excess oil, and built-up pollutants for a full hair reset for the week ahead.',
+  callouts: 'Free of parabens, formaldehydes, phthalates, and mineral oil. It is also vegan, and cruelty-free.',
+  other_info: "Sunday Shampoo is a deep, effective hair and scalp cleanser with a generous, bubbly lather that lifts away impurities that can give hair that end-of-week dullness. But remember, it's not a pick for color-treated hair.", 
+  fragrance: "A clean, effervescent scent with notes of sparkling cassis, watery cyclamen, and mint leaf to complement hair's Sunday start.",
+  ingredients: 'Water\Aqua\Eau, Sodium Laureth Sulfate, Cocamidopropyl Betaine, Sodium Chloride, Panax Ginseng Root Extract, Salvia Officinalis (Sage) Leaf Extract, Glycerin, Magnesium Chloride, Rosmarinus Officinalis Leaf Oil, Magnesium Nitrate, Sodium Hydroxide, Citric Acid, Isoceteth-20, PPG-2 Hydroxyethyl Cocamide, Fragrance (Parfum), Limonene, Tetrasodium EDTA, Phenoxyethanol, Chlorphenesin, Methylchloroisothiazolinone, Methylisothiazolinone, Green 5 (CI 61570), Ext. Violet 2 (CI 60730).',
+  how_to_use: 
+  '-Work a dab through wet hair, lather well and rinse thoroughly. Follow with a hydrating Bumble and bumble conditioner or mask.'
+  )
+  
+  p29.photo.attach(io: URI.open('https://shobha-seeds.s3.us-west-1.amazonaws.com/Shobha-Images-Hair/Mini-Sunday-Shampoo-B%26B16.webp'), filename: 'Shobha-Images-Hair/Mini-Sunday-Shampoo-B&B16.webp')
+  
+  
+  p30 = Product.create!( 
+    name: 'Mini Complete Instant Recovery Heat Protectant Leave-In Serum', 
+    price: 14.00, 
+    size: 0.84, 
+    brand: 'JVN', 
+    category: 'Hair,Mini Size',
+    description: 'An intense, nourishing, transformative leave-in treatment designed to repair and smooth weak, ultra-damaged, over-processed hair with a silky finish.',
+    callouts: 'This product is vegan, cruelty-free, and comes in recyclable packaging.',
+    other_info: "The silky, lightweight texture of this formula penetrates without greasiness or heaviness while providing heat protection. It features patented, sugarcane derived Hemisqualane—JVN's hero ingredient that improves hair over time by creating healthier, stronger strands—niacinamide to support keratin repair and increase body and sheen, and charged lemon protein to restore strength. It's also silicone-free, sulfate-free. The packaging is 99 percent free of plastic and recyclable.", 
+    ingredients: 'Water/Aqua/Eau, Hydrogenated Farnesene*, Glycerin, Sodium Acrylates Copolymer, Squalane, Hydroxypropyltrimonium Lemon Protein, Niacinamide, Lecithin, Tocopherol, Citrus Reticulata (Tangerine) Peel Oil, Jasminum Officinale (Jasmine) Oil, Leuconostoc/Radish Root Ferment Filtrate, Sodium Gluconate, Ethylhexylglycerin, Benzyl Alcohol, Citric Acid, Fragrance/Parfum, Limonene, Linalool.',
+    how_to_use: 
+    '- Apply to palms and rub together before gently smoothing down wet to damp mid-lengths and ends. Style as usual. Use before your other products to enhance their performance - or by itself for a smooth, protected, no-hold style.
+    
+    - JVN TIP: Start with a blueberry sized amount on wet to damp hair for finer strands, adding more if needed.'
+    )
+    
+    p30.photo.attach(io: URI.open('https://shobha-seeds.s3.us-west-1.amazonaws.com/Shobha-Images-Hair/Mini-Complete-Instant-JVN14.webp'), filename: 'Shobha-Images-Hair/Mini-Complete-Instant-JVN14.webp')
+    
+    puts "Products Done!"
+    
+    puts "Creating reviews..."
 
 Review.create!(
   title: 'first review',
