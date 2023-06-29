@@ -17,7 +17,7 @@ export default function NavBar2() {
                     </NavLink>
                 </li>
                 <li>
-                    <NavLink to={'/products'} className='nav2-link'>
+                    <NavLink to={'/categories/Makeup'} className='nav2-link'>
                      Makeup
                     </NavLink>
                 </li>
@@ -41,7 +41,7 @@ export default function NavBar2() {
                 </li>
 
                 <li>
-                    <NavLink to={`/categories/Body`} className='nav2-link'>
+                    <NavLink to={`/categories/Bath & Body`} className='nav2-link'>
                         Bath & Body
                     </NavLink>
                 </li>

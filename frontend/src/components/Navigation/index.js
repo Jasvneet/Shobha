@@ -101,7 +101,7 @@ function Navigation() {
               Stores and Services
             </button>
           <div className="dropdown-content">
-            <p>Sephora Powell</p>
+            <p>Find a Store</p>
           </div>
           </div>
         </li>
