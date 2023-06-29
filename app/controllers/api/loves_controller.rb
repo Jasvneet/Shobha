@@ -23,6 +23,6 @@ class Api::LovesController < ApplicationController
     end 
 
     def love_params 
-        params.require(:like).permit(:product_id, :user_id, :id)
+        params.require(:love).permit(:product_id, :user_id, :id)
     end 
 end

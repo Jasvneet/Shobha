@@ -38,19 +38,19 @@ export const deleteLove = (loveId) => async(dispatch) => {
     }
 }
 
-export const createLove = (like) => async(dispatch) => {
+export const createLove = (love) => async(dispatch) => {
   
     const response = await csrfFetch(`/api/loves`, {
         method: 'POST',
         headers: {
             'Content-type' : 'application/json'
         },
-        body: JSON.stringify({like})
+        body: JSON.stringify({love})
     })
 
     if (response.ok) {
         const data = await response.json();
-        dispatch(receiveLove(data.like))
+        dispatch(receiveLove(data.love))
     }
 }
 
@@ -61,7 +61,10 @@ export default function lovesReducer(state = {}, action) {
         case RECEIVE_LOVES:
             return {...action.loves};
         case RECEIVE_LOVE:
-            return {...state, [action.love.id]: action.love};
+            if (action.love) {
+                return { ...state, [action.love.id]: action.love };
+              }
+              return state; 
         case REMOVE_LOVE:
             delete newState[action.loveId]
             return newState

@@ -13,7 +13,8 @@ import UpdateReview from './components/Reviews/UpdateReviewForm';
 import CartIndex from './components/CartItems/CartIndex';
 import CategoryShowPage from './components/Navbar2/CategoryShowPage';
 import Footer from './components/Footer';
-import MinisCarousel from './components/Home/MinisCarousel';
+
+import LovesIndex from './components/Loves/LovesIndex';
 
 function App() {
   return (
@@ -33,6 +34,7 @@ function App() {
           <Route exact path="/reviews/edit/:reviewId" component={UpdateReview} />
           <Route exact path="/cart" component={CartIndex} />
           <Route exact path="/categories/:category" component={CategoryShowPage} />
+          <Route exact path="/loved_products" component={LovesIndex} />
           
           </Switch>
       <Footer />

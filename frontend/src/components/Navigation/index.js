@@ -55,7 +55,7 @@ function Navigation() {
 
   useEffect(() => {
     setCartItemCount(cartItems.length);
-  }, [cartItems]);
+  }, [cartItems.length]);
 
 
   return (

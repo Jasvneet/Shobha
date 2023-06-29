@@ -37,7 +37,6 @@ const ProductShow = () => {
             return;
         } else {
             // Redirect to the create page for reviews
-            // Replace the placeholder '/create-page-url' with your actual route
             window.location.href = `/reviews/new/${productId}`;
         }
     }
@@ -60,12 +59,12 @@ const ProductShow = () => {
     const HandleAddLove = (e) => {
         e.preventDefault();
 
-        const like = {
+        const love = {
             product_id: productId,
             user_id: currentUser.id
         };
 
-        dispatch(createLove(like));
+        dispatch(createLove(love));
     }
 
     const toggleIngredients = () => {
