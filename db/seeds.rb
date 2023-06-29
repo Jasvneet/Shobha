@@ -81,21 +81,23 @@ p2 = Product.create!({
 p2.photo.attach(io: URI.open('https://shobha-seeds.s3.us-west-1.amazonaws.com/Fenty-Gloss-Bomb-Universal-21.webp'), filename: 'Fenty-Gloss-Bomb-Universal-21.webp')
 
 p3 = Product.create!( 
-  name: "Brazilian Crush Cheirosa '62 Bum Bum Hair & Body Fragrance Mist", 
-  price: 38.00, 
-  size: 8.1, 
-  brand: 'Sol de Janeiro', 
-  category: 'Fragrance,New',
-  description: 'A body fragrance mist, bursting with an alluring pistachio and salted caramel scent, to be used on body, hair, and lingerie.',
-  callouts: 'FREE of parabens, sulfates, and phthalates.',
-  other_info: 'Sol de Janeiro came together with a mutual love of the distinctly Brazilian attitude towards beauty, their secrets, and their know-how. This product supports the Brazilian philosophy that beauty isn’t a standard to reach, it’s an attitude to take. A head-to-toe sensuality that comes through in a smile, a saunter, a samba. Based in the USA, Sol de Janeiro is excited to be able to bring you the most effective, transformative, and fun beauty care experiences—incorporating the latest and greatest super ingredients from the Amazon.', 
-  ingredients: 'Alcohol Denat., Aqua (Water, Eau), Parfum (Fragrance), Benzyl Alcohol, Benzyl Salicylate, Hydroxycitronellal, Coumarin, Limonene, Linalool, Benzyl Benzoate, Citral, Eugenol.',
+  size: 1.7, 
+  price: 122.00, 
+  name: 'Chance Eau Tendre Eau de Parfum', 
+  brand: 'CHANEL', 
+  category: 'Fragrance,Gifts',
+  description: 'An enhanced interpretation of the unexpected floral-fruity fragrance, CHANCE EAU TENDRE Eau de Parfum sweeps you into an intensified whirlwind of tenderness. The signature CHANCE bottle is reinvented with a silver cap and golden accent.',
+  callouts: 'This product is vegan, cruelty-free, and comes in recyclable packaging.',
+  other_info: "A constellation of enveloping notes of Jasmine Absolute and Rose Essence dazzles with an intoxicatingly soft and enveloping trail for a radiant and feminine scent.", 
+  ingredients: 'Alcohol, Fragrance, Water, Alpha-Isomethyl Ionone, Citronellol, Linalool, Hydroxycitronellal, Hexyl Cinnamal, Limonene, Geraniol, Benzyl Benzoate, Eugenol, Butyl Methoxydibenzoylmethane, Ci 17200 (Red 33), Ci 14700 (Red 4), Ci 60730 (Ext. Violet 2), Ci 15985 (Yellow 6), Ci 42090 (Blue 1), Il22-1.',
   how_to_use: 
-  '-Use all over the body any time, anywhere.
-  -Spray on hair, clothes, and lingerie for that lingering scent of pistachio caramel.'
+  '-Fragrance is intensified by the warmth of your own body. Apply in the creases of your knees and elbows for a longer-lasting, stronger scent. 
+  -After applying, avoid rubbing or dabbing skin. This breaks down the fragrance, causing it to wear off more quickly. 
+  -If you prefer placing fragrance on your wrists, be sure to reapply after frequent hand-washing, as this tends to rinse off the scent. 
+  -Replace fragrance after 12 months. Expired perfumes more than a year old lose the integrity of the original scent.'
 )
-
-p3.photo.attach(io: URI.open('https://shobha-seeds.s3.us-west-1.amazonaws.com/Shobha+Product+Images/Brazilian-Crush-Mist-38.webp'), filename: 'Shobha Product Images/Brazilian-Crush-Mist-38.webp')
+  
+p3.photo.attach(io: URI.open('https://shobha-seeds.s3.us-west-1.amazonaws.com/Shobha-Images-Fragrance/Chance-Eau-Chanel122.webp'), filename: 'Shobha-Images-Fragrance/Chance-Eau-Chanel122.webp')
 
 
 p4 = Product.create!({
@@ -576,36 +578,204 @@ p29 = Product.create!(
   ingredients: 'Water\Aqua\Eau, Sodium Laureth Sulfate, Cocamidopropyl Betaine, Sodium Chloride, Panax Ginseng Root Extract, Salvia Officinalis (Sage) Leaf Extract, Glycerin, Magnesium Chloride, Rosmarinus Officinalis Leaf Oil, Magnesium Nitrate, Sodium Hydroxide, Citric Acid, Isoceteth-20, PPG-2 Hydroxyethyl Cocamide, Fragrance (Parfum), Limonene, Tetrasodium EDTA, Phenoxyethanol, Chlorphenesin, Methylchloroisothiazolinone, Methylisothiazolinone, Green 5 (CI 61570), Ext. Violet 2 (CI 60730).',
   how_to_use: 
   '-Work a dab through wet hair, lather well and rinse thoroughly. Follow with a hydrating Bumble and bumble conditioner or mask.'
+)
+  
+p29.photo.attach(io: URI.open('https://shobha-seeds.s3.us-west-1.amazonaws.com/Shobha-Images-Hair/Mini-Sunday-Shampoo-B%26B16.webp'), filename: 'Shobha-Images-Hair/Mini-Sunday-Shampoo-B&B16.webp')
+  
+  
+p30 = Product.create!( 
+  name: 'Mini Complete Instant Recovery Heat Protectant Leave-In Serum', 
+  price: 14.00, 
+  size: 0.84, 
+  brand: 'JVN', 
+  category: 'Hair,Mini Size',
+  description: 'An intense, nourishing, transformative leave-in treatment designed to repair and smooth weak, ultra-damaged, over-processed hair with a silky finish.',
+  callouts: 'This product is vegan, cruelty-free, and comes in recyclable packaging.',
+  other_info: "The silky, lightweight texture of this formula penetrates without greasiness or heaviness while providing heat protection. It features patented, sugarcane derived Hemisqualane—JVN's hero ingredient that improves hair over time by creating healthier, stronger strands—niacinamide to support keratin repair and increase body and sheen, and charged lemon protein to restore strength. It's also silicone-free, sulfate-free. The packaging is 99 percent free of plastic and recyclable.", 
+  ingredients: 'Water/Aqua/Eau, Hydrogenated Farnesene*, Glycerin, Sodium Acrylates Copolymer, Squalane, Hydroxypropyltrimonium Lemon Protein, Niacinamide, Lecithin, Tocopherol, Citrus Reticulata (Tangerine) Peel Oil, Jasminum Officinale (Jasmine) Oil, Leuconostoc/Radish Root Ferment Filtrate, Sodium Gluconate, Ethylhexylglycerin, Benzyl Alcohol, Citric Acid, Fragrance/Parfum, Limonene, Linalool.',
+  how_to_use: 
+  '- Apply to palms and rub together before gently smoothing down wet to damp mid-lengths and ends. Style as usual. Use before your other products to enhance their performance - or by itself for a smooth, protected, no-hold style.
+  
+  - JVN TIP: Start with a blueberry sized amount on wet to damp hair for finer strands, adding more if needed.'
+  )
+    
+  p30.photo.attach(io: URI.open('https://shobha-seeds.s3.us-west-1.amazonaws.com/Shobha-Images-Hair/Mini-Complete-Instant-JVN14.webp'), filename: 'Shobha-Images-Hair/Mini-Complete-Instant-JVN14.webp')
+
+#Fragrance Products
+
+p31 = Product.create!( 
+  name: "Brazilian Crush Cheirosa '62 Bum Bum Hair & Body Fragrance Mist", 
+  price: 38.00, 
+  size: 8.1, 
+  brand: 'Sol de Janeiro', 
+  category: 'Fragrance,New',
+  description: 'A body fragrance mist, bursting with an alluring pistachio and salted caramel scent, to be used on body, hair, and lingerie.',
+  callouts: 'FREE of parabens, sulfates, and phthalates.',
+  other_info: 'Sol de Janeiro came together with a mutual love of the distinctly Brazilian attitude towards beauty, their secrets, and their know-how. This product supports the Brazilian philosophy that beauty isn’t a standard to reach, it’s an attitude to take. A head-to-toe sensuality that comes through in a smile, a saunter, a samba. Based in the USA, Sol de Janeiro is excited to be able to bring you the most effective, transformative, and fun beauty care experiences—incorporating the latest and greatest super ingredients from the Amazon.', 
+  ingredients: 'Alcohol Denat., Aqua (Water, Eau), Parfum (Fragrance), Benzyl Alcohol, Benzyl Salicylate, Hydroxycitronellal, Coumarin, Limonene, Linalool, Benzyl Benzoate, Citral, Eugenol.',
+  how_to_use: 
+  '-Use all over the body any time, anywhere.
+  -Spray on hair, clothes, and lingerie for that lingering scent of pistachio caramel.'
+)
+
+p31.photo.attach(io: URI.open('https://shobha-seeds.s3.us-west-1.amazonaws.com/Shobha+Product+Images/Brazilian-Crush-Mist-38.webp'), filename: 'Shobha Product Images/Brazilian-Crush-Mist-38.webp') 
+ #todo: insert photourl for product 3
+
+p32 = Product.create!( 
+  size: 1.7, 
+  price: 110.00, 
+  name: 'Good Girl Eau de Parfum', 
+  brand: 'Carolina Herrera', 
+  category: 'Fragrance,Gifts',
+  description: "Black and white… good girl, bad girl. GOOD GIRL is a sensual, evocative fragrance born of the beautiful contradictions and the ever-present duality of modern women and modern life. Both freshly light and moodily dark, this innovative fragrance captures a woman's wondrous complexity with surprising and exceptional ingredients. The sweet, alluring qualities of jasmine give GOOD GIRL its brightness and femininity. The darker side is created with richly fragrant cocoa and intoxicating tonka. Almond and coffee bring the scent its immediate vibrancy. Tuberose, extracted in a new way that creates a rich delicacy, is the fragrance's wild card, bringing fluidity and femininity. GOOD GIRL exemplifies the effortless elegance and wit of the House of Herrera.",
+  callouts: 'FREE of parabens, sulfates, and phthalates.',
+  other_info: "The ground-breaking bottle, the first in the form of a high heel, speaks as eloquently of the power of modern femininity and a woman's dual nature as the fragrance itself. Made of sleek, smoky, midnight blue glass, it stands on the tallest, thinnest gold heel.", 
+  ingredients: 'Alcohol Denat., Fragrance, Water, Linalool, Hydroxycitronellal, Benzyl Salicylate, Coumarin, Ethylhexyl Methoxycinnamate, Benzyl Benzoate, Ethylhexyl Saliclate, Butyl Methoxydibenzoylmethane, Limonen, Geraniol, Citronellol, Isoeugenol, Hexyl Cinnamal, Benzyl Alcohol, Citral, Ci 60730 (Ext. Violet 2) Alcohol Of Vegatal Origin 80%.',
+  how_to_use: 
+  '-Fragrance is intensified by the warmth of your own body. Apply in the creases of your knees and elbows for a longer-lasting, stronger scent.',
+  fragrance: "Warm Florals, Key Notes: Tuberose, Jasmine, Tonka Bean"
+)
+  
+p32.photo.attach(io: URI.open('https://shobha-seeds.s3.us-west-1.amazonaws.com/Shobha-Images-Fragrance/Good-Girl-Parfum-CH110.webp'), filename: 'Shobha-Images-Fragrance/Good-Girl-Parfum-CH110.webp')
+
+p33 = Product.create!( 
+  size: 2.7, 
+  price: 145.00, 
+  name: 'Prada Amber', 
+  brand: 'Prada', 
+  category: 'Fragrance,',
+  description: "This amber women's perfume is made from pure essential oils for a warm, long-lasting scent. Bergamot, mandarin, and patchouli are layered atop a warm sandalwood and vanilla perfume, creating a distinctive, intimate, and sumptuous scent for women.",
+  callouts: 'FREE of parabens, sulfates, and phthalates.',
+  other_info: "The modern, sleek, solid glass bottle symbolizes the future, encapsulating the timeless women's fragrance within. The hypnotic amber scent is a modern take on a classic women's scent, intertwining memory, reality, and possibility.", 
+  ingredients: 'Alcohol Denat., Water, Fragrance, Limonene, Ethylhexyl Methoxycinnamate, Butyl Methoxydibenzoylmethane, Ethylhexyl Salicylate, Linalool, Benzyl Alcohol, Butylphenyl Methylpropional, Citronellol, Coumarin, Benzyl Benzoate, Hydroxyisohexyl 3-Cyclohexene Carboxaldehyde, Benzyl Salicylate, Hydroxycitronellal, Citral, Benzyl Cinnamate, Geraniol, Ci 42090, Ci 17200, Alcohol Of Vegetal Origin.',
+  how_to_use: 
+  '-Fragrance is intensified by the warmth of your own body. Apply in the creases of your knees and elbows for a longer-lasting, stronger scent.',
+  fragrance: "Woody Spices, Key Notes: Patchouli, Sandalwood, Vanilla"
+)
+  
+p33.photo.attach(io: URI.open('https://shobha-seeds.s3.us-west-1.amazonaws.com/Shobha-Images-Fragrance/Prada-Amber145.webp'), filename: 'Shobha-Images-Fragrance/Prada-Amber145.webp')
+
+p34 = Product.create!( 
+  size: 1.7, 
+  price: 395.00, 
+  name: 'Electric Cherry', 
+  brand: 'TOM FORD', 
+  category: 'Fragrance,Gifts',
+  description: 'Electric Cherry merges the scent of Morello cherry with the warmth of musk and sultry jasmine, evoking a teasing flirt sparkling with playful effervescence.',
+  callouts: 'FREE of parabens, sulfates, and phthalates.',
+  other_info: "Electric Cherry merges the lush tartness of Morello cherry notes with exhilarating ginger, while opulent jasmine sambac entices with a mesmerizing aroma. Ambrettolide introduces an alluring musk scent, releasing a warm breath that mingles with spicy pink peppercorn. The Electric Cherry fragrance is contained in a luxe, bright red iteration of the iconic Private Blend bottle. Finished with a pale pink plaque, the 30 milliliter and 50 milliliter flacons enhance any vanity or grooming area.", 
+  ingredients: 'Alcohol Denat., Water\Aqua\Eau, Fragrance (Parfum), Limonene, Hydroxycitronellal, Linalool, Benzyl Benzoate, Coumarin, Anise Alcohol, Citral, Isoeugenol, Citronellol, Geraniol, Benzyl Cinnamate, Benzyl Alcohol, Bht, Pentaerythrityl Tetra-Di-T-Butyl Hydroxyhydrocinnamate.',
+  how_to_use: 
+  '-Fragrance is intensified by the warmth of your own body. Apply in the creases of your knees and elbows for a longer-lasting, stronger scent. 
+  -After applying, avoid rubbing or dabbing skin. This breaks down the fragrance, causing it to wear off more quickly. 
+  -If you prefer placing fragrance on your wrists, be sure to reapply after frequent hand-washing, as this tends to rinse off the scent. 
+  -Replace fragrance after 12 months. Expired perfumes more than a year old lose the integrity of the original scent.',
+  fragrance: "Fruity Florals"
+)
+  
+p34.photo.attach(io: URI.open('https://shobha-seeds.s3.us-west-1.amazonaws.com/Shobha-Images-Fragrance/Electric-Cherry-TomFord395.webp'), filename: 'Shobha-Images-Fragrance/Electric-Cherry-TomFord395.webp')
+
+p35 = Product.create!( 
+  size: 1.7, 
+  price: 130.00, 
+  name: "J'adore Parfum d'Eau", 
+  brand: 'Dior', 
+  category: 'Fragrance',
+  description: "This is a scent of unprecedented sensoriality. J'adore Parfum d'Eau reinterprets the promise of indulgence expressed by J'adore perfume since 1999 in an alcohol-free fragrance of water and flowers that is as intense and long-lasting as an Eau de Parfum.",
+  callouts: 'FREE of parabens, sulfates, and phthalates.',
+  other_info: "This Dior perfume for women rearranges the iconic J'adore bouquet in a spontaneous scent that caresses the skin with a synchronicity of jasmine sambac, neroli, and magnolia notes that breaks with the top-heart-base rule of perfumery. The legendary J'adore perfume bottle features a brand-new hue: an opalescent white with the softness of alabaster, echoing the velvety caress of flower petals.", 
+  ingredients: '#16455 Aqua (Water), Parfum (Fragrance), Butylene Glycol, Glycerin, Pentylene Glycol, Caprylic/Capric/Succinic Triglyceride, Citrus Aurantium Amara (Bitter Orange) Flower Water, Hydrogenated Lecithin, Hydroxycitronellal, Benzyl Salicylate, Hexyl Cinnamal, Hydroxyacetophenone, Chlorphenesin, Citronellol, Limonene, Alpha-Isomethyl Ionone, Triethyl Citrate, Poloxamer 407, Sodium Citrate, Phytosterols, Linalool, Geraniol, Citric Acid, Pentaerythrityl Tetra-Di-T-Butyl Hydroxyhydrocinnamate, Cinnamyl Alcohol, Benzyl Benzoate, Citral, Benzyl Alcohol, Benzyl Cinnamate.',
+  how_to_use: 
+  "-Spray J'adore Parfum d'Eau generously on the skin and hair in a soft and enveloping cloud.
+  -Repeat as desired.",
+  fragrance: "Warm Florals, Key Notes: Radiant Jasmine, Velvety Magnolia, Fresh Neroli"
+)
+  
+p35.photo.attach(io: URI.open("https://shobha-seeds.s3.us-west-1.amazonaws.com/Shobha-Images-Fragrance/J'adore-Dior130.webp"), filename: "Shobha-Images-Fragrance/J'adore-Dior130.webp")
+
+p36 = Product.create!( 
+  size: 1.6, 
+  price: 123.00, 
+  name: 'Her Eau de Parfum', 
+  brand: 'BURBERRY', 
+  category: 'Fragrance,Gifts',
+  description: 'Burberry Her Eau de Parfum for women is an artful blend of berries elevated by spirited jasmine and violet and smoothed out with amber and musk. A multifaceted, magnetic fruity gourmand and the scent of freedom.',
+  callouts: 'FREE of parabens, sulfates, and phthalates.',
+  other_info: "The Burberry Her woman throws herself head first into everything she does, losing herself in the whirlwind of color on her doorstep. Life lived in the fast lane. Shrug loose from the chains of expectation, seize the moment, and play by your own rules: a scent for women who know who they are. Interweaving the House's tailored heritage with unexpected twists and turns, this designer perfume from master perfumer Francis Kurkdjian opens with a dense burst of berries, with black currant, blueberry, and raspberry left to linger in an intense, fruity-floral sweetness. Delicate jasmine and violet unwind their tendrils in a white woody accord, casting the scent in dazzling light that deepens into dry amber and powdery musk at the base for a bold Burberry perfume for women.", 
+  ingredients: 'Alcohol Denat., Fragrance, Water, Ethylhexyl Methoxycinnamate, Alpha-Isomethyl Ionone, Ethylhexyl Salicylate, Limonene, Butyl Methoxydibenzoylmethane, Hexyl Cinnamal, Citronellol, Linalool, Bht, Alcohol, Tris(Tetramethylhydroxypiperidinol) Citrate, Ext. Violet 2 (Ci 60730), Red 33 (Ci 17200), Yellow 5 (Ci 19140).',
+  how_to_use: 
+  '-Fragrance is intensified by the warmth of your own body. Apply in the creases of your knees and elbows for a longer-lasting, stronger scent.
+  -After applying, avoid rubbing or dabbing skin. This breaks down the fragrance, causing it to wear off more quickly.
+  -If you prefer placing fragrance on your wrists, be sure to reapply after frequent hand-washing, as this tends to rinse off the scent.
+  -Replace fragrance after 12 months. Expired perfumes more than a year old lose the integrity of the original scent.'
+)
+  
+p36.photo.attach(io: URI.open('https://shobha-seeds.s3.us-west-1.amazonaws.com/Shobha-Images-Fragrance/Her-Parfum-Burberry123.webp'), filename: 'Shobha-Images-Fragrance/Her-Parfum-Burberry123.webp')
+
+p37 = Product.create!( 
+  size: 4.08, 
+  price: 125.00, 
+  name: 'Luna Rossa Ocean Eau de Toilette Cologne Set', 
+  brand: 'Prada', 
+  category: 'Fragrance,Gifts',
+  description: 'Give the gift of Prada. This gift set includes Luna Rossa Ocean Eau de Toilette Spray in a full size and two travel spray bottles.',
+  callouts: '',
+  other_info: "The unique men's cologne encapsulates a burst of bright bergamot scents, contrasted with the sensuality of vetiver and elegant, fragrant iris. It's a cologne perfect for the masculine, sophisticated, and contemporary man.", 
+  ingredients: 'Alcohol, Parfum/Fragrance, Aqua/Water/Eau, Limonene, Linalool, Butyl Methoxydibenzoylmethane, Coumarin, Citronellol, Alpha-Isomethyl Ionone, Pentaerythrityl Tetra-Di-T-Butyl Hydroxyhydrocinnamate, Citral, Methyl Anthranilate, Geraniol. (F.I.L B277999/I).',
+  how_to_use: 
+  '-Apply to pulse points: wrist, neck, and chest.'
+)
+  
+p37.photo.attach(io: URI.open('https://shobha-seeds.s3.us-west-1.amazonaws.com/Shobha-Images-Fragrance/Luna-Rossa-Set-Prada125.webp'), filename: 'Shobha-Images-Fragrance/Luna-Rossa-Set-Prada125.webp')
+
+p38 = Product.create!( 
+  size: 0.48, 
+  price: 35.00, 
+  name: 'Mini Good Girl & Very Good Girl Gift Set', 
+  brand: 'Carolina Herrera', 
+  category: 'Fragrance,Gifts',
+  description: 'Give the gift of Carolina Herrera with this two-piece gift set featuring two bestselling scents: Good Girl and Very Good Girl Eau de Parfum. Each of these iconic scents features a complex blend of light and dark notes that reflect the contrasting sides of our personality.',
+  callouts: 'FREE of parabens, sulfates, and phthalates.',
+  other_info: "2 x 0.24 oz/ 7 mL Eau de parfum minis in Good Girl and Very Good Girl", 
+  ingredients: 'Good Girl Eau de Parfum:
+  Alcohol Denat., Parfum (Fragrance), Aqua (Water), Linalool, Hydroxycitronellal, Benzyl Salicylate, Coumarin, Ethylhexyl Methoxycinnamate, Benzyl Benzoate, Ethylhexyl Salicylate, Butyl Methoxydibenzoylmethane, Limonene, Geraniol, Citronellol, Isoeugenol, Hexyl Cinnamal, Benzyl Alcohol, Citral, Ci 60730 (Ext. Violet 2).
+  
+  Very Good Girl Eau de Parfum:
+  Alcohol Denat., Parfum (Fragrance), Aqua (Water), Linalool, Limonene, Coumarin, Butyl Methoxydibenzoylmethane, Alpha-Isomethyl Ionone, Citral, Isoeugenol, Geraniol, Ci 14700 (Red 4), Ci 60730 (Ext. Violet 2).',
+  how_to_use: 
+  '-Fragrance is intensified by the warmth of your own body. Apply in the creases of your knees and elbows for a longer-lasting, stronger scent.
+  -After applying, avoid rubbing or dabbing skin. This breaks down the fragrance, causing it to wear off more quickly.
+  -If you prefer placing fragrance on your wrists, be sure to reapply after frequent handwashing, as this tends to rinse off the scent.
+  -Replace fragrance after 12 months. Expired perfumes more than a year old lose the integrity of the original scent.'
   )
   
-  p29.photo.attach(io: URI.open('https://shobha-seeds.s3.us-west-1.amazonaws.com/Shobha-Images-Hair/Mini-Sunday-Shampoo-B%26B16.webp'), filename: 'Shobha-Images-Hair/Mini-Sunday-Shampoo-B&B16.webp')
-  
-  
-  p30 = Product.create!( 
-    name: 'Mini Complete Instant Recovery Heat Protectant Leave-In Serum', 
-    price: 14.00, 
-    size: 0.84, 
-    brand: 'JVN', 
-    category: 'Hair,Mini Size',
-    description: 'An intense, nourishing, transformative leave-in treatment designed to repair and smooth weak, ultra-damaged, over-processed hair with a silky finish.',
-    callouts: 'This product is vegan, cruelty-free, and comes in recyclable packaging.',
-    other_info: "The silky, lightweight texture of this formula penetrates without greasiness or heaviness while providing heat protection. It features patented, sugarcane derived Hemisqualane—JVN's hero ingredient that improves hair over time by creating healthier, stronger strands—niacinamide to support keratin repair and increase body and sheen, and charged lemon protein to restore strength. It's also silicone-free, sulfate-free. The packaging is 99 percent free of plastic and recyclable.", 
-    ingredients: 'Water/Aqua/Eau, Hydrogenated Farnesene*, Glycerin, Sodium Acrylates Copolymer, Squalane, Hydroxypropyltrimonium Lemon Protein, Niacinamide, Lecithin, Tocopherol, Citrus Reticulata (Tangerine) Peel Oil, Jasminum Officinale (Jasmine) Oil, Leuconostoc/Radish Root Ferment Filtrate, Sodium Gluconate, Ethylhexylglycerin, Benzyl Alcohol, Citric Acid, Fragrance/Parfum, Limonene, Linalool.',
-    how_to_use: 
-    '- Apply to palms and rub together before gently smoothing down wet to damp mid-lengths and ends. Style as usual. Use before your other products to enhance their performance - or by itself for a smooth, protected, no-hold style.
-    
-    - JVN TIP: Start with a blueberry sized amount on wet to damp hair for finer strands, adding more if needed.'
-    )
-    
-    p30.photo.attach(io: URI.open('https://shobha-seeds.s3.us-west-1.amazonaws.com/Shobha-Images-Hair/Mini-Complete-Instant-JVN14.webp'), filename: 'Shobha-Images-Hair/Mini-Complete-Instant-JVN14.webp')
+p38.photo.attach(io: URI.open('https://shobha-seeds.s3.us-west-1.amazonaws.com/Shobha-Images-Fragrance/Mini-Good-Girl-Set-CH35.jpeg'), filename: 'Shobha-Images-Fragrance/Mini-Good-Girl-Set-CH35.jpeg')
 
-    #Fragrance Products
+p39 = Product.create!( 
+  size: 0.33, 
+  price: 38.00, 
+  name: 'Mini Her Eau de Parfum', 
+  brand: 'BURBERRY', 
+  category: 'Fragrance,Mini Size',
+  description: 'Burberry Her Eau de Parfum for women is an artful blend of berries elevated by spirited jasmine and violet and smoothed out with amber and musk. A multifaceted, magnetic fruity gourmand and the scent of freedom.',
+  callouts: 'FREE of parabens, sulfates, and phthalates.',
+  other_info: "The Burberry Her woman throws herself head first into everything she does, losing herself in the whirlwind of color on her doorstep. Life lived in the fast lane. Shrug loose from the chains of expectation, seize the moment, and play by your own rules: a scent for women who know who they are. Interweaving the House's tailored heritage with unexpected twists and turns, this designer perfume from master perfumer Francis Kurkdjian opens with a dense burst of berries, with black currant, blueberry, and raspberry left to linger in an intense, fruity-floral sweetness. Delicate jasmine and violet unwind their tendrils in a white woody accord, casting the scent in dazzling light that deepens into dry amber and powdery musk at the base for a bold Burberry perfume for women.", 
+  ingredients: 'Alcohol Denat., Fragrance, Water, Ethylhexyl Methoxycinnamate, Alpha-Isomethyl Ionone, Ethylhexyl Salicylate, Limonene, Butyl Methoxydibenzoylmethane, Hexyl Cinnamal, Citronellol, Linalool, Bht, Alcohol, Tris(Tetramethylhydroxypiperidinol) Citrate, Ext. Violet 2 (Ci 60730), Red 33 (Ci 17200), Yellow 5 (Ci 19140).',
+  how_to_use: 
+  '-Fragrance is intensified by the warmth of your own body. Apply in the creases of your knees and elbows for a longer-lasting, stronger scent.
+  -After applying, avoid rubbing or dabbing skin. This breaks down the fragrance, causing it to wear off more quickly.
+  -If you prefer placing fragrance on your wrists, be sure to reapply after frequent hand-washing, as this tends to rinse off the scent.
+  -Replace fragrance after 12 months. Expired perfumes more than a year old lose the integrity of the original scent.'
+)
+  
+p39.photo.attach(io: URI.open('https://shobha-seeds.s3.us-west-1.amazonaws.com/Shobha-Images-Fragrance/Mini-Her-Burberry38.webp'), filename: 'Shobha-Images-Fragrance/Mini-Her-Burberry38.webp')
 
+
+ 
     
+puts "Products Done!"
     
-    puts "Products Done!"
-    
-    puts "Creating reviews..."
+puts "Creating reviews..."
 
 Review.create!(
   title: 'first review',
