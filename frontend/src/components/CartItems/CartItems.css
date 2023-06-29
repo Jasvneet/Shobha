@@ -85,7 +85,7 @@
     border: 1px solid rgb(204, 204, 204);
     border-radius: 4px;
     display: block;
-    height: 22%;
+    height: 250px;
     width: 15%;
     margin-right: auto;
     margin-top: 87px;
@@ -129,6 +129,10 @@
 }
 
 .total-container {
+    height: 100%;
+}
+
+.total-section {
     display: flex;
     justify-content: space-between;
 }

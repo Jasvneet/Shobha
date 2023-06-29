@@ -17,10 +17,12 @@ import { fetchCartItems } from '../../store/cart_items';
 
 function Navigation() {
   const sessionUser = useSelector(state => state.session.user);
+  const cartItems = useSelector(state => Object.values(state.cartItems));
   const [showModal, setShowModal] = useState(false);
   const [showSignupModal, setShowSignupModal] = useState(false);
   const [showLoginForm, setShowLoginForm] = useState(true);
   const dispatch = useDispatch();
+  const [cartItemCount, setCartItemCount] = useState(0);
 
   let sessionLinks;
   if (sessionUser) {
@@ -50,6 +52,10 @@ function Navigation() {
   useEffect(() => {
     dispatch(fetchCartItems())
   }, [dispatch])
+
+  useEffect(() => {
+    setCartItemCount(cartItems.length);
+  }, [cartItems]);
 
 
   return (
@@ -202,6 +208,9 @@ function Navigation() {
                     <svg  className='nav-icon' id='replacement-icon'>
                       <path d="M21.397 20.472l-.516 2.088a1.631 1.631 0 01-1.582 1.245H4.741c-.75 0-1.402-.513-1.583-1.245l-.517-2.088h18.756zm.813-3.286l-.565 2.286H2.393l-.565-2.286H22.21zm.813-3.286l-.566 2.286H1.582L1.016 13.9h22.007zm.373-4.333c.355 0 .616.334.53.679L23.27 12.9H.77l-.654-2.654a.546.546 0 01.53-.679h22.75zM13.83 1.716l5.572 5.2a.5.5 0 01-.683.731l-5.572-5.201a1.647 1.647 0 00-2.256 0L5.319 7.647a.501.501 0 01-.682-.732l5.573-5.199a2.647 2.647 0 013.62 0z"></path>
                     </svg>
+                    {cartItemCount > 0 && (
+                      <div className="notification-count">{cartItemCount}</div>
+                    )}
                   </NavLink>
               </div>
             </div>

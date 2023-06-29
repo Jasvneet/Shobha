@@ -598,6 +598,10 @@ p29 = Product.create!(
     )
     
     p30.photo.attach(io: URI.open('https://shobha-seeds.s3.us-west-1.amazonaws.com/Shobha-Images-Hair/Mini-Complete-Instant-JVN14.webp'), filename: 'Shobha-Images-Hair/Mini-Complete-Instant-JVN14.webp')
+
+    #Fragrance Products
+
+    
     
     puts "Products Done!"
     

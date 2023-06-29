@@ -70,6 +70,7 @@
 .nav1-icon-container {
   padding-left: 12px;
   padding-right: 12px;
+  position: relative;
 }
 
 #icon-container:hover #replacement-icon {
@@ -265,3 +266,18 @@ ul li {
   border-radius: 8px;
 }
 
+.notification-count {
+  position: absolute;
+  top: -8px;
+  right: -8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 20px;
+  height: 20px;
+  background-color: red;
+  color: white;
+  font-size: 12px;
+  font-weight: bold;
+  border-radius: 50%;
+}

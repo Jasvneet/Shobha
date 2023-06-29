@@ -40,25 +40,28 @@ export default function CartIndex(){
             </div>
 
             <div className='cart-index-total'>
-                <div className='total-container'>
-                    <div>Merchandise Subtotal</div>
-                    <div className='total-price'>${totalPrice}.00</div>
-                </div>
-                <div className='total-container'>
-                    <div>Shipping & Handling</div>
-                    <div className='shipping-price'><strong>FREE</strong></div>
-                </div>
-                <div className='total-container'>
-                    <div>Estimated Tax & Other Fees</div>
-                    <div className='tax-price'><strong>TBD</strong></div>
-                </div>
-                <div className='divider'></div>
-                <div className='total-container'>
-                    <h2>Estimated Total</h2>
-                    <div className='estimated-price'><strong>${totalPrice}.00</strong></div>
+                <div className='total-conatiner'>
+                    <div className='total-section'>
+                        <div>Merchandise Subtotal</div>
+                        <div className='total-price'>${totalPrice}.00</div>
+                    </div>
+                    <div className='total-section'>
+                        <div>Shipping & Handling</div>
+                        <div className='shipping-price'><strong>FREE</strong></div>
+                    </div>
+                    <div className='total-section'>
+                        <div>Estimated Tax & Other Fees</div>
+                        <div className='tax-price'><strong>TBD</strong></div>
+                    </div>
+                    <div className='divider'></div>
+                    <div className='total-section'>
+                        <h2>Estimated Total</h2>
+                        <div className='estimated-price'><strong>${totalPrice}.00</strong></div>
+
+                    </div>
+                    <button>Checkout Shipped Items</button>
 
                 </div>
-                <button>Checkout Shipped Items</button>
             </div>
         </div>
         </>
