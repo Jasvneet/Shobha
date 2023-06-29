@@ -29,6 +29,12 @@ export default function NavBar2() {
                 </li>
 
                 <li>
+                    <NavLink to={`/categories/Hair`} className='nav2-link'>
+                        Hair
+                    </NavLink>
+                </li>
+
+                <li>
                     <NavLink to={`/categories/Fragrance`} className='nav2-link'>
                         Fragrance
                     </NavLink>
@@ -47,10 +53,25 @@ export default function NavBar2() {
                 </li>
 
                 <li>
-                    <NavLink to={`/categories/Hair`} className='nav2-link'>
-                        Hair
+                    <NavLink to={`/categories/Gifts`} className='nav2-link'>
+                        Gifts
                     </NavLink>
                 </li>
+
+                <li>
+                    <NavLink to={`/categories/Clean Beauty`} className='nav2-link'>
+                        Clean Beauty
+                    </NavLink>
+                </li>
+
+                <li>
+                    <NavLink to={`/categories/Beauty Under $20`} className='nav2-link'>
+                        Beauty Under $20
+                    </NavLink>
+                </li>
+
+
+
               
                 {/* <li>
                     <a className='nav2-link' href='#'>Skincare</a>
