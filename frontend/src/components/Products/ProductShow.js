@@ -18,6 +18,7 @@ const ProductShow = () => {
     const [showHow, setShowHow] = useState(false);
     const [showModal, setShowModal] = useState(false);
     const [isLoved, setIsLoved] = useState(false);
+    const [showNotification, setShowNotification] = useState(false);
     const dispatch = useDispatch();
 
     useEffect(() => {
@@ -62,6 +63,11 @@ const ProductShow = () => {
             quantity: 1
         };
         dispatch(createCartItem(cartItem));
+
+        setShowNotification(true);
+        setTimeout(() => {
+            setShowNotification(false);
+          }, 1000);
     }
 
     const HandleAddLove = (e) => {
@@ -112,7 +118,12 @@ const ProductShow = () => {
                     <b className='price'><strong>${product.price}0</strong> get 25% off your Shobha order when you open and use a Shobha Credit Card today. </b>
                     <p className='size'>Size: {product.size} oz</p>
                     <div className='product-show-buttons'>
-                        <button onClick={HandleAddCartItem} className='cart-button'>Add to Basket</button>
+                        <button onClick={HandleAddCartItem} className='cart-button tooltip' >Add to Basket
+                        {showNotification && (
+                            <span className="tooltip-text">Product added to the basket!</span>
+                        )}
+                   
+                        </button>
                         {isLoved ? (
                             <button onClick={HandleAddLove} className='add-love-button' id='loved-active'>
                                 <svg className="nav-icon" id='original-icon'>
@@ -126,7 +137,7 @@ const ProductShow = () => {
                             </svg>
                             </button> 
                         }
-                        
+                                    
                     </div>
                 </div>
            </div>
