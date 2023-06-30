@@ -34,8 +34,8 @@ function App() {
           <Route exact path="/reviews/edit/:reviewId" component={UpdateReview} />
           <Route exact path="/cart" component={CartIndex} />
           <Route exact path="/categories/:category" component={CategoryShowPage} />
-          <Route exact path="/loved_products" component={LovesIndex} />
-          <Route exact path="/store_locater" component={MapPage} />
+          <Route exact path="/loved-products" component={LovesIndex} />
+          <Route exact path="/store-locater" component={MapPage} />
           
           </Switch>
       <Footer />

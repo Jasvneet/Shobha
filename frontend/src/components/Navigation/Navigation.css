@@ -136,6 +136,11 @@ ul li {
   padding-right: 17px;
 }
 
+.nav-store-link {
+  color: black;
+
+}
+
 .user-dropdown {
   position: relative;
   display: inline-block;

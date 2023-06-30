@@ -109,7 +109,7 @@ export default function MainCarousel(){
             <div className="slide-farmacy-link">
               <div className="slide-link-container">
                   <h3>Limited-Edition Farmacy</h3>
-                  <NavLink to={'/categories/Skincare'} className='slide-link'>
+                  <NavLink to={'/brands/Farmacy'} className='slide-link'>
                       <p>Discover new scents. Available exclusively at Shobha. </p>
                       <span>SHOP NOW </span>
                   </NavLink>
@@ -121,7 +121,7 @@ export default function MainCarousel(){
             <div className="slide-lips-link">
               <div className="slide-link-container">
                 <h3>NEW Charlotte Tilbury</h3>
-                <NavLink to={'/categories/Skincare'} className='slide-link'>
+                <NavLink to={'/brands/Charlotte Tilbury'} className='slide-link'>
                     <p>Blur lips with this lightweight, full-coverage, matte liquid lipstick. Uniquely at Sephora.</p>
                     <span>SHOP NOW </span>
                 </NavLink>
