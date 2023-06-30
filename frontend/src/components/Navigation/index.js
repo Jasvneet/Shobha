@@ -187,7 +187,7 @@ function Navigation() {
            
           
             <div className="dropdown-content">
-              <p>Live Chat</p>
+              <p>Live Chat Unavailable</p>
             </div>
           </div>
           </li>
