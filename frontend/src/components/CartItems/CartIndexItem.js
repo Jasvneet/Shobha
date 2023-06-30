@@ -48,7 +48,9 @@ if (product === undefined) {
                     <NavLink to={`/brands/${product.brand}`} className='brand-link'>
                         <div className='cart-item-brand'><strong>{product.brand}</strong></div>
                     </NavLink>
-                    <h1>{product.name}</h1>
+                    <NavLink to={`/products/${product.id}`} className="prod-show-link">
+                        <h1>{product.name}</h1>
+                    </NavLink>
                     <div className='cart-item-size'>SIZE {product.size} oz</div>
                     <div className='edit-delete-cart-item'>
                         <select value={quantity} onChange={handleQuantityChange}>

@@ -67,7 +67,7 @@ const ProductShow = () => {
         setShowNotification(true);
         setTimeout(() => {
             setShowNotification(false);
-          }, 1000);
+          }, 2000);
     }
 
     const HandleAddLove = (e) => {
@@ -120,7 +120,7 @@ const ProductShow = () => {
                     <div className='product-show-buttons'>
                         <button onClick={HandleAddCartItem} className='cart-button tooltip' >Add to Basket
                         {showNotification && (
-                            <span className="tooltip-text">Product added to the basket!</span>
+                            <span className="tooltip-text">Added to the basket!</span>
                         )}
                    
                         </button>
