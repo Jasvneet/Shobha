@@ -63,10 +63,10 @@ export default function CategoryShowPage() {
                                     <img src="https://www.sephora.com/contentimages/homepage/060222/Homepage/RWD/CategoryTiles/homepage_featured_category_tile_fragrance_bottle_us_ca_rwd_slice.jpg?imwidth=48" srcset="https://www.sephora.com/contentimages/homepage/060222/Homepage/RWD/CategoryTiles/homepage_featured_category_tile_fragrance_bottle_us_ca_rwd_slice.jpg?imwidth=48 1x, https://www.sephora.com/contentimages/homepage/060222/Homepage/RWD/CategoryTiles/homepage_featured_category_tile_fragrance_bottle_us_ca_rwd_slice.jpg?imwidth=96 2x" loading="lazy" role="presentation" alt="" class="css-z3vs2m eanm77i0" data-comp="Image StyledComponent BaseComponent "/>
                                 </li>
                                 <li>
-                                    <NavLink to={'/categories/Mini Size'} className="prod-show-link">
-                                       Mini Size
+                                    <NavLink to={'/categories/Sunscreen'} className="prod-show-link">
+                                       Sunscreen
                                     </NavLink>
-                                    <img src="https://www.sephora.com/contentimages/homepage/060222/Homepage/RWD/CategoryTiles/homepage_featured_category_tile_minis_us_ca_rwd_slice.png?imwidth=48" srcset="https://www.sephora.com/contentimages/homepage/060222/Homepage/RWD/CategoryTiles/homepage_featured_category_tile_minis_us_ca_rwd_slice.png?imwidth=48 1x, https://www.sephora.com/contentimages/homepage/060222/Homepage/RWD/CategoryTiles/homepage_featured_category_tile_minis_us_ca_rwd_slice.png?imwidth=96 2x" loading="lazy" role="presentation" alt="" class="css-z3vs2m eanm77i0" data-comp="Image StyledComponent BaseComponent "/>
+                                    <img src="https://www.sephora.com/contentimages/categorybanners/RWD/icons/guide_foundations.svg"/>
                                 </li>
                                 <li>
                                     <NavLink to={'/categories/Scrubs & Exfoliants'} className="prod-show-link">
