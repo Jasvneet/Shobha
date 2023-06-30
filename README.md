@@ -15,6 +15,33 @@ Live Link : https://shobha.onrender.com/
 
  - Wishlist: Add products to your wishlist, and have them all in one place, where you can add them to your cart. 
 
+ # Dive Deeper!
+
+<details open>
+<summary>User Authentication:</summary>
+<br>
+This code is implementing a secure user registration and login system in a Ruby on Rails application. It utilizes the ActiveRecord ORM for database communication and the Bcrypt gem for password hashing and authentication.
+</details>
+
+<details open>
+<summary>Product Browsing:</summary>
+<br>
+Browse through a number of Beauty products, browse by category or brand.
+</details>
+
+<details open>
+<summary>Basket Items:</summary>
+<br>
+Add products to your shopping basket, and alter quantities in the basket.
+</details>
+
+<details open>
+<summary>Reviews:</summary>
+<br>
+Share your insights about a specific product by leaving a review and rating, enabling others to make informed decisions while enhancing the overall shopping community.
+</details>
+
+
 # Installation 
 
 To get started with Shobha locally, follow these steps:
