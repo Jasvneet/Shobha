@@ -1,24 +1,47 @@
-# README
+# Shobha
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Shobha, a Sephora clone, is a beauty retailer offering a wide range of cosmetics, skincare, and fragrance products from various brands.
 
-Things you may want to cover:
+Live Link : https://shobha.onrender.com/
 
-* Ruby version
+# Features
+ - User Authentication: Secure user registration and login functionality, ensuring user data privacy.
 
-* System dependencies
+ - Product Browsing: Browse through a number of Beauty products, browse by category or brand.
 
-* Configuration
+ - Shopping Basket: Add products to your shopping basket, and alter quantities in the basket.
 
-* Database creation
+ - Product Reviews: Share your insights about a specific product by leaving a review and rating, enabling others to make informed decisions while enhancing the overall shopping community.
 
-* Database initialization
+ - Wishlist: Add products to your wishlist, and have them all in one place, where you can add them to your cart. 
 
-* How to run the test suite
+# Installation 
 
-* Services (job queues, cache servers, search engines, etc.)
+To get started with Shobha locally, follow these steps:
 
-* Deployment instructions
+1. Clone the repository: 
+git clone https://github.com/jasvneet/shobha.git
 
-* ...
+2. Install the required dependencies: 
+cd shobha bundle install npm install
+
+3. Set up the database:
+rails db:create rails db:migrate rails db:seed
+
+4. Start the Rails server:
+rails s
+
+5. Open a new terminal window and start the React development server:
+cd frontend npm install npm start
+
+6. Visit http://localhost:3000
+in your browser to explore the app locally.
+
+ # Technologies Used
+
+ - Backend: Ruby on Rails
+ - Frontend: React, Redux, JavaScript, HTML5, CSS3
+ - Database: PostgreSQL
+ - Image Hosting: Amazon S3
+ - Deployment: Render
+ - Map: Google Maps API
