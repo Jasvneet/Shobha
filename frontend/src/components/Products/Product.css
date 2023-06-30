@@ -335,6 +335,7 @@
     justify-content: space-evenly;
     flex-wrap: wrap;
     align-items: left;
+    margin-right: 170px;
   }
 
   .category-links li {
