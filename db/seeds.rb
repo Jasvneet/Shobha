@@ -934,15 +934,17 @@ Review.create!(
   rating: 5
 )
 
-10.times do
-  Review.create!(
-    title: Faker::Lorem.sentence(word_count: 6),
-    user_id: User.all.sample.id,
-    product_id: Product.all.sample.id,
-    rating: Faker::Number.between(from: 1, to: 5),
-    body: Faker::Lorem.paragraph
-  )
-end
+Product.all.map do |product|
+  3.times do
+    Review.create!(
+      title: Faker::Movies::PrincessBride.character,
+      rating: rand(3..5),
+      body: Faker::Movies::PrincessBride.quote,
+      user_id: rand(1..2),
+      product_id: product.id
+      )
+    end
+  end
 puts "Reviews Done!"
 
   
