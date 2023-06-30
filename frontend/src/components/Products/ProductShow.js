@@ -83,7 +83,7 @@ const ProductShow = () => {
     }
 
     const handleLoginSuccess = () => {
-        setShowModal(false); // Close the modal upon successful sign-in
+        setShowModal(false); 
       };
       
 
@@ -138,8 +138,28 @@ const ProductShow = () => {
                 </div>
 
                 <div>
-                    <ul>
-
+                    <ul className='highlights-container'>
+                        <li>
+                            <img src='https://www.sephora.com/contentimages/highlights/vegan.svg'/>
+                            <p>Vegan</p>
+                        </li>
+                        <li>
+                            <img src='https://www.sephora.com/contentimages/highlights/community-approved.svg'/>
+                            <p>Community Favorite</p>
+                        </li>
+                        <li>
+                            <img src='https://www.sephora.com/contentimages/ppagebanners/rwd/allure-best-2020.png'/>
+                            <p>allure 2020 Best of Beauty Award Winner</p>
+                        </li>
+                        <li>
+                            <img src='https://www.sephora.com/contentimages/highlights/formulated-without.svg'/>
+                            <p>Without Parabens</p>
+                        </li>
+                        <li>
+                            <img src='https://www.sephora.com/contentimages/highlights/gluten-free.svg'/>
+                            <p>Gluten Free</p>
+                        </li>
+                       
                     </ul>
                 </div>
             </div>   
@@ -192,9 +212,9 @@ const ProductShow = () => {
 
             <div className='divider'/>
 
-            <div className='similar-products'>
+            {/* <div className='similar-products'>
              <h2>You may Also Like </h2>
-            </div>
+            </div> */}
 
             <div className='divider'/>
             
