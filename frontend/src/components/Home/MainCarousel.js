@@ -133,7 +133,7 @@ export default function MainCarousel(){
             <div className="slide-sunscreen-link">
               <div className="slide-link-container">
                   <h3>Ultra-Hydrating SPF</h3>
-                  <NavLink to={'/categories/Skincare'} className='slide-link'>
+                  <NavLink to={'/categories/Sunscreen'} className='slide-link'>
                       <p>The ultimate skincare must-have</p>
                       <span>SHOP NOW </span>
                   </NavLink>

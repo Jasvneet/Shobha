@@ -13,7 +13,7 @@ import UpdateReview from './components/Reviews/UpdateReviewForm';
 import CartIndex from './components/CartItems/CartIndex';
 import CategoryShowPage from './components/Navbar2/CategoryShowPage';
 import Footer from './components/Footer';
-
+import MapPage from './components/StoreLocater/index.js'
 import LovesIndex from './components/Loves/LovesIndex';
 
 function App() {
@@ -35,6 +35,7 @@ function App() {
           <Route exact path="/cart" component={CartIndex} />
           <Route exact path="/categories/:category" component={CategoryShowPage} />
           <Route exact path="/loved_products" component={LovesIndex} />
+          <Route exact path="/store_locater" component={MapPage} />
           
           </Switch>
       <Footer />
