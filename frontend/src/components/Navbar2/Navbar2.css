@@ -37,9 +37,9 @@
   }
   
   .category-show-wrapper {
-    height: 170vh;
-    padding-left: 150px;
-    padding-top: 50px;
+    padding-left: 10vw;
+    padding-top: 4vw;
+    padding-bottom: 3vw;
   }
 
   .category-show-container {

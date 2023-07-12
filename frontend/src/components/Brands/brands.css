@@ -21,19 +21,22 @@
 .brands-container {
     width: 100%;
     max-width: 1280px;
-    padding-top: 24px;
-    padding-left: 16px;
-    padding-right: 16px;
+    padding: 5vw 8vw;
     margin-left: auto;
     margin-right: auto;
-    height: 100vh;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    height: 50vh;
+  
 }
 
 .brand-show-wrapper {
- padding-left: 150px;
- padding-top: 50px;
+ padding-left: 12vw;
+ padding-top: 8vh;
  display: flex;
- height: 120vh;
+ padding-bottom: 3vw;
+
  
  
 }
@@ -68,7 +71,7 @@
 }
 
 .show-link {
-    font-size: 14px;
+    font-size: 1.1vw;
     height: 35px;
 }
 

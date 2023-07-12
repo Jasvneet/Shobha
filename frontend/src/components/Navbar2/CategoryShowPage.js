@@ -83,7 +83,9 @@ export default function CategoryShowPage() {
                             <div key={product.id} className='brand-show-container'>
                                 <li className='brand-show-item'>
                                     <div>
+                                    <NavLink to={`/products/${product.id}`}>
                                         <img src={product.photoUrl} />
+                                        </NavLink>
                                     </div>
                                     <span className='brand-index'>{product.brand}</span>
                                     <NavLink to={`/products/${product.id}`} className="show-link">{product.name}</NavLink>
