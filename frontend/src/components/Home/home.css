@@ -2,17 +2,18 @@
   height: 220vh;
 }
 .slide-img {
-  margin-left: 10px;
+  margin-left: .5vw;
   border-radius: 4px;
   display: flex;
   flex-direction: column;
+  
 }
 .slide-img img {
-  height: 330px;
+  height: 22vw;
   user-select: none;
-  margin-right: 15px;
-  margin-top: 15px;
-  width: 100%;
+  margin-right: 1vw;
+  margin-top: 1vw;
+  width: 30vw;
   border-radius: 5px;
 }
 
@@ -26,6 +27,7 @@
   height: 17vh;
   border-bottom-left-radius: 5px;
   border-bottom-right-radius: 5px;
+  width: 30vw;
 }
 
 .slide-lips-link {
@@ -34,6 +36,7 @@
   height: 17vh;
   border-bottom-left-radius: 5px;
   border-bottom-right-radius: 5px;
+  width: 30vw;
 }
 
 .slide-farmacy-link {
@@ -42,6 +45,7 @@
   height: 17vh;
   border-bottom-left-radius: 5px;
   border-bottom-right-radius: 5px;
+  width: 30vw;
 }
 
 .slide-newprod-link{
@@ -50,6 +54,7 @@
   height: 17vh;
   border-bottom-left-radius: 5px;
   border-bottom-right-radius: 5px;
+  width: 30vw;
 }
 
 .slide-sunscreen-link{
@@ -58,6 +63,7 @@
   height: 17vh;
   border-bottom-left-radius: 5px;
   border-bottom-right-radius: 5px;
+  width: 30vw;
 }
 
 .slide-minis-link {
@@ -66,6 +72,7 @@
   height: 17vh;
   border-bottom-left-radius: 5px;
   border-bottom-right-radius: 5px;
+  width: 30vw;
 }
 
 .slide-link-container {
@@ -76,6 +83,8 @@
   line-height: 1.25;
   padding: 18px;
   flex: 1 1 0%;
+
+
 }
 
 .slide-link-container h3 {
@@ -89,6 +98,7 @@
   text-decoration: none;
   color: black;
   font-size: 14px;
+
 }
 
 .slide-link span {
@@ -162,7 +172,7 @@
 }
 
 .brand-prod-carousel {
-  font-size: 12px;
+  font-size: .9vw;
   font-family: Arial, Helvetica, sans-serif;
   font-weight: 700;
   white-space: pre-wrap;
@@ -177,7 +187,7 @@
 }
 
 .name-prod-carousel {
-  font-size: 14px;
+  font-size: 1vw;
   font-family: Arial, Helvetica, sans-serif;
   white-space: pre-wrap;
   overflow-wrap: break-word;
@@ -209,7 +219,7 @@
   margin-left: 130px;
   margin-right: 130px;
   display: flex;
-  gap: 24px;
+  gap: 2vw;
   flex-flow: row wrap;
   align-items: flex-start;
   justify-content: space-between;
