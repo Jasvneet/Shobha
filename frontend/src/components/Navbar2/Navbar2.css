@@ -24,8 +24,8 @@
   .nav2-link {
     color: rgba(246, 242, 242, 0.874);
     font-family: "helvetica neue", helvetica ,arial,sans-serif;
-    font-size: 14px;
-    padding: 3px;
+    font-size: 1vw;
+    padding: .3vw;
     text-decoration-line: none;
     line-height: 1.25;
     display: flex;
@@ -33,7 +33,7 @@
     justify-content: center;
     text-align: center;
     flex-wrap: wrap;
-    padding-right: 20px;
+    padding-right: 2vw;
   }
   
   .category-show-wrapper {
@@ -47,13 +47,13 @@
   }
 
   .category-heading {
-    margin-right: 80px;
-    font-size: 24px;
+    margin-right: 7vw;
+    font-size: 2vw;
     font-family: Arial, Helvetica, sans-serif;
     margin-bottom: 1em;
     height: 100%;
     font-weight: 700;
-    min-width: 89px;
+    min-width: 7vw;
   }
   
   

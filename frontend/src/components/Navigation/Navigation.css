@@ -7,7 +7,7 @@
   background-color: #C0DCF1;
   margin-top: 0px;
   width: 100%;
-  font-size: 14px;
+  font-size: 1vw;
   display: flex;
   justify-content: center;
   width: 100%;
@@ -33,16 +33,16 @@
 }
 
 .user-greeting {
-  font-size: 14px;
+  font-size: 1vw;
 }
 
 .profile-icon {
   object-fit: cover;
-  width: 32px;
-  height: 32px;
+  width: 2vw;
+  height: 2vw;
   margin-top: -4px;
   margin-bottom: -4px;
-  margin-right: 12px;
+  margin-right: 1vw;
   display: inline-block;
   max-width: 100%;
 }
@@ -50,7 +50,7 @@
 .icon {
   display: inline-block;
   width: 24px; 
-  font-size: 24px;
+  font-size: 2vw;
   transform: scaleX(-1);
   height: 100%;
   padding-top: 16px;
@@ -62,14 +62,17 @@
 .nav-icon {
   height: 24px;
   width: 24px;
-  font-size: 24px;
-  margin-right: 12px;
+  font-size: 2vw;
+  margin-right: .8vw;
   margin-top: -0.125em;
 }
 
+
+
+
 .nav1-icon-container {
-  padding-left: 12px;
-  padding-right: 12px;
+  padding-left: 1vw;
+  padding-right: 1vw;
   position: relative;
 }
 
@@ -92,9 +95,9 @@
   display: flex;
   justify-content: center;
   font-family: Arial, Helvetica, sans-serif;
-  margin-right: 12px;
-  margin-top: 12px;
-  margin-bottom: 12px;
+  margin-right: 1vw;
+  margin-top: 1vw;
+  margin-bottom: .8vw;
   width: 100vw;
 }
 
@@ -112,7 +115,7 @@
 }
 
 .home-link {
-  font-size: 21px;
+  font-size: 1.7vw;
   color: black;
   text-decoration-line: none;
   font-family: Arial, Helvetica, sans-serif;
@@ -130,10 +133,12 @@ ul li {
   border-style: none;
   font-family: Arial, Helvetica, sans-serif;
   display: flex;
-  padding-top: 20px;
-  padding-bottom: 20px;
-  padding-left: 12px;
-  padding-right: 17px;
+  padding-top: 1.3vw;
+  padding-bottom: 1.3vw;
+  padding-left: 1vw;
+  padding-right: 1.1vw;
+  font-size: 1vw;
+
 }
 
 .nav-store-link {
@@ -172,7 +177,7 @@ ul li {
   background-color: black;
   color: white;
   border-style: none;
-  font-size: 12px;
+  font-size: .8vw;
   font-family: Arial, Helvetica, sans-serif;
   border-radius: 99999px;
   border: 2px solid black;
@@ -188,7 +193,7 @@ ul li {
   color: black;
   border: 2px solid black;
   border-radius: 99999px;
-  font-size: 12px;
+  font-size: .8vw;
   font-weight: 700;
   font-family: Arial, Helvetica, sans-serif;
   height: 35px;
@@ -201,17 +206,17 @@ ul li {
   display: flex;
   flex-direction: column;
   text-align: left;
-  margin-left: 10px;
+  margin-left: .8vw;
   font-family: Arial, Helvetica, sans-serif;
 }
 
 .user-msg h3 {
-  padding-bottom: 3px;
-  font-size: 14px;
+  padding-bottom: .3vh;
+  font-size: 1vw;
 }
 
 .user-msg p {
-  font-size: 12px;
+  font-size: .8vw;
 }
 
 .profile-dropdown:hover .dropdown-content {
@@ -228,12 +233,12 @@ ul li {
 }
 
 .profile-icon-drop {
-  width: 34px;
+  width: 3vw;
   padding-right: 15px;
 }
 
 .greeting-drop {
-  font-size: 14px;
+  font-size: 1vw;
   font-weight: 700;
   font-family: Arial, Helvetica, sans-serif;
 }
@@ -241,7 +246,7 @@ ul li {
 .logout-button button {
   background-color: transparent;
   font-family: Arial, Helvetica, sans-serif;
-  font-size: 14px;
+  font-size: 1vw;
   border: none;
   color: rgba(0, 0, 0, 0.76);
   padding-top: 10px;
@@ -251,7 +256,7 @@ ul li {
 .dropdown {
     position: relative;
     display: inline-block;
-    font-size: 14px;
+    font-size: 1vw;
 }
   
 .dropdown-content {
@@ -278,11 +283,11 @@ ul li {
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 20px;
-  height: 20px;
+  width: 1.4vw;
+  height: 1.4vw;
   background-color: red;
   color: white;
-  font-size: 12px;
+  font-size: .8vw;
   font-weight: bold;
   border-radius: 50%;
 }
