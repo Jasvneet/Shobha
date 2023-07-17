@@ -28,12 +28,12 @@ function LoginForm(props) {
           .catch(async (res) => {
             let data;
             try {
-              // .clone() essentially allows you to read the response body twice
+ 
               data = await res.clone().json();
             } catch {
-              data = await res.text(); // Will hit this case if the server is down
+              data = await res.text(); 
             }
-            if (data?.errors) setErrors(data.errors);
+            if (data?.error) setErrors(data.error);
             else if (data) setErrors([data]);
             else setErrors([res.statusText]);
           });
@@ -77,10 +77,8 @@ function LoginForm(props) {
       <>
       {showLoginForm && !showSignupModal && (
         <form onSubmit={handleSubmit} className="login-form">
-             <ul>
-                {errors.map((error, index) => <li key={index}>{error}</li>)}
-             </ul>
-             <div className="form">
+         
+            <div className="form">
 
             <div className="login-message">
             <h3 id="login-heading">Sign In</h3>
@@ -108,6 +106,14 @@ function LoginForm(props) {
                 onChange={(e) => setPassword(e.currentTarget.value)}
                 className="text-input"/>                
             </label>
+
+            {errors.length > 0 && (
+                <ul>
+                  {errors.map((error, index) => (
+                    <li key={index} className="login-error">{error}</li>
+                  ))}
+                </ul>
+              )}
             <br />
             <div id='terms-of-use'>By clicking “Sign In”, you (1) agree to the current version of our <strong>TERMS OF USE</strong>, and (2) have read Sephora’s Privacy Policy</div>
             <div>

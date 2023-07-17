@@ -11,8 +11,6 @@
     min-height: 44px;
     align-items: center;
     padding-bottom: 3px;
-    
-    
 }
 
 .signup-form {
@@ -114,6 +112,14 @@ p {
     font-size: 12px;
     text-align: left;
     display: block;
+}
+
+.signup-errors {
+    color: red;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 1vw;
+    flex-direction: column;
 }
 
 

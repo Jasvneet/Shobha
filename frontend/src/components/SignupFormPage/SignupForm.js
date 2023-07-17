@@ -44,8 +44,8 @@ function SignupForm(){
       </div>
        
       <form onSubmit={handleSubmit} className="signup-form">
-        <ul>
-          {errors.map(error => <li key={error}>{error}</li>)}
+        <ul className="signup-errors">
+          {errors.map(error => <li key={error} className="signup-error">{error}</li>)}
         </ul>
         <div>
           <img className='insider-logo' src="/images/logo-beauty-insider.svg"/>

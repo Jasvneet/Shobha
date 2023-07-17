@@ -165,3 +165,9 @@ strong {
     font-size: 11px;
     justify-content: flex-start;
 }
+
+.login-error {
+    color: red;
+    font-weight: bold;
+    margin-top: 1vw;
+}
