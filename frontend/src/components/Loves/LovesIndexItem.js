@@ -42,7 +42,9 @@ export default function LovesIndexItem({love}) {
         <>
             <div className='divider'></div>
             <div className='love-details-container'>
-                <img src={product.photoUrl} />
+                <NavLink to={`/products/${product.id}`} className="show-link">
+                    <img src={product.photoUrl} />
+                </NavLink>
                 <div className='love-details'>
                     <NavLink to={`/brands/${product.brand}`} className='brand-link'>
                         <div className='brand-index'>{product.brand}</div>

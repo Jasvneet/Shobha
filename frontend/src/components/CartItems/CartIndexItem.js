@@ -43,7 +43,9 @@ if (product === undefined) {
         <>
             <div className='cart-divider'></div>
             <div className='cart-item-card'>
-                <img src={product.photoUrl} />
+                <NavLink to={`/products/${product.id}`} className="show-link">
+                    <img src={product.photoUrl} />
+                </NavLink>
                 <div className='cart-item-details'>
                     <NavLink to={`/brands/${product.brand}`} className='brand-link'>
                         <div className='cart-item-brand'><strong>{product.brand}</strong></div>
