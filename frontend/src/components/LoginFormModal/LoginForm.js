@@ -50,7 +50,7 @@ function LoginForm(props) {
       props.closeLogin();
     };
 
-    const handleDemoLogin = (e) => {
+    const handleDemoLogin = async (e) => {
       e.preventDefault();
 
       const demoEmail = 'demo@user.io';
@@ -58,6 +58,17 @@ function LoginForm(props) {
       
       setEmail(demoEmail);
       setPassword(demoPassword);
+
+      try {
+        await dispatch(sessionActions.login({ email: demoEmail, password: demoPassword }));
+       
+        if (typeof props.onLoginSuccess === 'function') {
+          props.onLoginSuccess();
+        }
+      } catch (error) {
+ 
+        setErrors([error.message]);
+      }
   }
 
 
