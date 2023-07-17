@@ -19,6 +19,16 @@ class Api::ProductsController < ApplicationController
     render :cart_items
   end
 
+  def loves 
+    @loves = current_user.loves
+    love_ids = @loves.pluck(id: love_ids)
+
+    @loves = Love.where(id: love_ids)
+
+    render :loves
+
+  end 
+
   def search
     @products = Product.search(params[:query])
     puts "Search Query: #{params[:query]}" # Add this line to debug the query

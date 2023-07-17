@@ -18,8 +18,13 @@ class Api::LovesController < ApplicationController
 
     def destroy 
         @love = Love.find_by(id: params[:id])
-        @love.destroy
-        render :show
+        if @love
+            @love.destroy
+            render :show
+        else
+            render json: { error: 'Love not found' }, status: :not_found
+        end
+      
     end 
 
     def love_params 

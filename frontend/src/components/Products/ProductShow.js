@@ -4,7 +4,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import { fetchProduct } from '../../store/products';
 import ReviewIndex from '../Reviews/ReviewIndex';
 import { createCartItem } from '../../store/cart_items';
-import { createLove } from '../../store/loves';
+import { createLove, deleteLove } from '../../store/loves';
 import LoginForm from '../LoginFormModal/LoginForm';
 import { Modal } from '../../context/Modal';
 import './Product.css'
@@ -13,6 +13,7 @@ import './Product.css'
 const ProductShow = () => {
     const {productId} = useParams();
     const product = useSelector(state => state.products[productId]);
+    const loves = useSelector(state => state.loves)
     const currentUser = useSelector(state => state.session.user)
     const [showIngredients, setShowIngredients] = useState(false);
     const [showHow, setShowHow] = useState(false);
@@ -29,7 +30,10 @@ const ProductShow = () => {
     }, [productId]);
 
     useEffect(() => {
-        if (currentUser && product && product.loves && product.loves.some(love => love.product_id === product.id)) {
+        if ( currentUser &&
+            product &&
+            product.loves &&
+            product.loves.some((love) => love.user_id === currentUser.id)) {
           setIsLoved(true);
         } else {
           setIsLoved(false);
@@ -77,16 +81,25 @@ const ProductShow = () => {
             return;
         } 
         if (isLoved) {
-            return;
+            const loveId = product.loves.find(
+                (love) => love.user_id === currentUser.id && love.product_id === product.id
+              ).id;
+              dispatch(deleteLove(loveId));
+              setIsLoved(false);
+              return;
+     
+        } else {
+            if (product.loves && product.loves.some(love => love.user_id === currentUser.id)) {
+                return;
+            }
+            const love = {
+                product_id: productId,
+                user_id: currentUser.id
+            };
+            dispatch(createLove(love));
+            setIsLoved(true);
         }
-        const love = {
-            product_id: productId,
-            user_id: currentUser.id
-        };
-
-        dispatch(createLove(love));
-        setIsLoved(true);
-    }
+    };
 
     const handleLoginSuccess = () => {
         setShowModal(false); 
