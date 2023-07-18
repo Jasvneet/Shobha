@@ -54,7 +54,7 @@ Share your insights about a specific product by leaving a review and rating, ena
 ### Add Items to Your Basket
 ***
 
-![Gif](public/images/Shpbha-cart-items-gif.gif)
+![Gif](public/images/Shobha-cart-items-gif.gif)
 
 
 # Installation 
