@@ -25,6 +25,21 @@ export default function UpdateReview(){
     const [title, setTitle] = useState(review.title)
     const [body, setBody] = useState(review.body)
     const [rating, setRating] = useState(review.rating)
+    const [errors, setErrors] = useState([]);
+    const [isReviewCreated, setIsReviewCreated] = useState(false);
+
+
+    const handleError = async (res) => {
+        let data;
+        try {
+            data = await res.json();
+        } catch {
+            data = await res.text();
+        }
+        if (data) setErrors(data);
+        else if (data) setErrors([data]);
+        else setErrors([res.statusText]);
+    };
     
     const handleEdit = (e) => {
         e.preventDefault();
@@ -36,14 +51,22 @@ export default function UpdateReview(){
             product_id: review.productId,
           };
   
-        dispatch(updateReview(updatedReview));
-        history.push(`/products/${review.productId}`);
+        dispatch(updateReview(updatedReview))
+            .then(() => {
+                setIsReviewCreated(true);
+            })
+            .catch(handleError);
 
       };
 
       const onChange = (number) => {
         setRating(parseInt(number));
       };
+
+      if (isReviewCreated) {
+        history.push(`/products/${review.productId}`);
+        return null;
+      }
 
       return (
         <>
@@ -88,6 +111,9 @@ export default function UpdateReview(){
                             />
                         </label>
                         <div className="divider"></div>
+                        <ul className="review-errors">
+                                {errors.map((error, index) => <li key={`error-${index}`}>{error}</li>)}
+                        </ul>
 
                         <button type="submit" onClick={handleEdit}>Update</button>
                     </form>

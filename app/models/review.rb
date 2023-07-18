@@ -12,7 +12,8 @@
 #  updated_at :datetime         not null
 #
 class Review < ApplicationRecord
-    validates :user_id, :product_id, :rating, :title, :body, presence: true 
+    validates :user_id, :product_id, :title, :body, presence: true 
+    validates :rating, presence: true, numericality: { only_integer: true, greater_than_or_equal_to: 1, less_than_or_equal_to: 5 }
 
     belongs_to :product,
         foreign_key: :product_id,

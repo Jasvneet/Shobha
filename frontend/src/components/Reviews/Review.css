@@ -39,6 +39,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    margin-bottom: 10vw;
 
 }
 
@@ -64,6 +65,15 @@
     width: 40%;
     padding-right: 17px;
 
+}
+
+.review-errors {
+    color: red;
+    font-family: Arial, Helvetica, sans-serif;
+    display: flex;
+    flex-direction: column;
+    margin-top: 1vw;
+    gap: 1vw;
 }
 
 .product-review-info {

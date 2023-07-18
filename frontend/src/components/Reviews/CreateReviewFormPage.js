@@ -17,7 +17,9 @@ export default function CreateReview() {
     const [title, setTitle] = useState("")
     const [body, setBody] = useState("")
     const [rating, setRating] = useState(1)
-   
+    const [errors, setErrors] = useState([]);
+    const [isReviewCreated, setIsReviewCreated] = useState(false);
+
 
     useEffect(() => {
         if (productId){
@@ -30,28 +32,51 @@ export default function CreateReview() {
         return null 
     }
 
+    const handleError = async (res) => {
+        let data;
+        try {
+            data = await res.json();
+        } catch {
+            data = await res.text();
+        }
+        if (data) setErrors(data);
+        else if (data) setErrors([data]);
+        else setErrors([res.statusText]);
+    };
+
     const handleSubmit = (e) => {
         e.preventDefault();
+        setErrors([]);
       
-    
         const newReview = {
             title: title,
             body: body,
             rating: rating,
             product_id: productId
         };
-        dispatch(createReview(newReview));
-   
-        setTitle("");
-        setBody("");
-        setRating(0);
 
-        history.push(`/products/${productId}`);
+        dispatch(createReview(newReview))
+        .then(() => {
+            setIsReviewCreated(true);
+          })
+        .catch(handleError);
+   
+        // setTitle("");
+        // setBody("");
+        // setRating(0);
+
+
       };
 
       const onChange = (number) => {
         setRating(parseInt(number));
       };
+
+      if (isReviewCreated) {
+        history.push(`/products/${productId}`);
+        return null;
+      }
+    
 
 
     return (
@@ -85,6 +110,9 @@ export default function CreateReview() {
                                 />
                             </label>
                             <div className="divider"></div>
+                            <ul className="review-errors">
+                                {errors.map((error, index) => <li key={`error-${index}`}>{error}</li>)}
+                            </ul>
                             <label className="create-review-label">
                                 <h4>Headline</h4>
                                 <input 
