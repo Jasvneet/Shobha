@@ -115,10 +115,15 @@
     margin-top: 41vh;
 }
 
+.image-container {
+    margin-right: 10vw;
+}
+
 .image-container img {
     height: 64vh;
     width: 100%;
-    margin-right: 4vw;
+    margin-right: 1vw;
+ 
     padding-top: 7vw;
 }
 
