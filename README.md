@@ -42,6 +42,21 @@ Share your insights about a specific product by leaving a review and rating, ena
 </details>
 
 
+<br>
+
+### Add Items to Your Wishlist
+***
+
+![Gif](public/images/Shobha-loves-gif.gif)
+
+<br>
+
+### Add Items to Your Basket
+***
+
+![Gif](public/images/Shpbha-cart-items-gif.gif)
+
+
 # Installation 
 
 To get started with Shobha locally, follow these steps:
