@@ -56,8 +56,8 @@ function LoginForm(props) {
       const demoEmail = 'demo@user.io';
       const demoPassword = 'password';
       
-      setEmail(demoEmail);
-      setPassword(demoPassword);
+      // setEmail(demoEmail);
+      // setPassword(demoPassword);
 
       try {
         await dispatch(sessionActions.login({ email: demoEmail, password: demoPassword }));
