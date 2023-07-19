@@ -32,6 +32,6 @@
 
 .DS_Store
 
-/public
+# /public
 
 /node_modules
