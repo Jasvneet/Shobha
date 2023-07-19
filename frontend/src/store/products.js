@@ -1,6 +1,7 @@
 import { receiveCartItems } from './cart_items';
 import csrfFetch from './csrf';
 import { receiveReviews } from './reviews';
+import { receiveLoves } from './loves';
 
 export const RECEIVE_PRODUCT = 'products/RECEIVE_PRODUCT';
 export const RECEIVE_PRODUCTS = 'products/RECEIVE_PRODUCTS';
@@ -24,13 +25,15 @@ export const clearProducts = () => ({
 
   
 
-export const fetchProduct = (product) => async(dispatch) => {
-    const response = await fetch(`/api/products/${product}`);
+export const fetchProduct = (productId) => async(dispatch) => {
+    const response = await fetch(`/api/products/${productId}`);
 
     if (response.ok) {
         const data = await response.json();
         dispatch(receiveProduct(data.product));
-        dispatch(receiveReviews(data.reviews))
+        dispatch(receiveReviews(data.reviews));
+        dispatch(receiveLoves(data.loves));
+
     }
 }
 export const fetchProducts = () => async(dispatch) => {

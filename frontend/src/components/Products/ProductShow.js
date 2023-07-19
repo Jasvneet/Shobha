@@ -11,7 +11,7 @@ import './Product.css'
 
 
 const ProductShow = () => {
-    const {productId} = useParams();
+    const { productId } = useParams();
     const product = useSelector(state => state.products[productId]);
     const loves = useSelector(state => state.loves)
     const currentUser = useSelector(state => state.session.user)
@@ -21,24 +21,30 @@ const ProductShow = () => {
     const [isLoved, setIsLoved] = useState(false);
     const [showNotification, setShowNotification] = useState(false);
     const dispatch = useDispatch();
-
+// console.log(productId);
     useEffect(() => {
+        console.log('productId:', productId);
         if (productId){
-
+     
             dispatch(fetchProduct(productId))
         }
-    }, [productId]);
-
+    }, [productId, dispatch]);
+    
     useEffect(() => {
-        if ( currentUser &&
-            product &&
-            product.loves &&
-            product.loves.some((love) => love.user_id === currentUser.id)) {
-          setIsLoved(true);
+        if (currentUser && product) {
+          const userLove = product.loves.find((love) => love.user_id === currentUser.id);
+          console.log(userLove);
+          if (userLove){
+              setIsLoved(true); 
+
+          }
         } else {
           setIsLoved(false);
         }
-      }, [currentUser, product]);
+     console.log(isLoved);
+      }, [currentUser, product, dispatch]);
+
+
 
     if (product === undefined) {
         return null 
@@ -82,6 +88,9 @@ const ProductShow = () => {
         } 
 
      
+  if (!product) {
+    return; // Return or handle the case when product is undefined
+  }
 
         if (isLoved) {
             
