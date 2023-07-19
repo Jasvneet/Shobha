@@ -47,14 +47,14 @@ Share your insights about a specific product by leaving a review and rating, ena
 ### Add Items to Your Wishlist
 ***
 
-![Gif](public/images/Shobha-loves-gif.gif)
+![Gif](Shobha-loves-gif.gif)
 
 <br>
 
 ### Add Items to Your Basket
 ***
 
-![Gif](public/images/Shobha-cart-items-gif.gif)
+![Gif](Shobha-cart-items-gif.gif)
 
 
 # Installation 
