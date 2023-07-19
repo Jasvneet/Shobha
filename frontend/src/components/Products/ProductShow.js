@@ -28,8 +28,9 @@ const ProductShow = () => {
     
         if (productId){
             dispatch(fetchProduct(productId))
+            dispatch(fetchLoves())
         }
-    }, [productId, dispatch, updated]);
+    }, [productId, dispatch]);
     
     useEffect(() => {
 
@@ -103,7 +104,7 @@ const ProductShow = () => {
         if (isLoved) {
             
             const love = await product.loves.find(
-                (love) => love.userId === currentUser.id && love.productId === product.id
+                (love) => (love.userId === currentUser.id || love.user_id === currentUser.id) && (love.productId === product.id || love.product_id === product.id)
               );
         // console.log('love:', love);
         // console.log('product:', product);
