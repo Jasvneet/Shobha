@@ -2,7 +2,7 @@ import React from 'react';
 import { useState, useEffect} from 'react';
 import { Map, GoogleApiWrapper, Marker, InfoWindow } from 'google-maps-react';
 import './storelocater.css'
-import MAP_API_KEY from './config';
+import MAP_API_KEY from './config.js';
 
 function MapPage(props) {
   
