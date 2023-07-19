@@ -80,24 +80,34 @@ const ProductShow = () => {
             setShowModal(true);
             return;
         } 
+
+     
+
         if (isLoved) {
-            const loveId = product.loves.find(
+            
+            const love = product.loves.find(
                 (love) => love.user_id === currentUser.id && love.product_id === product.id
-              ).id;
-              dispatch(deleteLove(loveId));
-              setIsLoved(false);
+              );
+        
+                dispatch(deleteLove(love.id));
+                setIsLoved(false);
+            
+           
               return;
      
         } else {
             if (product.loves && product.loves.some(love => love.user_id === currentUser.id)) {
                 return;
             }
-            const love = {
-                product_id: productId,
-                user_id: currentUser.id
-            };
-            dispatch(createLove(love));
-            setIsLoved(true);
+            if (!isLoved) {
+                const love = {
+                    product_id: productId,
+                    user_id: currentUser.id
+                };
+                dispatch(createLove(love));
+                setIsLoved(true);
+
+            }
         }
     };
 

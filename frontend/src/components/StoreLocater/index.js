@@ -2,6 +2,7 @@ import React from 'react';
 import { useState, useEffect} from 'react';
 import { Map, GoogleApiWrapper, Marker, InfoWindow } from 'google-maps-react';
 import './storelocater.css'
+import MAP_API_KEY from './config';
 
 function MapPage(props) {
   
@@ -142,5 +143,5 @@ function MapPage(props) {
 }
 
 export default GoogleApiWrapper({
-  apiKey: 'AIzaSyCFRQw4Po3RgaPeK3qF1NOarJlfD5Cs3RY',
+  apiKey: MAP_API_KEY,
 })(MapPage);

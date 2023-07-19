@@ -32,7 +32,7 @@ export default function NewProductCarousel(){
         itemClass=""
         keyBoardControl
         minimumTouchDrag={80}
-        partialVisbile
+        partialVisbile={true}
         pauseOnHover
         renderArrowsWhenDisabled={false}
         renderButtonGroupOutside={false}
@@ -74,7 +74,7 @@ export default function NewProductCarousel(){
         >
             {products.map(product => (
 
-                <div className="caro-product-slide">
+                <div className="caro-product-slide" key={product.id}>
                    <div className="caro-product-card">
                         <NavLink to={`/products/${product.id}`} >
                               <img src={product.photoUrl} alt={product.name} className="caro-product-image" />

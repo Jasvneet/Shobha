@@ -22,7 +22,7 @@ export default function MainCarousel(){
         itemClass=""
         keyBoardControl
         minimumTouchDrag={80}
-        partialVisbile
+        partialVisbile={true}
         pauseOnHover
         renderArrowsWhenDisabled={false}
         renderButtonGroupOutside={false}

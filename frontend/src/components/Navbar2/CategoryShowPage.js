@@ -30,13 +30,13 @@ export default function CategoryShowPage() {
                                     <NavLink to={'/categories/Foundation'} className="prod-show-link">
                                         Foundation
                                     </NavLink>
-                                    <img src="https://www.sephora.com/contentimages/homepage/060222/Homepage/RWD/CategoryTiles/homepage_featured_category_tile_samples_32_us_ca_rwd_slice.png?imwidth=48" srcset="https://www.sephora.com/contentimages/homepage/060222/Homepage/RWD/CategoryTiles/homepage_featured_category_tile_samples_32_us_ca_rwd_slice.png?imwidth=48 1x, https://www.sephora.com/contentimages/homepage/060222/Homepage/RWD/CategoryTiles/homepage_featured_category_tile_samples_32_us_ca_rwd_slice.png?imwidth=96 2x" loading="lazy" role="presentation" alt="" class="css-z3vs2m eanm77i0" data-comp="Image StyledComponent BaseComponent " />
+                                    <img src="https://www.sephora.com/contentimages/homepage/060222/Homepage/RWD/CategoryTiles/homepage_featured_category_tile_samples_32_us_ca_rwd_slice.png?imwidth=48" />
                                 </li>
                                 <li>
                                     <NavLink to={'/categories/Mini Size'} className="prod-show-link">
                                         Mini size
                                     </NavLink>
-                                    <img src="https://www.sephora.com/contentimages/homepage/060222/Homepage/RWD/CategoryTiles/homepage_featured_category_tile_minis_us_ca_rwd_slice.png?imwidth=48" srcset="https://www.sephora.com/contentimages/homepage/060222/Homepage/RWD/CategoryTiles/homepage_featured_category_tile_minis_us_ca_rwd_slice.png?imwidth=48 1x, https://www.sephora.com/contentimages/homepage/060222/Homepage/RWD/CategoryTiles/homepage_featured_category_tile_minis_us_ca_rwd_slice.png?imwidth=96 2x" loading="lazy" role="presentation" alt="" class="css-z3vs2m eanm77i0" data-comp="Image StyledComponent BaseComponent "/>
+                                    <img src="https://www.sephora.com/contentimages/homepage/060222/Homepage/RWD/CategoryTiles/homepage_featured_category_tile_minis_us_ca_rwd_slice.png?imwidth=48" />
                                 </li>
                                 <li>
                                     <NavLink to={'/categories/Hair Treatments'} className="prod-show-link">
@@ -54,13 +54,13 @@ export default function CategoryShowPage() {
                                     <NavLink to={'/categories/Moisturizers'} className="prod-show-link">
                                         Moisturizers
                                     </NavLink>
-                                    <img src="https://www.sephora.com/contentimages/homepage/060222/Homepage/RWD/CategoryTiles/homepage_featured_category_tile_skincare_cleanser_moisturizer_us_ca_rwd_slice.jpg?imwidth=48" srcset="https://www.sephora.com/contentimages/homepage/060222/Homepage/RWD/CategoryTiles/homepage_featured_category_tile_skincare_cleanser_moisturizer_us_ca_rwd_slice.jpg?imwidth=48 1x, https://www.sephora.com/contentimages/homepage/060222/Homepage/RWD/CategoryTiles/homepage_featured_category_tile_skincare_cleanser_moisturizer_us_ca_rwd_slice.jpg?imwidth=96 2x" loading="lazy" role="presentation" alt="" class="css-z3vs2m eanm77i0"/>
+                                    <img src="https://www.sephora.com/contentimages/homepage/060222/Homepage/RWD/CategoryTiles/homepage_featured_category_tile_skincare_cleanser_moisturizer_us_ca_rwd_slice.jpg?imwidth=48" />
                                 </li>
                                 <li>
                                     <NavLink to={'/categories/Perfume'} className="prod-show-link">
                                        Perfume
                                     </NavLink>
-                                    <img src="https://www.sephora.com/contentimages/homepage/060222/Homepage/RWD/CategoryTiles/homepage_featured_category_tile_fragrance_bottle_us_ca_rwd_slice.jpg?imwidth=48" srcset="https://www.sephora.com/contentimages/homepage/060222/Homepage/RWD/CategoryTiles/homepage_featured_category_tile_fragrance_bottle_us_ca_rwd_slice.jpg?imwidth=48 1x, https://www.sephora.com/contentimages/homepage/060222/Homepage/RWD/CategoryTiles/homepage_featured_category_tile_fragrance_bottle_us_ca_rwd_slice.jpg?imwidth=96 2x" loading="lazy" role="presentation" alt="" class="css-z3vs2m eanm77i0" data-comp="Image StyledComponent BaseComponent "/>
+                                    <img src="https://www.sephora.com/contentimages/homepage/060222/Homepage/RWD/CategoryTiles/homepage_featured_category_tile_fragrance_bottle_us_ca_rwd_slice.jpg?imwidth=48" />
                                 </li>
                                 <li>
                                     <NavLink to={'/categories/Sunscreen'} className="prod-show-link">

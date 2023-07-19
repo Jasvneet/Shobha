@@ -66,7 +66,8 @@ export default function lovesReducer(state = {}, action) {
               }
               return state; 
         case REMOVE_LOVE:
-            delete newState[action.loveId]
+            const loveId = action.loveId
+            delete newState[loveId]
             return newState
         default:
             return state;

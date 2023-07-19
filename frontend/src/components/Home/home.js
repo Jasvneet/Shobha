@@ -38,7 +38,7 @@ const Home = () => {
                 <a href="#" className='category-details'>
                   <h5>Foundation</h5>
                   <div className='category-img-container'>
-                  <img src="https://www.sephora.com/contentimages/homepage/060222/Homepage/RWD/CategoryTiles/homepage_featured_category_tile_samples_32_us_ca_rwd_slice.png?imwidth=48" srcset="https://www.sephora.com/contentimages/homepage/060222/Homepage/RWD/CategoryTiles/homepage_featured_category_tile_samples_32_us_ca_rwd_slice.png?imwidth=48 1x, https://www.sephora.com/contentimages/homepage/060222/Homepage/RWD/CategoryTiles/homepage_featured_category_tile_samples_32_us_ca_rwd_slice.png?imwidth=96 2x" loading="lazy" role="presentation" alt="" class="css-z3vs2m eanm77i0" data-comp="Image StyledComponent BaseComponent " />
+                  <img src="https://www.sephora.com/contentimages/homepage/060222/Homepage/RWD/CategoryTiles/homepage_featured_category_tile_samples_32_us_ca_rwd_slice.png?imwidth=48"  />
                   </div>
                 </a>
               </li>
@@ -47,7 +47,7 @@ const Home = () => {
                 <a href="#" className='category-details'>
                   <h5>Moisturizers</h5>
                   <div className='category-img-container'>
-                  <img src="https://www.sephora.com/contentimages/homepage/060222/Homepage/RWD/CategoryTiles/homepage_featured_category_tile_skincare_cleanser_moisturizer_us_ca_rwd_slice.jpg?imwidth=48" srcset="https://www.sephora.com/contentimages/homepage/060222/Homepage/RWD/CategoryTiles/homepage_featured_category_tile_skincare_cleanser_moisturizer_us_ca_rwd_slice.jpg?imwidth=48 1x, https://www.sephora.com/contentimages/homepage/060222/Homepage/RWD/CategoryTiles/homepage_featured_category_tile_skincare_cleanser_moisturizer_us_ca_rwd_slice.jpg?imwidth=96 2x" loading="lazy" role="presentation" alt="" class="css-z3vs2m eanm77i0"/>
+                  <img src="https://www.sephora.com/contentimages/homepage/060222/Homepage/RWD/CategoryTiles/homepage_featured_category_tile_skincare_cleanser_moisturizer_us_ca_rwd_slice.jpg?imwidth=48" />
                   </div>
                 </a>
               </li>
@@ -56,7 +56,7 @@ const Home = () => {
                 <a href="#" className='category-details'>
                   <h5>Hair Styling & Treatments</h5>
                   <div className='category-img-container'>
-                  <img src="https://www.sephora.com/contentimages/homepage/091322/Homepage/RWD/hair%20dryer.JPG?imwidth=48" srcset="https://www.sephora.com/contentimages/homepage/091322/Homepage/RWD/hair%20dryer.JPG?imwidth=48 1x, https://www.sephora.com/contentimages/homepage/091322/Homepage/RWD/hair%20dryer.JPG?imwidth=96 2x" loading="lazy" role="presentation" alt="" class="css-z3vs2m eanm77i0" data-comp="Image StyledComponent BaseComponent "/>
+                  <img src="https://www.sephora.com/contentimages/homepage/091322/Homepage/RWD/hair%20dryer.JPG?imwidth=48" />
                   </div>
                 </a>
               </li>
@@ -65,7 +65,7 @@ const Home = () => {
                 <a href="#" className='category-details'>
                   <h5>Perfume</h5>
                   <div className='category-img-container'>
-                    <img src="https://www.sephora.com/contentimages/homepage/060222/Homepage/RWD/CategoryTiles/homepage_featured_category_tile_fragrance_bottle_us_ca_rwd_slice.jpg?imwidth=48" srcset="https://www.sephora.com/contentimages/homepage/060222/Homepage/RWD/CategoryTiles/homepage_featured_category_tile_fragrance_bottle_us_ca_rwd_slice.jpg?imwidth=48 1x, https://www.sephora.com/contentimages/homepage/060222/Homepage/RWD/CategoryTiles/homepage_featured_category_tile_fragrance_bottle_us_ca_rwd_slice.jpg?imwidth=96 2x" loading="lazy" role="presentation" alt="" class="css-z3vs2m eanm77i0" data-comp="Image StyledComponent BaseComponent "/>
+                    <img src="https://www.sephora.com/contentimages/homepage/060222/Homepage/RWD/CategoryTiles/homepage_featured_category_tile_fragrance_bottle_us_ca_rwd_slice.jpg?imwidth=48" />
                   </div>
                 </a>
               </li>
@@ -73,7 +73,7 @@ const Home = () => {
                 <a href="#" className='category-details'>
                   <h5>Minis</h5>
                   <div className='category-img-container'>
-                  <img src="https://www.sephora.com/contentimages/homepage/060222/Homepage/RWD/CategoryTiles/homepage_featured_category_tile_minis_us_ca_rwd_slice.png?imwidth=48" srcset="https://www.sephora.com/contentimages/homepage/060222/Homepage/RWD/CategoryTiles/homepage_featured_category_tile_minis_us_ca_rwd_slice.png?imwidth=48 1x, https://www.sephora.com/contentimages/homepage/060222/Homepage/RWD/CategoryTiles/homepage_featured_category_tile_minis_us_ca_rwd_slice.png?imwidth=96 2x" loading="lazy" role="presentation" alt="" class="css-z3vs2m eanm77i0" data-comp="Image StyledComponent BaseComponent "/>
+                  <img src="https://www.sephora.com/contentimages/homepage/060222/Homepage/RWD/CategoryTiles/homepage_featured_category_tile_minis_us_ca_rwd_slice.png?imwidth=48" />
                   </div>
                 </a>
               </li>
