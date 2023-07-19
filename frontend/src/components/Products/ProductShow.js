@@ -41,10 +41,9 @@ const ProductShow = () => {
         } else {
           setIsLoved(false);
         }
-     console.log(isLoved);
+     console.log(isLoved); 
       }, [currentUser, product, dispatch]);
-
-
+// hi
 
     if (product === undefined) {
         return null 
