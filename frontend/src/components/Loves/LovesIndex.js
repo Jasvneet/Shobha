@@ -11,6 +11,7 @@ export default function LovesIndex() {
     const dispatch = useDispatch();
 
     useEffect(() => {
+      
         dispatch(fetchLoves());
     }, [dispatch])
 

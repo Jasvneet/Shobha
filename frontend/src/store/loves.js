@@ -20,10 +20,11 @@ export const removeLove = (loveId) => ({
 })
 
 export const fetchLoves = () => async(dispatch) => {
-    const response = await fetch(`/api/loves`)
+    const response = await csrfFetch(`/api/loves`)
 
     if (response.ok) {
         const loves = await response.json();
+        // debugger
         dispatch(receiveLoves(loves))
     }
 }
@@ -61,6 +62,7 @@ export default function lovesReducer(state = {}, action) {
         case RECEIVE_LOVES:
             return {...action.loves};
         case RECEIVE_LOVE:
+            // debugger
             if (action.love) {
                 return { ...state, [action.love.id]: action.love };
               }

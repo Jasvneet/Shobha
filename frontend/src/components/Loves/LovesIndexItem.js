@@ -14,8 +14,9 @@ export default function LovesIndexItem({love}) {
     const dispatch = useDispatch();
 
     useEffect(() => {
+        console.log('testing');
         dispatch(fetchProduct(love.productId))
-    }, [dispatch, love.productId])
+    }, [dispatch])
 
     if (product === undefined) {
         return null 

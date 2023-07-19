@@ -4,7 +4,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import { fetchProduct } from '../../store/products';
 import ReviewIndex from '../Reviews/ReviewIndex';
 import { createCartItem } from '../../store/cart_items';
-import { createLove, deleteLove } from '../../store/loves';
+import { createLove, deleteLove, fetchLoves } from '../../store/loves';
 import LoginForm from '../LoginFormModal/LoginForm';
 import { Modal } from '../../context/Modal';
 import './Product.css'
@@ -21,19 +21,22 @@ const ProductShow = () => {
     const [isLoved, setIsLoved] = useState(false);
     const [showNotification, setShowNotification] = useState(false);
     const dispatch = useDispatch();
+    const [updated, setUpdated] = useState(false);
 // console.log(productId);
     useEffect(() => {
-        console.log('productId:', productId);
+        // console.log('productId:', productId);
+    
         if (productId){
-     
             dispatch(fetchProduct(productId))
         }
-    }, [productId, dispatch]);
+    }, [productId, dispatch, updated]);
     
     useEffect(() => {
+
         if (currentUser && product && product.loves) {
           const userLove = product.loves.find((love) => love.user_id === currentUser.id);
-          console.log(userLove);
+        //   console.log(userLove);
+
           if (userLove){
               setIsLoved(true); 
 
@@ -41,9 +44,17 @@ const ProductShow = () => {
         } else {
           setIsLoved(false);
         }
-     console.log(isLoved); 
+    //  console.log(isLoved); 
       }, [currentUser, product, dispatch]);
-// hi
+        
+      const changeUpdated = () => {
+        if (updated) {
+            setUpdated(false)
+
+        } else {
+            setUpdated(true)
+        }
+      }
 
     if (product === undefined) {
         return null 
@@ -79,32 +90,34 @@ const ProductShow = () => {
           }, 2000);
     }
 
-    const HandleAddLove = (e) => {
+    const HandleAddLove = async (e) => {
         e.preventDefault();
         if (!currentUser){
             setShowModal(true);
             return;
         } 
 
-     
-  if (!product) {
-    return; // Return or handle the case when product is undefined
-  }
-
+        if (!product) {
+            return; // Return or handle the case when product is undefined
+        }
         if (isLoved) {
             
-            const love = product.loves.find(
-                (love) => love.user_id === currentUser.id && love.product_id === product.id
+            const love = await product.loves.find(
+                (love) => love.userId === currentUser.id && love.productId === product.id
               );
-        
-                dispatch(deleteLove(love.id));
-                setIsLoved(false);
-            
+        // console.log('love:', love);
+        // console.log('product:', product);
+        // debugger
+                dispatch(deleteLove(love.id))
+                  .then(setIsLoved(false));
+
+                  changeUpdated();
            
               return;
      
         } else {
             if (product.loves && product.loves.some(love => love.user_id === currentUser.id)) {
+               console.log("testing");
                 return;
             }
             if (!isLoved) {
@@ -112,8 +125,8 @@ const ProductShow = () => {
                     product_id: productId,
                     user_id: currentUser.id
                 };
-                dispatch(createLove(love));
-                setIsLoved(true);
+                dispatch(createLove(love))
+                .then(setIsLoved(true));
 
             }
         }

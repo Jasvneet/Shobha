@@ -1,7 +1,9 @@
 import { receiveCartItems } from './cart_items';
 import csrfFetch from './csrf';
 import { receiveReviews } from './reviews';
-import { receiveLoves } from './loves';
+import { receiveLoves, RECEIVE_LOVE } from './loves';
+import {merge} from 'lodash';
+
 
 export const RECEIVE_PRODUCT = 'products/RECEIVE_PRODUCT';
 export const RECEIVE_PRODUCTS = 'products/RECEIVE_PRODUCTS';
@@ -32,7 +34,7 @@ export const fetchProduct = (productId) => async(dispatch) => {
         const data = await response.json();
         dispatch(receiveProduct(data.product));
         dispatch(receiveReviews(data.reviews));
-        dispatch(receiveLoves(data.loves));
+        // dispatch(receiveLoves(data.loves));
 
     }
 }
@@ -91,7 +93,7 @@ const initialState = {
   };
 
 const productsReducer = (state = initialState, action) => {
-    let newState = {...state};
+    let newState = merge({}, state)
 
     switch (action.type) {
         case RECEIVE_PRODUCTS:
@@ -99,6 +101,11 @@ const productsReducer = (state = initialState, action) => {
         case RECEIVE_PRODUCT:
             newState[action.product.id] = action.product;
             return newState;
+        case RECEIVE_LOVE:
+            if (action.love ) {
+                newState[action.love.productId].loves.push(action.love);
+              }
+              return newState;
         case CLEAR_PRODUCTS:
             return {};
         default:

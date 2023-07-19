@@ -51,6 +51,7 @@ function Navigation() {
   };
 
   useEffect(() => {
+    // console.log('testing');
     dispatch(fetchCartItems())
   }, [dispatch])
 
