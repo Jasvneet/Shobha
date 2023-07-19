@@ -14,7 +14,7 @@ export default function LovesIndexItem({love}) {
     const dispatch = useDispatch();
 
     useEffect(() => {
-        console.log('testing');
+        // console.log('testing');
         dispatch(fetchProduct(love.productId))
     }, [dispatch])
 
