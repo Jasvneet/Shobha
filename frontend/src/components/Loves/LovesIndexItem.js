@@ -37,7 +37,7 @@ export default function LovesIndexItem({love}) {
     }
 
 
-    console.log(product);
+    // console.log(product);
     return (
         <>
             <div className='divider'></div>

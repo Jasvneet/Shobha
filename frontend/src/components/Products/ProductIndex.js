@@ -13,7 +13,7 @@ const ProductIndex = ()=> {
         dispatch(fetchProducts());
     }, [dispatch]);
 
-   console.log(products);
+//    console.log(products);
 
     return (
         <>
