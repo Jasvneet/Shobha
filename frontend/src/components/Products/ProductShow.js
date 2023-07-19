@@ -31,7 +31,7 @@ const ProductShow = () => {
     }, [productId, dispatch]);
     
     useEffect(() => {
-        if (currentUser && product) {
+        if (currentUser && product && product.loves) {
           const userLove = product.loves.find((love) => love.user_id === currentUser.id);
           console.log(userLove);
           if (userLove){
