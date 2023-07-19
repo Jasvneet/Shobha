@@ -46,14 +46,14 @@ export default function Footer(){
                     <h4>Connect</h4>
                     <ul className='connect-links'>
                         <li>
-                            <a href='https://github.com/Jasvneet'>
-                                <FaGithub size={30}/>
-                            </a>
+                        <a href='https://github.com/Jasvneet' target="_blank" rel="noopener noreferrer">
+                            <FaGithub size={30}/>
+                        </a>
                         </li>
                         <li>
-                            <a href='https://www.linkedin.com/in/jas-kaur-762sg1888/'>
-                                <FaLinkedin size={30} />
-                            </a>
+                        <a href='https://www.linkedin.com/in/jas-kaur-762sg1888/' target="_blank" rel="noopener noreferrer">
+                            <FaLinkedin size={30} />
+                        </a>
                         </li>
 
                         

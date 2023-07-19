@@ -118,7 +118,7 @@ const ProductShow = () => {
      
         } else {
             if (product.loves && product.loves.some(love => love.user_id === currentUser.id)) {
-               console.log("testing");
+              
                 return;
             }
             if (!isLoved) {
