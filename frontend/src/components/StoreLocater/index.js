@@ -74,7 +74,7 @@ function MapPage(props) {
 
   return (
      <div className="map-wrapper" >
-        <h1>Find a Shobha</h1>
+        <h1>Find a Shobha (San Francisco only)</h1>
 
         <div className='map-search-container'>
             <div className='stores-search-container'>
@@ -82,14 +82,14 @@ function MapPage(props) {
                     <input
                     className='zip-input'
                     type="text"
-                    placeholder="Enter Zip Code"
+                    placeholder="Enter Zip Code located in San Francisco"
                     onChange={(e) => findNearestLocation(e.target.value)}
                     />
                 </div>
                 <div className="store-list">
                     {searchResults.length > 0 && (
                     <div>
-                        <h3>Stores Near You</h3>
+                        <h3>Stores Near You </h3>
                         <div className='divider'></div>
                         {searchResults.map((location, index) => (
                             <>
