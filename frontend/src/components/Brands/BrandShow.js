@@ -27,7 +27,9 @@ function BrandShow() {
                     <div key={product.id} className='brand-show-container'>
                         <li className='brand-show-item'>
                             <div>
-                                <img src={product.photoUrl} />
+                                <NavLink to={`/products/${product.id}`} className="show-link">
+                                    <img src={product.photoUrl} />
+                                </NavLink>
                             </div>
                             <span className='brand-index'>{product.brand}</span>
                             <NavLink to={`/products/${product.id}`} className="show-link">{product.name}</NavLink>
