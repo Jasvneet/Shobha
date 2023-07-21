@@ -69,18 +69,18 @@ export const updateReview = (review) => async(dispatch) => {
     }
 }
 
-const initialState = {
-    reviews: {}
-}
+// const initialState = {
+//     reviews: {}
+// }
 
-const reviewsReducer = (state = initialState, action) => {
+const reviewsReducer = (state = {}, action) => {
     let newState = {...state};
 
     switch (action.type) {
         case RECEIVE_REVIEWS:
             return {...action.reviews};
         case RECEIVE_REVIEW:
-            return {...state, [action.review.id]: action.review};
+            return {...state, [action.review.review.id]: action.review.review};
         case REMOVE_REVIEW:
             delete newState[action.reviewId]
             return newState

@@ -62,7 +62,7 @@ function Navigation() {
     });
   
     setCartItemCount(totalQuantity);
-  }, [cartItems]);
+  }, []);
 
  
 

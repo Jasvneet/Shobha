@@ -10,23 +10,39 @@ import { useHistory } from "react-router-dom/cjs/react-router-dom.min";
 
 export default function UpdateReview(){
     const {reviewId} = useParams();
-    const review = useSelector(state => state.reviews ? state.reviews[reviewId] : null)
-    const product = useSelector(state => state.products[review.productId]);
+    const review = useSelector(state => Object.values(state.reviews).length ? state.reviews[reviewId] : null)
+    const product = useSelector(state => state.products[review?.productId]);
     const dispatch = useDispatch();
     const history = useHistory();
-
-    useEffect(() => {
-        if (reviewId) {
-         
-          dispatch(fetchReview(reviewId));
-        }
-    }, [dispatch, reviewId]);
-     
-    const [title, setTitle] = useState(review.title)
-    const [body, setBody] = useState(review.body)
-    const [rating, setRating] = useState(review.rating)
+    const [title, setTitle] = useState(review?.title)
+    const [body, setBody] = useState(review?.body)
+    const [rating, setRating] = useState(review?.rating)
     const [errors, setErrors] = useState([]);
     const [isReviewCreated, setIsReviewCreated] = useState(false);
+// console.log(product);
+// console.log(review);
+    // useEffect(() => async() => {
+    //     if (reviewId) {
+    //         console.log(reviewId);
+
+    //       const rev = await dispatch(fetchReview(reviewId));
+    //     console.log(rev);
+    //     }
+    // }, [dispatch, reviewId]);
+
+    useEffect(() => {
+        (async() => {
+            if (reviewId) {
+            // console.log(reviewId);
+
+          const rev = await dispatch(fetchReview(reviewId));
+        //   console.log(rev);
+            }
+        })()
+
+
+    }, [reviewId, dispatch])
+     
 
 
     const handleError = async (res) => {
@@ -64,7 +80,7 @@ export default function UpdateReview(){
       };
 
       if (isReviewCreated) {
-        history.push(`/products/${review.productId}`);
+        history.push(`/products/${review?.productId}`);
         return null;
       }
 
@@ -74,12 +90,12 @@ export default function UpdateReview(){
             <h1>Update Review</h1>
             <div className="divider"></div>
             <div className="review-form-container">
-                <img src={product.photoUrl}/>
+                <img src={product?.photoUrl}/>
                 <div className="product-review-info">
-                    <NavLink to={`/brands/${product.brand}`} className='brand-review-form-link'>
-                                {product.brand}
+                    <NavLink to={`/brands/${product?.brand}`} className='brand-review-form-link'>
+                                {product?.brand}
                     </NavLink>
-                    <p>{product.name}</p>
+                    <p>{product?.name}</p>
                     <form className="review-form">
                         
                         <label className="create-review-label">
