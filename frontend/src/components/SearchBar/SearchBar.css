@@ -28,7 +28,7 @@
     display: flex;
     margin-top: 30px;
     padding-right: 30px;
-    height: 170vh;
+   
 }
 
 .result-details {
@@ -47,9 +47,12 @@
 
 .search-results {
     display: flex;
-    margin-right: 20px;
-    margin-left: 80px;
-    width: 50%;
+    margin-right: 2vw;
+    margin-left: 8vw;
+    width: 90vw;
+    flex-wrap: wrap;
+    margin-bottom: 2vw;
+    margin-top: 2vw;
 
 }
 
@@ -65,5 +68,6 @@
     line-height: 1.25;
     text-align: left;
     position: relative;
+    width: 20vw
 }
 
