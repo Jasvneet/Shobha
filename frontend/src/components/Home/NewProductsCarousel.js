@@ -32,7 +32,7 @@ export default function NewProductCarousel(){
         itemClass=""
         keyBoardControl
         minimumTouchDrag={80}
-        partialVisbile={true}
+        partialVisible={true}
         pauseOnHover
         renderArrowsWhenDisabled={false}
         renderButtonGroupOutside={false}

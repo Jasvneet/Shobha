@@ -56,8 +56,13 @@ function Navigation() {
   }, [dispatch])
 
   useEffect(() => {
-    setCartItemCount(cartItems.length);
-  }, [cartItems.length]);
+    let totalQuantity = 0;
+    cartItems.forEach((item) => {
+      totalQuantity += item.quantity; 
+    });
+  
+    setCartItemCount(totalQuantity);
+  }, [cartItems]);
 
  
 

@@ -33,7 +33,7 @@ export default function MinisCarousel(){
         itemClass=""
         keyBoardControl
         minimumTouchDrag={80}
-        partialVisbile={true}
+        partialVisible={true}
         pauseOnHover
         renderArrowsWhenDisabled={false}
         renderButtonGroupOutside={false}
