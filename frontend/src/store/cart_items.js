@@ -78,9 +78,6 @@ export const createCartItem = (cartItem) => async(dispatch) => {
     }
 }
 
-// const initialState = {
-//     cartItems: {}
-// }
 
 export default function cartItemsReducer(state = {}, action) {
     let newState = {...state}

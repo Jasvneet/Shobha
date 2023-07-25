@@ -99,7 +99,7 @@ const ProductShow = () => {
         } 
 
         if (!product) {
-            return; // Return or handle the case when product is undefined
+            return; 
         }
         if (isLoved) {
             

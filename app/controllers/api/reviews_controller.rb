@@ -41,3 +41,5 @@ class Api::ReviewsController < ApplicationController
         params.require(:review).permit(:product_id, :title, :rating, :body, :user_id)
     end
 end
+
+

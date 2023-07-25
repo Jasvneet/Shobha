@@ -8,11 +8,9 @@ export default function CartIndexItem({cartItem}) {
     const product = useSelector(state => state.products[cartItem.productId])
     const dispatch = useDispatch();
     const [quantity, setQuantity] = useState(cartItem.quantity);
-    // console.log(cartItem);
 
     useEffect(() => {
         if (cartItem.productId) {
-            // dispatch(fetchProduct(cartItem.productId))
         }
      
     }, [dispatch])

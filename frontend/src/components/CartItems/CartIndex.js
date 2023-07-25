@@ -12,7 +12,6 @@ export default function CartIndex(){
 
     useEffect(() => {
         dispatch(fetchCartProducts());
-        // dispatch(fetchCartItems());
       }, [dispatch]);
 
   

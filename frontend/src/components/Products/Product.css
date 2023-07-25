@@ -49,21 +49,20 @@
 .name-price-size {
     display: flex;
     flex-direction: column;
-    margin-top: 100px;
-    font-size: 16px;
+    margin-top: 8vw;
     font-family: Arial, Helvetica, sans-serif;
 }
 
 .name {
     font-size: 1.5vw;
-    padding-bottom: 30px;
+    padding-bottom: 4vh;
 }
 
 .price {
     color: gray;
     font-size: 1vw;
     width: 70%;
-    padding-bottom: 17px;
+    padding-bottom: 8vh;
 }
 
 .price strong {
@@ -121,7 +120,7 @@
 
 .image-container img {
     height: 64vh;
-    width: 100%;
+    /* width: 100%; */
     margin-right: 1vw;
  
     padding-top: 7vw;

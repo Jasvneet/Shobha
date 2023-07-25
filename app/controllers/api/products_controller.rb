@@ -1,4 +1,28 @@
 class Api::ProductsController < ApplicationController
+  def search
+    @products = Product.search(params[:query])
+    puts "Search Query: #{params[:query]}"
+    puts "Search Results: #{@products.inspect}" 
+    render :search
+  end
+
+  def brand
+    @products = Product.where(brand: params[:brand])
+    render :brand
+  end
+
+  def category
+    categories = params[:category].split(',') 
+
+    product_ids = nil
+    categories.each do |category|
+      category_products = Product.where('category LIKE ?', "%#{category}%").pluck(:id)
+      product_ids = product_ids.nil? ? category_products : product_ids & category_products
+    end
+    @products = Product.where(id: product_ids)
+    render :category
+  end
+
   def index
     @products = Product.all
     render :index
