@@ -19,9 +19,6 @@ Live Link : https://shobha.onrender.com/
 
  # Dive Deeper!
 
- ### Home Page 
-
- ![HOMEIMG](public/images/Shobha-Home.png)
 
 <details open>
 <summary>User Authentication:</summary>
