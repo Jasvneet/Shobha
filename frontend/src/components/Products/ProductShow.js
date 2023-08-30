@@ -8,6 +8,7 @@ import { createLove, deleteLove, fetchLoves } from '../../store/loves';
 import LoginForm from '../LoginFormModal/LoginForm';
 import { Modal } from '../../context/Modal';
 import './Product.css'
+import { fetchCartItems } from '../../store/cart_items';
 
 
 const ProductShow = () => {
@@ -25,7 +26,7 @@ const ProductShow = () => {
 // console.log(productId);
     useEffect(() => {
         // console.log('productId:', productId);
-    
+     
         if (productId){
             dispatch(fetchProduct(productId))
             dispatch(fetchLoves())

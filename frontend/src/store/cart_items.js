@@ -34,7 +34,7 @@ export const fetchCartItem = (cartItemId) => async(dispatch) => {
 
     if (response.ok) {
         const cartItem = await response.json();
-        dispatch(receiveCartItems(cartItem))
+        dispatch(receiveCartItem(cartItem))
     }
 }
 

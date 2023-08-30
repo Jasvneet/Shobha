@@ -1,33 +1,34 @@
 import './CartItems.css'
 import {useSelector, useDispatch} from "react-redux";
 import { useState, useEffect } from 'react';
-import { deleteCartItem, updateCartItem } from '../../store/cart_items';
+import { deleteCartItem, fetchCartItem, updateCartItem } from '../../store/cart_items';
 import { NavLink } from 'react-router-dom/cjs/react-router-dom.min';
+import { fetchProduct } from '../../store/products';
+import { fetchCartItems } from '../../store/cart_items';
+import { fetchCartProducts } from '../../store/products';
+
 
 export default function CartIndexItem({cartItem}) {
     const product = useSelector(state => state.products[cartItem.productId])
+    const cartItems = useSelector(state => Object.values(state.cartItems))
     const dispatch = useDispatch();
     const [quantity, setQuantity] = useState(cartItem.quantity);
 
-    useEffect(() => {
-        if (cartItem.productId) {
-        }
-     
-    }, [dispatch])
+
 
 
     const handleDelete = () => {
         dispatch(deleteCartItem(cartItem.id));
     };
 
-const handleQuantityChange = (e) => {
-    const newQuantity = e.target.value;
-    setQuantity(newQuantity)
+    const handleQuantityChange = (e) => {
+        const newQuantity = e.target.value;
+        setQuantity(newQuantity)
 
-    const newCartQuantity = {
-        id: cartItem.id,
-        product_id: cartItem.product_id,
-        quantity: newQuantity
+        const newCartQuantity = {
+            id: cartItem.id,
+            product_id: cartItem.product_id,
+            quantity: newQuantity
     }
 
     dispatch(updateCartItem(newCartQuantity))
